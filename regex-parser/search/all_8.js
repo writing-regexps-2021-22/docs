@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['name_0',['name',['../structwr22_1_1regex__parser_1_1regex_1_1capture_1_1Name.html#a29396c20815cb6e808a22ddab165da20',1,'wr22::regex_parser::regex::capture::Name']]],
-  ['name_1',['Name',['../structwr22_1_1regex__parser_1_1regex_1_1capture_1_1Name.html',1,'wr22::regex_parser::regex::capture']]],
-  ['named_5fcapture_5fflavor_2ecpp_2',['named_capture_flavor.cpp',['../named__capture__flavor_8cpp.html',1,'']]],
-  ['named_5fcapture_5fflavor_2ehpp_3',['named_capture_flavor.hpp',['../named__capture__flavor_8hpp.html',1,'']]],
-  ['namedcaptureflavor_4',['NamedCaptureFlavor',['../namespacewr22_1_1regex__parser_1_1regex.html#ab4ab1b35dcd29d86ce14f5279f90f67a',1,'wr22::regex_parser::regex']]],
-  ['none_5',['None',['../structwr22_1_1regex__parser_1_1regex_1_1capture_1_1None.html',1,'wr22::regex_parser::regex::capture']]]
+  ['m_5fvariant_0',['m_variant',['../classwr22_1_1regex__parser_1_1utils_1_1Adt.html#ad5089efb5ad103963759397ea13a2d6c',1,'wr22::regex_parser::utils::Adt']]],
+  ['multicallable_1',['MultiCallable',['../structwr22_1_1regex__parser_1_1utils_1_1detail_1_1adt_1_1MultiCallable.html#a39e51e1b3b2e5389c6632b78325ffb0a',1,'wr22::regex_parser::utils::detail::adt::MultiCallable::MultiCallable()'],['../structwr22_1_1regex__parser_1_1utils_1_1detail_1_1adt_1_1MultiCallable.html',1,'wr22::regex_parser::utils::detail::adt::MultiCallable&lt; Fs &gt;']]]
 ];

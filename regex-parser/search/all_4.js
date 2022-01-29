@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['group_0',['Group',['../structwr22_1_1regex__parser_1_1regex_1_1part_1_1Group.html#a2dfdba00d2031379a018ff1253401591',1,'wr22::regex_parser::regex::part::Group::Group()'],['../structwr22_1_1regex__parser_1_1regex_1_1part_1_1Group.html',1,'wr22::regex_parser::regex::part::Group']]]
+  ['flavor_0',['flavor',['../structwr22_1_1regex__parser_1_1regex_1_1capture_1_1Name.html#ac2282c45d84986c7fdc0f19b50d064e4',1,'wr22::regex_parser::regex::capture::Name']]]
 ];

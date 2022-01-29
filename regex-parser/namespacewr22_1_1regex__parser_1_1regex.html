@@ -102,6 +102,7 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Capture.html">Capture</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Group capture behavior.  <a href="classwr22_1_1regex__parser_1_1regex_1_1Capture.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html">Part</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A part of a regular expression and its AST node type.  <a href="classwr22_1_1regex__parser_1_1regex_1_1Part.html#details">More...</a><br /></td></tr>
@@ -113,6 +114,7 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespacewr22_1_1regex__parser_1_1regex.html#ab4ab1b35dcd29d86ce14f5279f90f67aa2fa76adbb6d92527d3c42cb3e0a8a948">Angles</a>
 , <a class="el" href="namespacewr22_1_1regex__parser_1_1regex.html#ab4ab1b35dcd29d86ce14f5279f90f67aaf3ab88ca38f98c3013856d3cf233e4f5">AnglesWithP</a>
  }</td></tr>
+<tr class="memdesc:ab4ab1b35dcd29d86ce14f5279f90f67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flavor (dialect) of a named group capture.  <a href="namespacewr22_1_1regex__parser_1_1regex.html#ab4ab1b35dcd29d86ce14f5279f90f67a">More...</a><br /></td></tr>
 <tr class="separator:ab4ab1b35dcd29d86ce14f5279f90f67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -145,10 +147,18 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The flavor (dialect) of a named group capture. </p>
+<p >The most common variants are included. This list is subject to extension if deemed necessary. The source used as a reference is <a href="https://www.regular-expressions.info/named.html">https://www.regular-expressions.info/named.html</a>. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab4ab1b35dcd29d86ce14f5279f90f67aa549fc27c4080371ae74e4d111c644fe6" name="ab4ab1b35dcd29d86ce14f5279f90f67aa549fc27c4080371ae74e4d111c644fe6"></a>Apostrophes&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab4ab1b35dcd29d86ce14f5279f90f67aa2fa76adbb6d92527d3c42cb3e0a8a948" name="ab4ab1b35dcd29d86ce14f5279f90f67aa2fa76adbb6d92527d3c42cb3e0a8a948"></a>Angles&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab4ab1b35dcd29d86ce14f5279f90f67aaf3ab88ca38f98c3013856d3cf233e4f5" name="ab4ab1b35dcd29d86ce14f5279f90f67aaf3ab88ca38f98c3013856d3cf233e4f5"></a>AnglesWithP&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab4ab1b35dcd29d86ce14f5279f90f67aa549fc27c4080371ae74e4d111c644fe6" name="ab4ab1b35dcd29d86ce14f5279f90f67aa549fc27c4080371ae74e4d111c644fe6"></a>Apostrophes&#160;</td><td class="fielddoc"><p >The flavor <code>(?'name'contents)</code>. </p>
+<p >Mostly used in C# and other .NET-oriented languages, although can also be found in certain versions Perl, Boost and elsewhere. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab4ab1b35dcd29d86ce14f5279f90f67aa2fa76adbb6d92527d3c42cb3e0a8a948" name="ab4ab1b35dcd29d86ce14f5279f90f67aa2fa76adbb6d92527d3c42cb3e0a8a948"></a>Angles&#160;</td><td class="fielddoc"><p >The flavor <code>(?&lt;name&gt;contents)</code>. </p>
+<p >Mostly used in C# and other .NET-oriented languages, although can also be found in certain versions Perl, Boost and elsewhere. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab4ab1b35dcd29d86ce14f5279f90f67aaf3ab88ca38f98c3013856d3cf233e4f5" name="ab4ab1b35dcd29d86ce14f5279f90f67aaf3ab88ca38f98c3013856d3cf233e4f5"></a>AnglesWithP&#160;</td><td class="fielddoc"><p >The flavor <code>(?P&lt;name&gt;contents)</code>. Found in Python, PCRE and elsewhere. </p>
+</td></tr>
 </table>
 
 </div>
