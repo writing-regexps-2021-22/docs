@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['name_0',['Name',['../structwr22_1_1regex__parser_1_1regex_1_1capture_1_1Name.html',1,'wr22::regex_parser::regex::capture']]],
-  ['none_1',['None',['../structwr22_1_1regex__parser_1_1regex_1_1capture_1_1None.html',1,'wr22::regex_parser::regex::capture']]]
+  ['multicallable_0',['MultiCallable',['../structwr22_1_1regex__parser_1_1utils_1_1detail_1_1adt_1_1MultiCallable.html',1,'wr22::regex_parser::utils::detail::adt']]]
 ];

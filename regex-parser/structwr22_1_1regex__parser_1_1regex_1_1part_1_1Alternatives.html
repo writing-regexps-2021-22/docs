@@ -97,6 +97,8 @@ $(document).ready(function(){initNavTree('structwr22_1_1regex__parser_1_1regex_1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ac6a1da644d77953d11801ca70ba7eda7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html#ac6a1da644d77953d11801ca70ba7eda7">Alternatives</a> (std::vector&lt; <a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html">Part</a> &gt; <a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html#a65917d980ff629227769b65d28ebf326">alternatives</a>)</td></tr>
+<tr class="separator:ac6a1da644d77953d11801ca70ba7eda7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6cd5dc2e120bbb20100b41ce5d773da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html#ab6cd5dc2e120bbb20100b41ce5d773da">operator==</a> (const <a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html">Alternatives</a> &amp;rhs) const =default</td></tr>
 <tr class="separator:ab6cd5dc2e120bbb20100b41ce5d773da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -110,7 +112,34 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p >A regex part with the list of alternatives to be matched. </p>
 <p ><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html" title="A regex part with the list of alternatives to be matched.">Alternatives</a> in regular expressions are subexpressions by <code>|</code>. For the whole expression part's match to succeed, at least one of the subexpressions must match the input successfully.</p>
 <p >As an example, <code>a|(b)|cde</code> would be represented as an <code><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html" title="A regex part with the list of alternatives to be matched.">Alternatives</a></code> part with 3 alternatives. The alternatives themselves are represented recursively as <code><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html" title="A part of a regular expression and its AST node type.">Part</a></code>s. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac6a1da644d77953d11801ca70ba7eda7" name="ac6a1da644d77953d11801ca70ba7eda7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6a1da644d77953d11801ca70ba7eda7">&#9670;&nbsp;</a></span>Alternatives()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wr22::regex_parser::regex::part::Alternatives::Alternatives </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html">Part</a> &gt;&#160;</td>
+          <td class="paramname"><em>alternatives</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab6cd5dc2e120bbb20100b41ce5d773da" name="ab6cd5dc2e120bbb20100b41ce5d773da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab6cd5dc2e120bbb20100b41ce5d773da">&#9670;&nbsp;</a></span>operator==()</h2>
 
@@ -154,8 +183,9 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>include/wr22/regex_parser/regex/<a class="el" href="part_8hpp_source.html">part.hpp</a></li>
+<li>src/regex/<a class="el" href="part_8cpp.html">part.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

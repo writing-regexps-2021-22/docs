@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['raw_0',['raw',['../classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView.html#abea34fbdb2eb5e4681443787e1e35d2e',1,'wr22::regex_parser::utils::UnicodeStringView']]]
+  ['name_0',['Name',['../structwr22_1_1regex__parser_1_1regex_1_1capture_1_1Name.html#a4b76b871436545bdac70630dc568f577',1,'wr22::regex_parser::regex::capture::Name']]],
+  ['none_1',['None',['../structwr22_1_1regex__parser_1_1regex_1_1capture_1_1None.html#a0e4b5901d043bf0dd9f53428b8503fc3',1,'wr22::regex_parser::regex::capture::None']]]
 ];

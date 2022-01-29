@@ -9,6 +9,6 @@ var searchData=
   ['regex_6',['regex',['../namespacewr22_1_1regex__parser_1_1regex.html',1,'wr22::regex_parser']]],
   ['regex_5fparser_7',['regex_parser',['../namespacewr22_1_1regex__parser.html',1,'wr22']]],
   ['utils_8',['utils',['../namespacewr22_1_1regex__parser_1_1utils.html',1,'wr22::regex_parser']]],
-  ['what_9',['what',['../structwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView_1_1InvalidUtf8.html#a5069a6a8a03a7a381da269b2f58b6974',1,'wr22::regex_parser::utils::UnicodeStringView::InvalidUtf8']]],
+  ['what_9',['what',['../structwr22_1_1regex__parser_1_1utils_1_1BoxIsEmpty.html#a7c440a4b597a2efb68da5f45174a90f4',1,'wr22::regex_parser::utils::BoxIsEmpty::what()'],['../structwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView_1_1InvalidUtf8.html#a5069a6a8a03a7a381da269b2f58b6974',1,'wr22::regex_parser::utils::UnicodeStringView::InvalidUtf8::what()']]],
   ['wr22_10',['wr22',['../namespacewr22.html',1,'']]]
 ];

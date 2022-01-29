@@ -22,7 +22,10 @@ var annotated_dup =
             [ "Empty", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Empty.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Empty" ],
             [ "Group", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Group.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Group" ],
             [ "Literal", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Literal.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Literal" ],
-            [ "Sequence", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Sequence.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Sequence" ]
+            [ "Optional", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Optional.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Optional" ],
+            [ "Plus", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Plus.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Plus" ],
+            [ "Sequence", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Sequence.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Sequence" ],
+            [ "Star", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Star.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Star" ]
           ] ],
           [ "Capture", "classwr22_1_1regex__parser_1_1regex_1_1Capture.html", null ],
           [ "Part", "classwr22_1_1regex__parser_1_1regex_1_1Part.html", null ]
@@ -34,6 +37,8 @@ var annotated_dup =
             ] ]
           ] ],
           [ "Adt", "classwr22_1_1regex__parser_1_1utils_1_1Adt.html", "classwr22_1_1regex__parser_1_1utils_1_1Adt" ],
+          [ "Box", "classwr22_1_1regex__parser_1_1utils_1_1Box.html", "classwr22_1_1regex__parser_1_1utils_1_1Box" ],
+          [ "BoxIsEmpty", "structwr22_1_1regex__parser_1_1utils_1_1BoxIsEmpty.html", "structwr22_1_1regex__parser_1_1utils_1_1BoxIsEmpty" ],
           [ "UnicodeStringView", "classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView.html", "classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView" ],
           [ "UnicodeStringViewIterator", "classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringViewIterator.html", "classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringViewIterator" ]
         ] ]

@@ -92,6 +92,7 @@ $(document).ready(function(){initNavTree('part_8hpp.html',''); initResizable(); 
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="capture_8hpp_source.html">wr22/regex_parser/regex/capture.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="adt_8hpp_source.html">wr22/regex_parser/utils/adt.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="box_8hpp_source.html">wr22/regex_parser/utils/box.hpp</a>&gt;</code><br />
 <code>#include &lt;iosfwd&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
@@ -115,6 +116,15 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Group.html">wr22::regex_parser::regex::part::Group</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A regex part that represents a group in parentheses.  <a href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Group.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Optional.html">wr22::regex_parser::regex::part::Optional</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A regex part specifying an optional quantifier (<code>(expression)?</code>).  <a href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Optional.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Plus.html">wr22::regex_parser::regex::part::Plus</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A regex part specifying an "at least one" quantifier (<code>(expression)+</code>).  <a href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Plus.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Star.html">wr22::regex_parser::regex::part::Star</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A regex part specifying an "at least zero" quantifier (<code>(expression)*</code>).  <a href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Star.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html">wr22::regex_parser::regex::Part</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A part of a regular expression and its AST node type.  <a href="classwr22_1_1regex__parser_1_1regex_1_1Part.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,8 +143,8 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:af348a3d3a275f40eb7d68c6eea772934"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html#af348a3d3a275f40eb7d68c6eea772934">wr22::regex_parser::regex::part::Adt</a> = utils::Adt&lt; Empty, Literal, Alternatives, Sequence, Group &gt;</td></tr>
-<tr class="separator:af348a3d3a275f40eb7d68c6eea772934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe6d949911c6896844c9eebdbd797b6d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html#abe6d949911c6896844c9eebdbd797b6d">wr22::regex_parser::regex::part::Adt</a> = utils::Adt&lt; Empty, Literal, Alternatives, Sequence, Group, Optional, Plus, Star &gt;</td></tr>
+<tr class="separator:abe6d949911c6896844c9eebdbd797b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>

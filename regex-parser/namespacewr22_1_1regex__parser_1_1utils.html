@@ -101,6 +101,11 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Adt.html">Adt</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper class that simplifies creation of algebraic data types.  <a href="classwr22_1_1regex__parser_1_1utils_1_1Adt.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html">Box</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A copyable and equality-comparable wrapper around <code>std::unique_ptr</code>.  <a href="classwr22_1_1regex__parser_1_1utils_1_1Box.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__parser_1_1utils_1_1BoxIsEmpty.html">BoxIsEmpty</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView.html">UnicodeStringView</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper around <code>std::string_view</code> that enables UTF-8 codepoint iteration.  <a href="classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,6 +128,20 @@ Functions</h2></td></tr>
 <tr class="memitem:adb054b49bde07594e06865f1ed2a8901"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1utils.html#adb054b49bde07594e06865f1ed2a8901">operator!=</a> (const <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Adt.html">Adt</a>&lt; Variants... &gt; &amp;lhs, const <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Adt.html">Adt</a>&lt; Variants... &gt; &amp;rhs)</td></tr>
 <tr class="memdesc:adb054b49bde07594e06865f1ed2a8901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two compatible ADTs for non-equality.  <a href="namespacewr22_1_1regex__parser_1_1utils.html#adb054b49bde07594e06865f1ed2a8901">More...</a><br /></td></tr>
 <tr class="separator:adb054b49bde07594e06865f1ed2a8901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a0801694b57db01bb27fe467e0aac02"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8a0801694b57db01bb27fe467e0aac02"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1utils.html#a8a0801694b57db01bb27fe467e0aac02">Box</a> (T &amp;&amp;value) -&gt; <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html">Box</a>&lt; T &gt;</td></tr>
+<tr class="memdesc:a8a0801694b57db01bb27fe467e0aac02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type deduction guideline for <code><a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html" title="A copyable and equality-comparable wrapper around std::unique_ptr.">Box</a></code> (value initialization).  <a href="namespacewr22_1_1regex__parser_1_1utils.html#a8a0801694b57db01bb27fe467e0aac02">More...</a><br /></td></tr>
+<tr class="separator:a8a0801694b57db01bb27fe467e0aac02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa992ba6491b9edd24ddd669f1851104f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa992ba6491b9edd24ddd669f1851104f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1utils.html#aa992ba6491b9edd24ddd669f1851104f">Box</a> (std::unique_ptr&lt; T &gt; ptr) -&gt; <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html">Box</a>&lt; T &gt;</td></tr>
+<tr class="memdesc:aa992ba6491b9edd24ddd669f1851104f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type deduction guideline for <code><a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html" title="A copyable and equality-comparable wrapper around std::unique_ptr.">Box</a></code> (<code>std::unique_ptr</code> adoption).  <a href="namespacewr22_1_1regex__parser_1_1utils.html#aa992ba6491b9edd24ddd669f1851104f">More...</a><br /></td></tr>
+<tr class="separator:aa992ba6491b9edd24ddd669f1851104f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c1883281886b073c09ef6653285c196"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a8c1883281886b073c09ef6653285c196"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1utils.html#a8c1883281886b073c09ef6653285c196">operator==</a> (const <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html">Box</a>&lt; T &gt; &amp;lhs, const <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html">Box</a>&lt; U &gt; &amp;rhs)</td></tr>
+<tr class="separator:a8c1883281886b073c09ef6653285c196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61a1583c1d6d3c4046d3ed88e70d34c9"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a61a1583c1d6d3c4046d3ed88e70d34c9"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1utils.html#a61a1583c1d6d3c4046d3ed88e70d34c9">operator!=</a> (const <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html">Box</a>&lt; T &gt; &amp;lhs, const <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html">Box</a>&lt; U &gt; &amp;rhs)</td></tr>
+<tr class="separator:a61a1583c1d6d3c4046d3ed88e70d34c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="abc0177abfcf146a4d08e8a45d53ada27" name="abc0177abfcf146a4d08e8a45d53ada27"></a>
@@ -140,8 +159,52 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aa992ba6491b9edd24ddd669f1851104f" name="aa992ba6491b9edd24ddd669f1851104f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa992ba6491b9edd24ddd669f1851104f">&#9670;&nbsp;</a></span>Box() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html">wr22::regex_parser::utils::Box</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td> -&gt;  <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html">Box</a>&lt; T &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type deduction guideline for <code><a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html" title="A copyable and equality-comparable wrapper around std::unique_ptr.">Box</a></code> (<code>std::unique_ptr</code> adoption). </p>
+
+</div>
+</div>
+<a id="a8a0801694b57db01bb27fe467e0aac02" name="a8a0801694b57db01bb27fe467e0aac02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a0801694b57db01bb27fe467e0aac02">&#9670;&nbsp;</a></span>Box() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html">wr22::regex_parser::utils::Box</a> </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> -&gt;  <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html">Box</a>&lt; T &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type deduction guideline for <code><a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html" title="A copyable and equality-comparable wrapper around std::unique_ptr.">Box</a></code> (value initialization). </p>
+
+</div>
+</div>
 <a id="adb054b49bde07594e06865f1ed2a8901" name="adb054b49bde07594e06865f1ed2a8901"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb054b49bde07594e06865f1ed2a8901">&#9670;&nbsp;</a></span>operator!=()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adb054b49bde07594e06865f1ed2a8901">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,8 +235,38 @@ template&lt;typename... Variants&gt; </div>
 
 </div>
 </div>
+<a id="a61a1583c1d6d3c4046d3ed88e70d34c9" name="a61a1583c1d6d3c4046d3ed88e70d34c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61a1583c1d6d3c4046d3ed88e70d34c9">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wr22::regex_parser::utils::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html">Box</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html">Box</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa23906cd08aeea087f8d96dde2963bb3" name="aa23906cd08aeea087f8d96dde2963bb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa23906cd08aeea087f8d96dde2963bb3">&#9670;&nbsp;</a></span>operator==()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa23906cd08aeea087f8d96dde2963bb3">&#9670;&nbsp;</a></span>operator==() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,6 +294,36 @@ template&lt;typename... Variants&gt; </div>
 </div><div class="memdoc">
 
 <p>Compare two compatible ADTs for equality. </p>
+
+</div>
+</div>
+<a id="a8c1883281886b073c09ef6653285c196" name="a8c1883281886b073c09ef6653285c196"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c1883281886b073c09ef6653285c196">&#9670;&nbsp;</a></span>operator==() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wr22::regex_parser::utils::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html">Box</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1Box.html">Box</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
