@@ -18,6 +18,7 @@ var hierarchy =
     [ "std::runtime_error", null, [
       [ "wr22::regex_parser::parser::errors::ParseError", "structwr22_1_1regex__parser_1_1parser_1_1errors_1_1ParseError.html", [
         [ "wr22::regex_parser::parser::errors::ExpectedEnd", "classwr22_1_1regex__parser_1_1parser_1_1errors_1_1ExpectedEnd.html", null ],
+        [ "wr22::regex_parser::parser::errors::UnexpectedChar", "classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html", null ],
         [ "wr22::regex_parser::parser::errors::UnexpectedEnd", "classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedEnd.html", null ]
       ] ]
     ] ],
