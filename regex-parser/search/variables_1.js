@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['capture_0',['capture',['../structwr22_1_1regex__parser_1_1regex_1_1part_1_1Group.html#acf52a5c638ae43ef8660b9383633d8ed',1,'wr22::regex_parser::regex::part::Group']]],
-  ['character_1',['character',['../structwr22_1_1regex__parser_1_1regex_1_1part_1_1Literal.html#ae53694e89923ea039e39052879a3eff3',1,'wr22::regex_parser::regex::part::Literal']]]
+  ['begin_0',['begin',['../structwr22_1_1regex__parser_1_1span_1_1InvalidSpan.html#abda0086cf4ce453c17408a2c386be0f6',1,'wr22::regex_parser::span::InvalidSpan']]]
 ];

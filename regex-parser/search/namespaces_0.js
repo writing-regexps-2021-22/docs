@@ -8,6 +8,7 @@ var searchData=
   ['part_5',['part',['../namespacewr22_1_1regex__parser_1_1regex_1_1part.html',1,'wr22::regex_parser::regex']]],
   ['regex_6',['regex',['../namespacewr22_1_1regex__parser_1_1regex.html',1,'wr22::regex_parser']]],
   ['regex_5fparser_7',['regex_parser',['../namespacewr22_1_1regex__parser.html',1,'wr22']]],
-  ['utils_8',['utils',['../namespacewr22_1_1regex__parser_1_1utils.html',1,'wr22::regex_parser']]],
-  ['wr22_9',['wr22',['../namespacewr22.html',1,'']]]
+  ['span_8',['span',['../namespacewr22_1_1regex__parser_1_1span.html',1,'wr22::regex_parser']]],
+  ['utils_9',['utils',['../namespacewr22_1_1regex__parser_1_1utils.html',1,'wr22::regex_parser']]],
+  ['wr22_10',['wr22',['../namespacewr22.html',1,'']]]
 ];

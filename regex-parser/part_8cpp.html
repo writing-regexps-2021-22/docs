@@ -88,10 +88,13 @@ $(document).ready(function(){initNavTree('part_8cpp.html',''); initResizable(); 
   <div class="headertitle"><div class="title">part.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="part_8hpp_source.html">wr22/regex_parser/regex/part.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="span_8hpp_source.html">wr22/regex_parser/span/span.hpp</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="part_8hpp_source.html">wr22/regex_parser/regex/part.hpp</a>&gt;</code><br />
 <code>#include &lt;iterator&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;boost/locale/utf.hpp&gt;</code><br />
+<code>#include &lt;fmt/core.h&gt;</code><br />
+<code>#include &lt;fmt/ostream.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -104,9 +107,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2b2a883ed77d02e6a6b982e103692921"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex.html#a2b2a883ed77d02e6a6b982e103692921">wr22::regex_parser::regex::operator&lt;&lt;</a> (std::ostream &amp;out, const Part &amp;part)</td></tr>
-<tr class="memdesc:a2b2a883ed77d02e6a6b982e103692921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <code><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html" title="A part of a regular expression and its AST node type.">Part</a></code> to a textual representation and write it to an <code>std::ostream</code>.  <a href="namespacewr22_1_1regex__parser_1_1regex.html#a2b2a883ed77d02e6a6b982e103692921">More...</a><br /></td></tr>
-<tr class="separator:a2b2a883ed77d02e6a6b982e103692921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35360a511d9625e0579b6a05d829a2e5"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex.html#a35360a511d9625e0579b6a05d829a2e5">wr22::regex_parser::regex::operator&lt;&lt;</a> (std::ostream &amp;out, const SpannedPart &amp;part)</td></tr>
+<tr class="memdesc:a35360a511d9625e0579b6a05d829a2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <code><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html" title="A part of a regular expression and its AST node type.">Part</a></code> to a textual representation and write it to an <code>std::ostream</code>.  <a href="namespacewr22_1_1regex__parser_1_1regex.html#a35360a511d9625e0579b6a05d829a2e5">More...</a><br /></td></tr>
+<tr class="separator:a35360a511d9625e0579b6a05d829a2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -97,24 +97,24 @@ $(document).ready(function(){initNavTree('structwr22_1_1regex__parser_1_1regex_1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac6a1da644d77953d11801ca70ba7eda7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html#ac6a1da644d77953d11801ca70ba7eda7">Alternatives</a> (std::vector&lt; <a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html">Part</a> &gt; <a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html#a65917d980ff629227769b65d28ebf326">alternatives</a>)</td></tr>
-<tr class="separator:ac6a1da644d77953d11801ca70ba7eda7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac9877a00a1a71c80df33f6815746002"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html#aac9877a00a1a71c80df33f6815746002">Alternatives</a> (std::vector&lt; <a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html">SpannedPart</a> &gt; <a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html#acd48b958510edb5c0a3c3f6a2e93c2aa">alternatives</a>)</td></tr>
+<tr class="separator:aac9877a00a1a71c80df33f6815746002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6cd5dc2e120bbb20100b41ce5d773da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html#ab6cd5dc2e120bbb20100b41ce5d773da">operator==</a> (const <a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html">Alternatives</a> &amp;rhs) const =default</td></tr>
 <tr class="separator:ab6cd5dc2e120bbb20100b41ce5d773da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a65917d980ff629227769b65d28ebf326"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html">Part</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html#a65917d980ff629227769b65d28ebf326">alternatives</a></td></tr>
-<tr class="memdesc:a65917d980ff629227769b65d28ebf326"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of the alternatives.  <a href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html#a65917d980ff629227769b65d28ebf326">More...</a><br /></td></tr>
-<tr class="separator:a65917d980ff629227769b65d28ebf326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd48b958510edb5c0a3c3f6a2e93c2aa"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html">SpannedPart</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html#acd48b958510edb5c0a3c3f6a2e93c2aa">alternatives</a></td></tr>
+<tr class="memdesc:acd48b958510edb5c0a3c3f6a2e93c2aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of the alternatives.  <a href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html#acd48b958510edb5c0a3c3f6a2e93c2aa">More...</a><br /></td></tr>
+<tr class="separator:acd48b958510edb5c0a3c3f6a2e93c2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A regex part with the list of alternatives to be matched. </p>
 <p ><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html" title="A regex part with the list of alternatives to be matched.">Alternatives</a> in regular expressions are subexpressions by <code>|</code>. For the whole expression part's match to succeed, at least one of the subexpressions must match the input successfully.</p>
-<p >As an example, <code>a|(b)|cde</code> would be represented as an <code><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html" title="A regex part with the list of alternatives to be matched.">Alternatives</a></code> part with 3 alternatives. The alternatives themselves are represented recursively as <code><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html" title="A part of a regular expression and its AST node type.">Part</a></code>s. </p>
+<p >As an example, <code>a|(b)|cde</code> would be represented as an <code><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html" title="A regex part with the list of alternatives to be matched.">Alternatives</a></code> part with 3 alternatives. The alternatives themselves are represented recursively as <code><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html" title="A version of Part including the span information (position in the input) of the root AST node (child ...">SpannedPart</a></code>s. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac6a1da644d77953d11801ca70ba7eda7" name="ac6a1da644d77953d11801ca70ba7eda7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6a1da644d77953d11801ca70ba7eda7">&#9670;&nbsp;</a></span>Alternatives()</h2>
+<a id="aac9877a00a1a71c80df33f6815746002" name="aac9877a00a1a71c80df33f6815746002"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac9877a00a1a71c80df33f6815746002">&#9670;&nbsp;</a></span>Alternatives()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -125,7 +125,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">wr22::regex_parser::regex::part::Alternatives::Alternatives </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html">Part</a> &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html">SpannedPart</a> &gt;&#160;</td>
           <td class="paramname"><em>alternatives</em></td><td>)</td>
           <td></td>
         </tr>
@@ -167,14 +167,14 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a65917d980ff629227769b65d28ebf326" name="a65917d980ff629227769b65d28ebf326"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65917d980ff629227769b65d28ebf326">&#9670;&nbsp;</a></span>alternatives</h2>
+<a id="acd48b958510edb5c0a3c3f6a2e93c2aa" name="acd48b958510edb5c0a3c3f6a2e93c2aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd48b958510edb5c0a3c3f6a2e93c2aa">&#9670;&nbsp;</a></span>alternatives</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html">Part</a>&gt; wr22::regex_parser::regex::part::Alternatives::alternatives</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html">SpannedPart</a>&gt; wr22::regex_parser::regex::part::Alternatives::alternatives</td>
         </tr>
       </table>
 </div><div class="memdoc">

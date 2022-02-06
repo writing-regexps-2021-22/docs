@@ -28,7 +28,12 @@ var annotated_dup =
             [ "Star", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Star.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Star" ]
           ] ],
           [ "Capture", "classwr22_1_1regex__parser_1_1regex_1_1Capture.html", null ],
-          [ "Part", "classwr22_1_1regex__parser_1_1regex_1_1Part.html", null ]
+          [ "Part", "classwr22_1_1regex__parser_1_1regex_1_1Part.html", null ],
+          [ "SpannedPart", "classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html", "classwr22_1_1regex__parser_1_1regex_1_1SpannedPart" ]
+        ] ],
+        [ "span", "namespacewr22_1_1regex__parser_1_1span.html", [
+          [ "InvalidSpan", "structwr22_1_1regex__parser_1_1span_1_1InvalidSpan.html", "structwr22_1_1regex__parser_1_1span_1_1InvalidSpan" ],
+          [ "Span", "classwr22_1_1regex__parser_1_1span_1_1Span.html", "classwr22_1_1regex__parser_1_1span_1_1Span" ]
         ] ],
         [ "utils", "namespacewr22_1_1regex__parser_1_1utils.html", [
           [ "detail", "namespacewr22_1_1regex__parser_1_1utils_1_1detail.html", [

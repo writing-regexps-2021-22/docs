@@ -107,19 +107,19 @@ Functions</h2></td></tr>
 <tr class="memitem:a69dac5ada19585e767eaf71bdf3d29b9"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1parser.html#a69dac5ada19585e767eaf71bdf3d29b9">Parser</a> (Iter begin, Sentinel end) -&gt; <a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1Parser.html">Parser</a>&lt; Iter, Sentinel &gt;</td></tr>
 <tr class="memdesc:a69dac5ada19585e767eaf71bdf3d29b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type deduction guideline for <code><a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1Parser.html" title="A regex parser.">Parser</a></code>.  <a href="namespacewr22_1_1regex__parser_1_1parser.html#a69dac5ada19585e767eaf71bdf3d29b9">More...</a><br /></td></tr>
 <tr class="separator:a69dac5ada19585e767eaf71bdf3d29b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dc595a19e81abed1c444fda1bbe6aee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html">regex::Part</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1parser.html#a0dc595a19e81abed1c444fda1bbe6aee">parse_regex</a> (const <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView.html">utils::UnicodeStringView</a> &amp;regex)</td></tr>
-<tr class="memdesc:a0dc595a19e81abed1c444fda1bbe6aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a regular expression into its AST.  <a href="namespacewr22_1_1regex__parser_1_1parser.html#a0dc595a19e81abed1c444fda1bbe6aee">More...</a><br /></td></tr>
-<tr class="separator:a0dc595a19e81abed1c444fda1bbe6aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace217504acdc6ed4ae36367869ee770e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html">regex::SpannedPart</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1parser.html#ace217504acdc6ed4ae36367869ee770e">parse_regex</a> (const <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView.html">utils::UnicodeStringView</a> &amp;regex)</td></tr>
+<tr class="memdesc:ace217504acdc6ed4ae36367869ee770e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a regular expression into its AST.  <a href="namespacewr22_1_1regex__parser_1_1parser.html#ace217504acdc6ed4ae36367869ee770e">More...</a><br /></td></tr>
+<tr class="separator:ace217504acdc6ed4ae36367869ee770e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a0dc595a19e81abed1c444fda1bbe6aee" name="a0dc595a19e81abed1c444fda1bbe6aee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0dc595a19e81abed1c444fda1bbe6aee">&#9670;&nbsp;</a></span>parse_regex()</h2>
+<a id="ace217504acdc6ed4ae36367869ee770e" name="ace217504acdc6ed4ae36367869ee770e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace217504acdc6ed4ae36367869ee770e">&#9670;&nbsp;</a></span>parse_regex()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html">regex::Part</a> wr22::regex_parser::parser::parse_regex </td>
+          <td class="memname"><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html">regex::SpannedPart</a> wr22::regex_parser::parser::parse_regex </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView.html">utils::UnicodeStringView</a> &amp;&#160;</td>
           <td class="paramname"><em>regex</em></td><td>)</td>
@@ -129,7 +129,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Parse a regular expression into its AST. </p>
-<p >The regular expression is a string view in the UTF-8 encoding (the <code><a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView.html" title="A wrapper around std::string_view that enables UTF-8 codepoint iteration.">utils::UnicodeStringView</a></code> wrapper is used for convenience and type safety; see its docs for additional information). It is parsed and its object representation (see the docs for <code><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html" title="A part of a regular expression and its AST node type.">regex::Part</a></code>) is built. The returned representation is an owned object and its lifetime does not depend on the lifetime of the <code>regex</code> argument.</p>
+<p >The regular expression is a string view in the UTF-8 encoding (the <code><a class="el" href="classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView.html" title="A wrapper around std::string_view that enables UTF-8 codepoint iteration.">utils::UnicodeStringView</a></code> wrapper is used for convenience and type safety; see its docs for additional information). It is parsed and its object representation (see the docs for <code><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html" title="A version of Part including the span information (position in the input) of the root AST node (child ...">regex::SpannedPart</a></code>) is built. The returned representation is an owned object and its lifetime does not depend on the lifetime of the <code>regex</code> argument.</p>
 <p >If the parsing fails, an exception is thrown. <code><a class="el" href="structwr22_1_1regex__parser_1_1parser_1_1errors_1_1ParseError.html" title="The base class for parse errors.">errors::ParseError</a></code> is the base class for all exceptions thrown from this function, but more specific exceptions may be caught and handled separately. See the docs for the <code><a class="el" href="errors_8hpp.html">errors.hpp</a></code> file for details.</p>
 <dl class="section return"><dt>Returns</dt><dd>the parsed regex AST if the parsing succeeds. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
