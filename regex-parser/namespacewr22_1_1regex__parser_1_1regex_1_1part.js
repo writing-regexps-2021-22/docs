@@ -8,5 +8,6 @@ var namespacewr22_1_1regex__parser_1_1regex_1_1part =
     [ "Plus", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Plus.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Plus" ],
     [ "Sequence", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Sequence.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Sequence" ],
     [ "Star", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Star.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Star" ],
-    [ "Adt", "namespacewr22_1_1regex__parser_1_1regex_1_1part.html#abe6d949911c6896844c9eebdbd797b6d", null ]
+    [ "Wildcard", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Wildcard.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Wildcard" ],
+    [ "Adt", "namespacewr22_1_1regex__parser_1_1regex_1_1part.html#a7b7fd7048e238af763fc1fc8e544f49e", null ]
 ];

@@ -25,7 +25,8 @@ var annotated_dup =
             [ "Optional", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Optional.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Optional" ],
             [ "Plus", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Plus.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Plus" ],
             [ "Sequence", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Sequence.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Sequence" ],
-            [ "Star", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Star.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Star" ]
+            [ "Star", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Star.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Star" ],
+            [ "Wildcard", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Wildcard.html", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Wildcard" ]
           ] ],
           [ "Capture", "classwr22_1_1regex__parser_1_1regex_1_1Capture.html", null ],
           [ "Part", "classwr22_1_1regex__parser_1_1regex_1_1Part.html", null ],

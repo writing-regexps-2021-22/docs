@@ -34,6 +34,7 @@ var hierarchy =
     [ "wr22::regex_parser::regex::part::Star", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Star.html", null ],
     [ "wr22::regex_parser::utils::UnicodeStringView", "classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView.html", null ],
     [ "wr22::regex_parser::utils::UnicodeStringViewIterator", "classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringViewIterator.html", null ],
+    [ "wr22::regex_parser::regex::part::Wildcard", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Wildcard.html", null ],
     [ "wr22::regex_parser::utils::detail::adt::Fs", null, [
       [ "wr22::regex_parser::utils::detail::adt::MultiCallable< Fs >", "structwr22_1_1regex__parser_1_1utils_1_1detail_1_1adt_1_1MultiCallable.html", null ]
     ] ]

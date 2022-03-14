@@ -9,5 +9,6 @@ var classwr22_1_1regex__parser_1_1parser_1_1Parser =
     [ "parse_group_name", "classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a21abf5909376cb92a27149e6b1077a6b", null ],
     [ "parse_regex", "classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a7478e843eb8684b673bc4fd709dc5323", null ],
     [ "parse_sequence", "classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a6c70da3acd6ff5fb57907fb097076728", null ],
-    [ "parse_sequence_or_empty", "classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a96e4187e522366bed01856d9b0010de2", null ]
+    [ "parse_sequence_or_empty", "classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a96e4187e522366bed01856d9b0010de2", null ],
+    [ "parse_wildcard", "classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a3ed1b5786e4876d4881804bbcd662e21", null ]
 ];
