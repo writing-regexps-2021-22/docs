@@ -44,9 +44,7 @@ var annotated_dup =
           ] ],
           [ "Adt", "classwr22_1_1regex__parser_1_1utils_1_1Adt.html", "classwr22_1_1regex__parser_1_1utils_1_1Adt" ],
           [ "Box", "classwr22_1_1regex__parser_1_1utils_1_1Box.html", "classwr22_1_1regex__parser_1_1utils_1_1Box" ],
-          [ "BoxIsEmpty", "structwr22_1_1regex__parser_1_1utils_1_1BoxIsEmpty.html", "structwr22_1_1regex__parser_1_1utils_1_1BoxIsEmpty" ],
-          [ "UnicodeStringView", "classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView.html", "classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView" ],
-          [ "UnicodeStringViewIterator", "classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringViewIterator.html", "classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringViewIterator" ]
+          [ "BoxIsEmpty", "structwr22_1_1regex__parser_1_1utils_1_1BoxIsEmpty.html", "structwr22_1_1regex__parser_1_1utils_1_1BoxIsEmpty" ]
         ] ]
       ] ]
     ] ]
