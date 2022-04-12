@@ -30,6 +30,9 @@
         font-size: 0.9em;
         padding: 1em;
       }
+      h1 {
+        font-size: 1.8em;
+      }
     }
     @media print {
       body {
@@ -134,6 +137,12 @@
     #TOC li {
       list-style: none;
     }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
     #TOC a:not(:hover) {
       text-decoration: none;
     }
@@ -217,53 +226,128 @@
 <h1 class="title">regex-parser</h1>
 </header>
 <h1 id="regex-parser">regex-parser</h1>
-<p>This is the library for parsing regular expressions. It takes a regular expression as a UTF-32 string and parses it into its syntax tree, throwing exceptions if the regular expression cannot be parsed (has invalid syntax). The syntax tree consists of nodes, each representing a particular element in the regex. Each node contains full information about the component of the regex it is representing (e.g. the characters in a character class <code>[0-9a-f]</code> or the type of the group capture <code>(abc)</code> vs <code>(?:abc)</code> vs <code>(?&lt;name&gt;abc)</code>) and the location of this element in the regex string.</p>
+<p>This is the library for parsing regular expressions. It takes a
+regular expression as a UTF-32 string and parses it into its syntax
+tree, throwing exceptions if the regular expression cannot be parsed
+(has invalid syntax). The syntax tree consists of nodes, each
+representing a particular element in the regex. Each node contains full
+information about the component of the regex it is representing
+(e.g. the characters in a character class <code>[0-9a-f]</code> or the
+type of the group capture <code>(abc)</code> vs <code>(?:abc)</code> vs
+<code>(?&lt;name&gt;abc)</code>) and the location of this element in the
+regex string.</p>
 <h2 id="usage-instructions">Usage instructions</h2>
-<p>The function that does parsing is <a href="https://writing-regexps-2021-22.github.io/docs/regex-parser/namespacewr22_1_1regex__parser_1_1parser.html#a0dc595a19e81abed1c444fda1bbe6aee"><code>wr22::regex_parser::parser::parse_regex</code></a>. A brief example of its usage is as follows:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Assume `parse_regex` is already in the scope.</span></span>
+<p>The function that does parsing is <a
+href="https://writing-regexps-2021-22.github.io/docs/regex-parser/namespacewr22_1_1regex__parser_1_1parser.html#a0dc595a19e81abed1c444fda1bbe6aee"><code>wr22::regex_parser::parser::parse_regex</code></a>.
+A brief example of its usage is as follows:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Assume `parse_regex` is already in the scope.</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">auto</span> regex <span class="op">=</span> <span class="st">U&quot;a(b|c)+&quot;</span><span class="op">;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">auto</span> syntax_tree <span class="op">=</span> parse_regex<span class="op">(</span>regex<span class="op">);</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">std::</span>cout<span class="op"> &lt;&lt;</span> syntax_tree <span class="op">&lt;&lt;</span> <span class="bu">std::</span>endl<span class="op">;</span></span></code></pre></div>
-<p><code>parse_regex</code> accepts a <a href="https://en.cppreference.com/w/cpp/string/basic_string_view"><code>std::u32string_view</code></a> as an argument and returns a <a href="https://writing-regexps-2021-22.github.io/docs/regex-parser/classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html"><code>wr22::regex_parser::regex::SpannedPart</code></a>. The characters comprising a regular expression are represented as <code>char32_t</code>, so that any Unicode code point can fit into this representation.</p>
-<p>The <code>SpannedPart</code> returned from <code>parse_regex()</code> represents the syntax tree of the parsed regular expression. <code>SpannedPart</code> consists of two items:</p>
+<p><code>parse_regex</code> accepts a <a
+href="https://en.cppreference.com/w/cpp/string/basic_string_view"><code>std::u32string_view</code></a>
+as an argument and returns a <a
+href="https://writing-regexps-2021-22.github.io/docs/regex-parser/classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html"><code>wr22::regex_parser::regex::SpannedPart</code></a>.
+The characters comprising a regular expression are represented as
+<code>char32_t</code>, so that any Unicode code point can fit into this
+representation.</p>
+<p>The <code>SpannedPart</code> returned from <code>parse_regex()</code>
+represents the syntax tree of the parsed regular expression.
+<code>SpannedPart</code> consists of two items:</p>
 <ul>
-<li>A <a href="https://writing-regexps-2021-22.github.io/docs/regex-parser/classwr22_1_1regex__parser_1_1span_1_1Span.html"><code>Span</code></a>, which indicates what range of characters in the regex is covered by this node. See the API reference for details.</li>
-<li>A <a href="https://writing-regexps-2021-22.github.io/docs/regex-parser/classwr22_1_1regex__parser_1_1regex_1_1Part.html"><code>Part</code></a>, which represents one of the supported types of nodes.</li>
+<li>A <a
+href="https://writing-regexps-2021-22.github.io/docs/regex-parser/classwr22_1_1regex__parser_1_1span_1_1Span.html"><code>Span</code></a>,
+which indicates what range of characters in the regex is covered by this
+node. See the API reference for details.</li>
+<li>A <a
+href="https://writing-regexps-2021-22.github.io/docs/regex-parser/classwr22_1_1regex__parser_1_1regex_1_1Part.html"><code>Part</code></a>,
+which represents one of the supported types of nodes.</li>
 </ul>
-<p><code>Part</code> is an algebraic, or variant data type (see <a href="https://writing-regexps-2021-22.github.io/docs/regex-parser/classwr22_1_1regex__parser_1_1utils_1_1Adt.html"><code>Adt</code></a> or <a href="https://en.cppreference.com/w/cpp/utility/variant"><code>std::variant</code></a> for an explanation). A <code>Part</code> represents a node in syntax tree. There are different types of syntax tree nodes, which correspond to the <a href="https://writing-regexps-2021-22.github.io/docs/regex-parser/namespacewr22_1_1regex__parser_1_1regex_1_1part.html">variants</a> of <code>Part</code>:</p>
+<p><code>Part</code> is an algebraic, or variant data type (see <a
+href="https://writing-regexps-2021-22.github.io/docs/regex-parser/classwr22_1_1regex__parser_1_1utils_1_1Adt.html"><code>Adt</code></a>
+or <a
+href="https://en.cppreference.com/w/cpp/utility/variant"><code>std::variant</code></a>
+for an explanation). A <code>Part</code> represents a node in syntax
+tree. There are different types of syntax tree nodes, which correspond
+to the <a
+href="https://writing-regexps-2021-22.github.io/docs/regex-parser/namespacewr22_1_1regex__parser_1_1regex_1_1part.html">variants</a>
+of <code>Part</code>:</p>
 <ul>
-<li>Empty node (<code>part::Empty</code>). Represents an empty regular expression or the content of an empty group, e.g. the inner part of <code>()</code>.</li>
-<li>Character literal (<code>part::Literal</code>). Represents a single Unicode character (code point) that is matched literally, e.g. <code>a</code>, or <code>Ǽ</code>.</li>
-<li>Sequence of nodes (<code>part::Sequence</code>). Represents a sequence of smaller elements of a regex that will be matched one after another. For example, <code>abc</code> is represented as a sequence of three <code>Literal</code>s.</li>
-<li>Alternatives list (<code>part::Alternatives</code>). Represents a list of smaller elements of a regex at least some of which should match. The alternatives are separated by <code>|</code> in a regex. E.g. <code>a|b|cd</code> contains three alternatives: a <code>Literal</code> <code>a</code>, a <code>Literal</code> <code>b</code> and a <code>Sequence</code> of <code>Literal</code>s <code>c</code> and <code>d</code>.</li>
-<li>Group (<code>part::Group</code>). Represents a subexpression in parentheses, e.g. <code>(abc)</code>. A group might be capturing or non-capturing, and, if capturing, might capture the matched substring by name or by index. For additional and more detailed information, see the API reference.</li>
-<li>Quantifiers (<code>part::Optional</code>, <code>part::Star</code>, <code>part::Plus</code>). These nodes represent a quantifier over a subexpression (e.g. <code>(foo)?</code>, <code>.*</code> or <code>[a-z]+</code>).</li>
-<li>Wildcard (<code>part::Wildcard</code>). Represents a “dot” whildcard matching any single character (<code>.</code>).</li>
+<li>Empty node (<code>part::Empty</code>). Represents an empty regular
+expression or the content of an empty group, e.g. the inner part of
+<code>()</code>.</li>
+<li>Character literal (<code>part::Literal</code>). Represents a single
+Unicode character (code point) that is matched literally,
+e.g. <code>a</code>, or <code>Ǽ</code>.</li>
+<li>Sequence of nodes (<code>part::Sequence</code>). Represents a
+sequence of smaller elements of a regex that will be matched one after
+another. For example, <code>abc</code> is represented as a sequence of
+three <code>Literal</code>s.</li>
+<li>Alternatives list (<code>part::Alternatives</code>). Represents a
+list of smaller elements of a regex at least some of which should match.
+The alternatives are separated by <code>|</code> in a regex. E.g.
+<code>a|b|cd</code> contains three alternatives: a <code>Literal</code>
+<code>a</code>, a <code>Literal</code> <code>b</code> and a
+<code>Sequence</code> of <code>Literal</code>s <code>c</code> and
+<code>d</code>.</li>
+<li>Group (<code>part::Group</code>). Represents a subexpression in
+parentheses, e.g. <code>(abc)</code>. A group might be capturing or
+non-capturing, and, if capturing, might capture the matched substring by
+name or by index. For additional and more detailed information, see the
+API reference.</li>
+<li>Quantifiers (<code>part::Optional</code>, <code>part::Star</code>,
+<code>part::Plus</code>). These nodes represent a quantifier over a
+subexpression (e.g. <code>(foo)?</code>, <code>.*</code> or
+<code>[a-z]+</code>).</li>
+<li>Wildcard (<code>part::Wildcard</code>). Represents a “dot” whildcard
+matching any single character (<code>.</code>).</li>
 </ul>
 <p>More variants will be eventually added.</p>
-<p>Each of the listed types is a type a syntax tree node might have. Either of these types may be contained in a <code>Part</code>, since these types are <code>Part</code>’s variants. To check what type of a syntax tree node is contained in a given <code>Part</code> and to access the stored value of this type, the method <a href="https://writing-regexps-2021-22.github.io/docs/regex-parser/classwr22_1_1regex__parser_1_1utils_1_1Adt.html#a07d5c8e3b851046fa584fe4d8ec311ea"><code>Part::visit</code></a> exists (see the API reference for a usage example).</p>
-<p>For a more detailed reference on the functions and data types available in this library, we ask the reader to take a look at the <a href="https://writing-regexps-2021-22.github.io/docs/regex-parser/index.html">API reference</a>.</p>
+<p>Each of the listed types is a type a syntax tree node might have.
+Either of these types may be contained in a <code>Part</code>, since
+these types are <code>Part</code>’s variants. To check what type of a
+syntax tree node is contained in a given <code>Part</code> and to access
+the stored value of this type, the method <a
+href="https://writing-regexps-2021-22.github.io/docs/regex-parser/classwr22_1_1regex__parser_1_1utils_1_1Adt.html#a07d5c8e3b851046fa584fe4d8ec311ea"><code>Part::visit</code></a>
+exists (see the API reference for a usage example).</p>
+<p>For a more detailed reference on the functions and data types
+available in this library, we ask the reader to take a look at the <a
+href="https://writing-regexps-2021-22.github.io/docs/regex-parser/index.html">API
+reference</a>.</p>
 <h2 id="library-status">Library status</h2>
-<p>Currently, the library is not ready to be seriously used as a building block. Some prototyping can be done now, but the library’s interface may currently change without a warning, including breaking changes. The library code resides on the <code>feature/regex-parser-cpp</code> branch and will be merged into <code>main</code> when it becomes ready to be used (the library’s interface might still change from time to time).</p>
-<p>Utilities such as <code>Adt</code> might split off into a separate utility library if it becomes necessary to use them from other code as well. This might change their namespaces and the header files that need to be included.</p>
+<p>Currently, the library is not ready to be seriously used as a
+building block. Some prototyping can be done now, but the library’s
+interface may currently change without a warning, including breaking
+changes. The library code resides on the
+<code>feature/regex-parser-cpp</code> branch and will be merged into
+<code>main</code> when it becomes ready to be used (the library’s
+interface might still change from time to time).</p>
+<p>Utilities such as <code>Adt</code> might split off into a separate
+utility library if it becomes necessary to use them from other code as
+well. This might change their namespaces and the header files that need
+to be included.</p>
 <p>The level of regex support is as follows.</p>
 <p><strong>Supported features</strong>:</p>
 <ul>
 <li>Literal characters</li>
 <li>Groups (capture by index or by name (3 flavors) or none at all)</li>
 <li>Alternative lists (<code>a|bb|ccc</code>)</li>
-<li>Quantifiers <code>?</code>, <code>+</code> and <code>*</code> (greedy only)</li>
+<li>Quantifiers <code>?</code>, <code>+</code> and <code>*</code>
+(greedy only)</li>
 <li>Wildcards (<code>.</code>)</li>
 </ul>
 <p><strong>Unsupported features</strong>:</p>
 <ul>
 <li>Character classes (<code>[a-z]</code>)</li>
 <li>Start of line / end of line (<code>^</code>, <code>$</code>)</li>
-<li>Repetitions (e.g. <code>(abc){3}</code> or <code>x{5,10}</code>)</li>
+<li>Repetitions (e.g. <code>(abc){3}</code> or
+<code>x{5,10}</code>)</li>
 <li>Escape sequences (e.g. <code>\n</code> or <code>\d</code>)</li>
 <li>Special character escaping</li>
 <li>Extended character classes (<code>[[:digit:]]</code>)</li>
-<li>Lazy or possessive quantifiers (e.g. <code>*?</code> or <code>*+</code>).</li>
+<li>Lazy or possessive quantifiers (e.g. <code>*?</code> or
+<code>*+</code>).</li>
 <li>Lookaround</li>
 <li>Backreferences</li>
 <li>Extensions for recursion</li>
@@ -271,28 +355,51 @@
 </ul>
 <p><strong>Compatibility notes</strong>:</p>
 <ul>
-<li>Group names are currently represented as UTF-8 encoded <code>std::string</code>s. It is unclear if we should change it.</li>
-<li>Group names are not checked for being valid (e.g. <code>:0::-</code> is accepted as a group name). This should probably stay as it is, and an additional verification might be done in a post-processing step using language-specific settings.</li>
+<li>Group names are currently represented as UTF-8 encoded
+<code>std::string</code>s. It is unclear if we should change it.</li>
+<li>Group names are not checked for being valid (e.g. <code>:0::-</code>
+is accepted as a group name). This should probably stay as it is, and an
+additional verification might be done in a post-processing step using
+language-specific settings.</li>
 </ul>
 <h2 id="building">Building</h2>
-<p>A C++20-capable compiler and <a href="https://cmake.org">CMake</a> 3.12 or newer are required. Also, the following dependencies need to be be available:</p>
+<p>A C++20-capable compiler and <a href="https://cmake.org">CMake</a>
+3.12 or newer are required. Also, the following dependencies need to be
+be available:</p>
 <ul>
-<li><a href="https://www.boost.org/">Boost</a> (<code>Locale</code> module)</li>
+<li><a href="https://www.boost.org/">Boost</a> (<code>Locale</code>
+module)</li>
 <li><a href="https://fmt.dev">fmt</a></li>
-<li><a href="https://github.com/catchorg/Catch2">Catch2</a> (optional; required only if unit tests are built)</li>
+<li><a href="https://github.com/catchorg/Catch2">Catch2</a> (optional;
+required only if unit tests are built)</li>
 </ul>
-<p>It is expected that this library is built in a Unix-like environment. The ability to build under Windows without using MSYS2, Cygwin or WSL2 is not guaranteed.</p>
-<p>Building using the <a href="https://ninja-build.org">Ninja</a> backend is recommended, although is should be also possible to use other backends (e.g. Unix Makefiles). Example commands to build this library are as follows:</p>
+<p>It is expected that this library is built in a Unix-like environment.
+The ability to build under Windows without using MSYS2, Cygwin or WSL2
+is not guaranteed.</p>
+<p>Building using the <a href="https://ninja-build.org">Ninja</a>
+backend is recommended, although is should be also possible to use other
+backends (e.g. Unix Makefiles). Example commands to build this library
+are as follows:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> build</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> build</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cmake</span> .. <span class="at">-G</span> Ninja   <span class="co"># See notes below</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">ninja</span></span></code></pre></div>
-<p>To build the library once again, only the <code>ninja</code> command is sufficient (provided that you are in the build directory at the moment).</p>
+<p>To build the library once again, only the <code>ninja</code> command
+is sufficient (provided that you are in the build directory at the
+moment).</p>
 <p>Additional optional CMake flags may be useful in some cases:</p>
 <ul>
-<li><code>-DCMAKE_BUILD_TYPE=[Debug/Release]</code>: Control the level of optimization and debug information emitted.</li>
-<li><code>-DCMAKE_EXPORT_COMPILE_COMMANDS=1</code>: Generate a compilation database (<code>compile_commands.json</code>) that might be used by external tools (e.g. <a href="https://github.com/ycm-core/YouCompleteMe">YouCompleteMe</a> or other code completers).</li>
-<li><code>-DREGEX_PARSER_BUILD_TESTS=1</code>: Enable building an executable with unit tests. Run it to check that the tests catch no bugs in the library. Requires <code>Catch2</code> to be available in the system.</li>
+<li><code>-DCMAKE_BUILD_TYPE=[Debug/Release]</code>: Control the level
+of optimization and debug information emitted.</li>
+<li><code>-DCMAKE_EXPORT_COMPILE_COMMANDS=1</code>: Generate a
+compilation database (<code>compile_commands.json</code>) that might be
+used by external tools (e.g. <a
+href="https://github.com/ycm-core/YouCompleteMe">YouCompleteMe</a> or
+other code completers).</li>
+<li><code>-DREGEX_PARSER_BUILD_TESTS=1</code>: Enable building an
+executable with unit tests. Run it to check that the tests catch no bugs
+in the library. Requires <code>Catch2</code> to be available in the
+system.</li>
 </ul>
 </body>
 </html>

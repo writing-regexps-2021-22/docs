@@ -12,5 +12,7 @@ var namespacewr22_1_1regex__parser_1_1regex =
     ] ],
     [ "operator<<", "namespacewr22_1_1regex__parser_1_1regex.html#adce80b3da8d24b833c403fb12cb7aa52", null ],
     [ "operator<<", "namespacewr22_1_1regex__parser_1_1regex.html#a35360a511d9625e0579b6a05d829a2e5", null ],
-    [ "operator<<", "namespacewr22_1_1regex__parser_1_1regex.html#ab62a8c9673af1fc497efa92970125fd4", null ]
+    [ "operator<<", "namespacewr22_1_1regex__parser_1_1regex.html#ab62a8c9673af1fc497efa92970125fd4", null ],
+    [ "to_json", "namespacewr22_1_1regex__parser_1_1regex.html#a4b5ea29565845990ebf6ac8b799a3725", null ],
+    [ "to_json", "namespacewr22_1_1regex__parser_1_1regex.html#a1ed788d6e19d4eb08a393154bd053f53", null ]
 ];
