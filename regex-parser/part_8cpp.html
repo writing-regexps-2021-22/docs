@@ -89,6 +89,7 @@ $(document).ready(function(){initNavTree('part_8cpp.html',''); initResizable(); 
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="span_8hpp_source.html">wr22/regex_parser/span/span.hpp</a>&quot;</code><br />
+<code>#include &lt;boost/locale/encoding_utf.hpp&gt;</code><br />
 <code>#include &lt;<a class="el" href="part_8hpp_source.html">wr22/regex_parser/regex/part.hpp</a>&gt;</code><br />
 <code>#include &lt;iterator&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
@@ -104,12 +105,37 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacewr22_1_1regex__parser_1_1regex"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex.html">wr22::regex_parser::regex</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacewr22_1_1regex__parser_1_1regex_1_1part"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html">wr22::regex_parser::regex::part</a></td></tr>
+<tr class="memdesc:namespacewr22_1_1regex__parser_1_1regex_1_1part"><td class="mdescLeft">&#160;</td><td class="mdescRight">The namespace with the variants of <code><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html" title="A part of a regular expression and its AST node type.">Part</a></code>. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a35360a511d9625e0579b6a05d829a2e5"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex.html#a35360a511d9625e0579b6a05d829a2e5">wr22::regex_parser::regex::operator&lt;&lt;</a> (std::ostream &amp;out, const SpannedPart &amp;part)</td></tr>
-<tr class="memdesc:a35360a511d9625e0579b6a05d829a2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <code><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html" title="A part of a regular expression and its AST node type.">Part</a></code> to a textual representation and write it to an <code>std::ostream</code>.  <a href="namespacewr22_1_1regex__parser_1_1regex.html#a35360a511d9625e0579b6a05d829a2e5">More...</a><br /></td></tr>
+<tr class="memdesc:a35360a511d9625e0579b6a05d829a2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <code><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html" title="A version of Part including the span information (position in the input) of the root AST node (child ...">SpannedPart</a></code> to a textual representation and write it to an <code>std::ostream</code>.  <a href="namespacewr22_1_1regex__parser_1_1regex.html#a35360a511d9625e0579b6a05d829a2e5">More...</a><br /></td></tr>
 <tr class="separator:a35360a511d9625e0579b6a05d829a2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2058d92a8d5640910be8ced3c8adeb6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html#a2058d92a8d5640910be8ced3c8adeb6f">wr22::regex_parser::regex::part::to_json</a> (nlohmann::json &amp;j, const part::Empty &amp;part)</td></tr>
+<tr class="separator:a2058d92a8d5640910be8ced3c8adeb6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8973468cadbd0054ac52691a5be94b9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html#a8973468cadbd0054ac52691a5be94b9a">wr22::regex_parser::regex::part::to_json</a> (nlohmann::json &amp;j, const part::Literal &amp;part)</td></tr>
+<tr class="separator:a8973468cadbd0054ac52691a5be94b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16bde763fd33214d173e3a4d74591964"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html#a16bde763fd33214d173e3a4d74591964">wr22::regex_parser::regex::part::to_json</a> (nlohmann::json &amp;j, const part::Alternatives &amp;part)</td></tr>
+<tr class="separator:a16bde763fd33214d173e3a4d74591964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c7c141a1d4e67645850de69cc58daf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html#a3c7c141a1d4e67645850de69cc58daf9">wr22::regex_parser::regex::part::to_json</a> (nlohmann::json &amp;j, const part::Sequence &amp;part)</td></tr>
+<tr class="separator:a3c7c141a1d4e67645850de69cc58daf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae60d1c2e3b9998d33a1154c724fe5c86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html#ae60d1c2e3b9998d33a1154c724fe5c86">wr22::regex_parser::regex::part::to_json</a> (nlohmann::json &amp;j, const part::Group &amp;part)</td></tr>
+<tr class="separator:ae60d1c2e3b9998d33a1154c724fe5c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a532d5f9d22959c7843ef54f7d2e143a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html#a532d5f9d22959c7843ef54f7d2e143a7">wr22::regex_parser::regex::part::to_json</a> (nlohmann::json &amp;j, const part::Optional &amp;part)</td></tr>
+<tr class="separator:a532d5f9d22959c7843ef54f7d2e143a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f46efebe73cd1ddf49ac44e0451a01d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html#a2f46efebe73cd1ddf49ac44e0451a01d">wr22::regex_parser::regex::part::to_json</a> (nlohmann::json &amp;j, const part::Plus &amp;part)</td></tr>
+<tr class="separator:a2f46efebe73cd1ddf49ac44e0451a01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad686857e77cab9237d855baad3f46422"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html#ad686857e77cab9237d855baad3f46422">wr22::regex_parser::regex::part::to_json</a> (nlohmann::json &amp;j, const part::Star &amp;part)</td></tr>
+<tr class="separator:ad686857e77cab9237d855baad3f46422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd89a14aa7218cf6c409c8419ec81bfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html#afd89a14aa7218cf6c409c8419ec81bfc">wr22::regex_parser::regex::part::to_json</a> (nlohmann::json &amp;j, const part::Wildcard &amp;part)</td></tr>
+<tr class="separator:afd89a14aa7218cf6c409c8419ec81bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b5ea29565845990ebf6ac8b799a3725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex.html#a4b5ea29565845990ebf6ac8b799a3725">wr22::regex_parser::regex::to_json</a> (nlohmann::json &amp;j, const Part &amp;part)</td></tr>
+<tr class="separator:a4b5ea29565845990ebf6ac8b799a3725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ed788d6e19d4eb08a393154bd053f53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex.html#a1ed788d6e19d4eb08a393154bd053f53">wr22::regex_parser::regex::to_json</a> (nlohmann::json &amp;j, const SpannedPart &amp;part)</td></tr>
+<tr class="separator:a1ed788d6e19d4eb08a393154bd053f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

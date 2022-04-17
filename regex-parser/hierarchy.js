@@ -9,8 +9,7 @@ var hierarchy =
     [ "wr22::regex_parser::utils::Box< wr22::regex_parser::regex::SpannedPart >", "classwr22_1_1regex__parser_1_1utils_1_1Box.html", null ],
     [ "wr22::regex_parser::regex::part::Empty", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Empty.html", null ],
     [ "std::exception", null, [
-      [ "wr22::regex_parser::utils::BoxIsEmpty", "structwr22_1_1regex__parser_1_1utils_1_1BoxIsEmpty.html", null ],
-      [ "wr22::regex_parser::utils::UnicodeStringView::InvalidUtf8", "structwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView_1_1InvalidUtf8.html", null ]
+      [ "wr22::regex_parser::utils::BoxIsEmpty", "structwr22_1_1regex__parser_1_1utils_1_1BoxIsEmpty.html", null ]
     ] ],
     [ "wr22::regex_parser::regex::part::Group", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Group.html", null ],
     [ "wr22::regex_parser::regex::capture::Index", "structwr22_1_1regex__parser_1_1regex_1_1capture_1_1Index.html", null ],
@@ -32,8 +31,6 @@ var hierarchy =
     [ "wr22::regex_parser::span::Span", "classwr22_1_1regex__parser_1_1span_1_1Span.html", null ],
     [ "wr22::regex_parser::regex::SpannedPart", "classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html", null ],
     [ "wr22::regex_parser::regex::part::Star", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Star.html", null ],
-    [ "wr22::regex_parser::utils::UnicodeStringView", "classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringView.html", null ],
-    [ "wr22::regex_parser::utils::UnicodeStringViewIterator", "classwr22_1_1regex__parser_1_1utils_1_1UnicodeStringViewIterator.html", null ],
     [ "wr22::regex_parser::regex::part::Wildcard", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Wildcard.html", null ],
     [ "wr22::regex_parser::utils::detail::adt::Fs", null, [
       [ "wr22::regex_parser::utils::detail::adt::MultiCallable< Fs >", "structwr22_1_1regex__parser_1_1utils_1_1detail_1_1adt_1_1MultiCallable.html", null ]

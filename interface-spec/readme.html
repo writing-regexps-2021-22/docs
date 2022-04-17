@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>interface-spec</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+<link rel="stylesheet" href="../style.css"></head>
+<body><a href="../index.html">[Index]</a><br>
+<header id="title-block-header">
+<h1 class="title">interface-spec</h1>
+</header>
+<h1 id="communication-interface-specification-v-0.1.0">Communication Interface Specification v 0.1.0</h1>
+<h2 id="common-definitions-and-convention">Common Definitions And Convention</h2>
+<ol type="1">
+<li><strong>Backend</strong> is the program that implements processing of regular expressions and provides a software interface to execute these operations on given data and obtain the result of their execution.</li>
+<li><strong>Frontend</strong> is the program that instructs the backend to execute operations with regular expressions, as requested, directly or indirectly, by the user, and presents their results, possibly with some additional post-processing, to the user.</li>
+<li><strong>Communication interface</strong> is the interface to the operations provided by the backend and used by the frontend.</li>
+<li><strong>Service error</strong> is an error that prevents a request from the frontend from being handled by the backend. This category of errors includes (but is not limited to) I/O errors, errors related to the syntax or format of ths request or hitting a timeout, but does not include an unsuccessful result of an operation executed.</li>
+<li><strong>Error code</strong> is a unique string that describes a kind of error.</li>
+<li>Terms <strong>JSON object</strong>, <strong>JSON array</strong>, <strong>JSON number</strong>, <strong>JSON string</strong> are defined as the corresponding JSON datatypes. The term <strong>JSON value</strong> corresponds to a value of an arbitrary type (explicitly including <code>null</code>).</li>
+<li>Unless explicitly specified otherwise, the described values cannot be null.</li>
+<li><strong>Bold</strong> text is used to introduce new terms. <em>Italic</em> text is used to refer to already defined terms.</li>
+</ol>
+<h2 id="communication-interface">Communication Interface</h2>
+<p>The communication interface is defined in this section. The <em>backend</em> listens on the TCP network socket bound to the IPv4 address <code>127.0.0.1</code> to the port <code>6666</code> and accepts incoming connections from the <em>frontend</em>. After the TCP connection has been established, the communication between the <em>frontend</em> and the <em>backend</em> proceeds over HTTP/1.1. The <em>frontend</em> makes HTTP requests to the <em>backend</em> and receives HTTP responses from it.</p>
+<p>The set of allowed request paths is limited, and each path represents an operation with regular expressions. If the <em>frontend</em> requests a path not defined in this specification, the <em>backend</em> responds with the 404 Not Found HTTP status code and arbitrary, possibly empty response body. If the <em>frontend</em> requests a path that is defined in this specification but uses an HTTP method that is not defined for this path, the <em>backend</em> responds with the 405 Method Not Allowed HTTP status code and arbitrary, possibly empty response body, for any HTTP method except <code>HEAD</code>. The behavior of the <code>HEAD</code> method is defined as in the <a href="https://datatracker.ietf.org/doc/rfc2616/">HTTP/1.1 specification</a>.</p>
+<p>When requests have a body, it must be a valid JSON document. This document is referred to as <strong>the request payload</strong>. The structure of the request payload is defined separately for each request path.</p>
+<p>The response body must be a valid JSON document. The root document item must be a <em>JSON object</em> with either one or both the following fields:</p>
+<ol type="1">
+<li><code>data</code> — A <em>JSON object</em> of the format specific to the request path. Represents the operation-specific data returned as the result of its execution. Must be present if <code>error</code> is not present, but may be present even together with <code>error</code>. This object is referred to as <strong>the response payload</strong>.</li>
+<li><code>error</code> — A <em>JSON object</em> representing an error (format defined below). Describes the <em>service error</em> that prevented the execution of the requested operation. Must be present if and only if a <em>service error</em> has occurred. This field is referred to as <strong>the response service error object</strong>.</li>
+</ol>
+<p>If present, the <code>error</code> field is an <strong>error</strong> object. The latter is defined as a <em>JSON object</em> with the following fields:</p>
+<ol type="1">
+<li><code>code</code> — A <em>JSON string</em> that represents the <em>error code</em>. Must always be present.</li>
+<li><code>data</code> — A <em>JSON value</em> of the error-specific format. The precise format is defined together with the definition of the corresponding <em>error code</em>. If no definition of the <code>data</code> field is given for an <em>error code</em>, this field must be absent if such error is returned.</li>
+</ol>
+<p>The list of defined request paths is as follows:</p>
+<ol type="1">
+<li><code>/parse</code></li>
+</ol>
+<h3 id="request-paths">Request Paths</h3>
+<h4 id="parse"><code>/parse</code></h4>
+<p>Parse a regular expression into its syntax tree.</p>
+<p>Allowed HTTP methods: <code>POST</code>.</p>
+<p><em>Request payload</em> fields:</p>
+<ol type="1">
+<li><code>regex</code> — A JSON string that represents the regular expression to parse. Must always be present.</li>
+</ol>
+<p><em>Response payload</em> is a <em>parse result</em> object representing the result of the parse operation. This and other object types are defined below.</p>
+<ol type="1">
+<li><strong>Parse result</strong> is a <em>JSON object</em>. Two fields are possible, and exactly one must be present:
+<ol type="1">
+<li><code>parse_tree</code> — a <em>spanned tree node</em> object corresponding to the root parse tree node, if the regular expression was successfully parsed.</li>
+<li><code>parse_error</code> — an <em>error</em> object describing the parse error if it has occurred. The possible <em>error codes</em> are defined as follows:
+<ol type="1">
+<li>“<code>expected_end</code>” — if a regular expression was expected to end at a certain position but did not. It is unspecified when exactly this error will be raised, and it may be subject to change. Error <code>data</code> is a <em>JSON object</em> with the following fields:
+<ol type="1">
+<li><code>char_got</code> — a <em>JSON string</em> encoding exactly 1 character (Unicode codepoint). This is the character that was encountered instead of the end of string (that is, <code>char = regex[position]</code>).</li>
+<li><code>position</code> — a <em>JSON number</em> representing the 0-based index of the character right after the expected end of the regular expression.</li>
+</ol></li>
+<li>“<code>unexpected_char</code>” — if a certain character in the regular expression is not allowable at its position. Error <code>data</code> is a <em>JSON object</em> with the following fields:
+<ol type="1">
+<li><code>char_got</code> — a <em>JSON string</em> encoding exactly 1 character (Unicode codepoint). This is the first character that was encountered but not allowable.</li>
+<li><code>position</code> — a <em>JSON number</em> representing the 0-based index of the first character that was not allowable.</li>
+<li><code>expected</code> — a <em>JSON string</em> giving a hint on what kinds of characters were expected/allowable at this position. This string does not have a defined format and should only be used to help the developers or users to debug their parse error. This may be subject to change in further revisions of the specification.</li>
+</ol></li>
+<li>“<code>unexpected_end</code>” — if a regular expression ended abruptly, at a position where it was not expected to. Error <code>data</code> is a <em>JSON object</em> with the following fields:
+<ol type="1">
+<li><code>position</code> — a <em>JSON number</em> representing the 0-based index of the character that would be located right after the end. Effectively, this is the length of the regular expression string.</li>
+<li><code>expected</code> — a <em>JSON string</em> giving a hint on what kinds of characters were expected at this position. This string does not have a defined format and should only be used to help the developers or users to debug their parse error. This may be subject to change in further revisions of the specification.</li>
+</ol></li>
+</ol></li>
+</ol></li>
+<li><strong>Spanned tree node</strong> is a <em>JSON object</em> with the following fields:
+<ol type="1">
+<li><code>span</code> — a <em>span</em>. Determines the starting and ending positions of the current parse tree node in the regular expression string.</li>
+<li>All fields from a <em>tree node</em> object.</li>
+</ol></li>
+<li><strong>Tree node</strong> is a <em>JSON object</em> with the following fields:
+<ol type="1">
+<li><code>type</code> — a <em>JSON string</em> that determines the type of the tree node.</li>
+<li>Other fields depdending on <code>type</code>. The following values of <code>type</code> are defined (new fields may be added in further revisions of the specification):
+<ol type="1">
+<li>“<code>alternatives</code>” — a list of alternatives (e.g. “<code>a|b|c</code>” in the regex). Other fields in the <em>tree node</em> object:
+<ol type="1">
+<li><code>alternatives</code> — a <em>JSON array</em> of <em>spanned tree node</em> objects. Each of them represents one alternative.</li>
+</ol></li>
+<li>“<code>empty</code>” — an empty tree node (matches the empty string). No other <em>tree node</em> fields are defined.</li>
+<li>“<code>group</code>” — a group (e.g. “<code>(foo)</code>” in the regex). May be capturing or non-capturing, see <a href="https://writing-regexps-2021-22.github.io/docs/regex-parser/structwr22_1_1regex__parser_1_1regex_1_1part_1_1Group.html">the reference documentation</a> for details. Other fields in the tree node object:
+<ol type="1">
+<li><code>inner</code> — a <em>spanned tree node</em>, which represents the content of the group.</li>
+<li><code>capture</code> — a <em>capture</em> object, which describes the capturing behavior of this group.</li>
+</ol></li>
+<li>“<code>literal</code>” — a literal character (e.g. “<code>a</code>”). Other fields in the <em>tree node</em> object:
+<ol type="1">
+<li><code>char</code> — a <em>JSON string</em> containing 1 character (Unicode codepoint). This codepoint is the literal character in the regular expression.</li>
+</ol></li>
+<li>“<code>optional</code>”, “<code>plus</code>”, “<code>star</code>” — expressions quantified with “<code>?</code>”, “<code>+</code>” and “<code>*</code>” respectively. Other fields in the <em>tree node</em> object:
+<ol type="1">
+<li><code>inner</code> — a <em>spanned tree node</em> representing the expression under the quantifier.</li>
+</ol></li>
+<li>“<code>sequence</code>” — a collection of several subexpressions following each other sequentially (e.g. “<code>[a-z].abc+</code>” is a sequence of “<code>[a-z]</code>”, “<code>.</code>”, “<code>a</code>”, “<code>b</code>” and “<code>c+</code>”). Other fields in the <em>tree node</em> object:
+<ol type="1">
+<li><code>items</code> — a <em>JSON array</em> of <em>spanned tree nodes</em>, each representing a subexpression.</li>
+</ol></li>
+<li>“<code>wildcard</code>” — a wildcard symbol (“<code>.</code>” in the regex). No other <em>tree node</em> fields are defined.</li>
+</ol></li>
+</ol></li>
+<li><strong>Capture</strong> is a <em>JSON object</em> describing the capturing behavior of a group with the following fields:
+<ol type="1">
+<li><code>type</code> — a <em>JSON string</em> that determines the type of the capture.</li>
+<li>Other fields depdending on <code>type</code>. The following values of <code>type</code> are defined:
+<ol type="1">
+<li>“<code>index</code>” — group capturing by index (e.g. “<code>(foo)</code>”). No other <em>capture</em> fields are defined.</li>
+<li>“<code>none</code>” — non-capturing group (e.g. “<code>(?:foo)</code>”). No other <em>capture</em> fields are defined.</li>
+<li>“<code>name</code>” — group capturing by name (e.g. “<code>(?P&lt;name&gt;foo)</code>”). Other fields in the <em>capture</em> object:
+<ol type="1">
+<li><code>name</code> — a <em>JSON string</em> representing the name of the capture.</li>
+<li><code>flavor</code> — a <em>JSON string</em> representing the syntax variant used in the regular expression to declare a group capturing by name. Possible values:
+<ol type="1">
+<li>“<code>apostrophes</code>” — corresponds to “<code>(?'name'data)</code>”.</li>
+<li>“<code>angles</code>” — corresponds to “<code>(?&lt;name&gt;data)</code>”.</li>
+<li>“<code>angles_with_p</code>” — corresponds to “<code>(?P&lt;name&gt;data)</code>”.</li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+<li><strong>Span</strong> is a <em>JSON array</em> of exactly two <em>JSON numbers</em>. Each number is an integer, and the second one is greater than or equal to the first one. These numbers represent the starting and ending positions of a parse tree node in the regular expression string: the first number is the 0-based index of the first Unicode character (codepoint) covered by this tree node, and the second number is the 0-based index of the Unicode character right after the last one covered. That is, the left end is included, and the right end is excluded. For example, in a regex “<code>a(b|c)d</code>” the group “<code>(b|c)</code>” has the span <code>[1, 6]</code>, because the index of “<code>(</code>” is 1, and the index of “<code>d</code>” (the character right after the group) is 6.</li>
+</ol>
+<h2 id="service-errors">Service Errors</h2>
+<p><em>Service errors</em> are represented by <em>error</em> objects. The following <em>error codes</em> are defined for <em>service errors</em>:</p>
+<ol type="1">
+<li>“<code>internal_error</code>” — due to a bug in the backend, it was unable to handle the request. HTTP status code 500 (Internal Server Error) is returned. <code>data</code> field is absent.</li>
+<li>“<code>invalid_request_json</code>” — the request payload was not a valid JSON document. HTTP status code 400 (Bad Request) is returned. <code>data</code> field is absent.</li>
+<li>“<code>invalid_request_json_structure</code>” — the request payload was valid JSON, but its structure did not conform to this specification (e.g. data types were wrong or required fields were missing). HTTP status code 400 (Bad Request) is returned. <code>data</code> field is absent.</li>
+<li>“<code>invalid_utf8</code>” — some strings in the request payload were not correctly UTF-8 encoded. It is unspecified when this error is raised in place of “<code>invalid_request_json</code>”, since the latest JSON specification requires the JSON document to be UTF-8 encoded. HTTP status code 400 (Bad Request) is returned. <code>data</code> field is absent.</li>
+<li>“<code>not_implemented</code>” — the requested operation or its part is not implemented on the backend. HTTP status code 501 (Not Implemented) is returned. <code>data</code> field is absent.</li>
+</ol>
+<h2 id="examples">Examples</h2>
+<h3 id="successful-parsing">Successful Parsing</h3>
+<p>Request payload:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;regex&quot;</span><span class="fu">:</span> <span class="st">&quot;(?P&lt;group&gt;a|b)c&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p>Response JSON:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;parse_tree&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;span&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">0</span><span class="ot">,</span> <span class="dv">15</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;sequence&quot;</span><span class="fu">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;items&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                <span class="fu">{</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">&quot;span&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">0</span><span class="ot">,</span> <span class="dv">14</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;group&quot;</span><span class="fu">,</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">&quot;capture&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;name&quot;</span><span class="fu">,</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;group&quot;</span><span class="fu">,</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">&quot;flavor&quot;</span><span class="fu">:</span> <span class="st">&quot;angles_with_p&quot;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">},</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">&quot;inner&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">&quot;span&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">10</span><span class="ot">,</span> <span class="dv">13</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;alternatives&quot;</span><span class="fu">,</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>                        <span class="dt">&quot;alternatives&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>                            <span class="fu">{</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>                                <span class="dt">&quot;span&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">10</span><span class="ot">,</span> <span class="dv">11</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>                                <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;literal&quot;</span><span class="fu">,</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>                                <span class="dt">&quot;char&quot;</span><span class="fu">:</span> <span class="st">&quot;a&quot;</span><span class="fu">,</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>                            <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>                            <span class="fu">{</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>                                <span class="dt">&quot;span&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">12</span><span class="ot">,</span> <span class="dv">13</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>                                <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;literal&quot;</span><span class="fu">,</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>                                <span class="dt">&quot;char&quot;</span><span class="fu">:</span> <span class="st">&quot;b&quot;</span><span class="fu">,</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>                            <span class="fu">}</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>                        <span class="ot">]</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">}</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>                <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>                <span class="fu">{</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">&quot;span&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">14</span><span class="ot">,</span> <span class="dv">15</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;literal&quot;</span><span class="fu">,</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">&quot;char&quot;</span><span class="fu">:</span> <span class="st">&quot;c&quot;</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>                <span class="fu">}</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>        <span class="fu">}</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<h3 id="parse-error">Parse Error</h3>
+<p>Request payload:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;regex&quot;</span><span class="fu">:</span> <span class="st">&quot;(text&quot;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p>Response JSON:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;parse_error&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;code&quot;</span><span class="fu">:</span> <span class="st">&quot;unexpected_end&quot;</span><span class="fu">,</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                <span class="dt">&quot;position&quot;</span><span class="fu">:</span> <span class="dv">5</span><span class="fu">,</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>                <span class="dt">&quot;expected&quot;</span><span class="fu">:</span> <span class="st">&quot;&lt;a description that a closing parenthesis was expected&gt;&quot;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>            <span class="fu">}</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">}</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<h3 id="service-error">Service Error</h3>
+<p>Request payload:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">2</span><span class="ot">,</span> <span class="dv">3</span><span class="ot">]</span></span></code></pre></div>
+<p>Response JSON:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;error&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;code&quot;</span><span class="fu">:</span> <span class="st">&quot;invalid_request_json_structure&quot;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+</body>
+</html>

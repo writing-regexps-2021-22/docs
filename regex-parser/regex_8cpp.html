@@ -89,8 +89,7 @@ $(document).ready(function(){initNavTree('regex_8cpp.html',''); initResizable();
   <div class="headertitle"><div class="title">regex.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;boost/locale/utf.hpp&gt;</code><br />
-<code>#include &lt;<a class="el" href="errors_8hpp_source.html">wr22/regex_parser/parser/errors.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="errors_8hpp_source.html">wr22/regex_parser/parser/errors.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="regex_8hpp_source.html">wr22/regex_parser/parser/regex.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="part_8hpp_source.html">wr22/regex_parser/regex/part.hpp</a>&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
@@ -98,6 +97,7 @@ $(document).ready(function(){initNavTree('regex_8cpp.html',''); initResizable();
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;boost/locale/encoding_utf.hpp&gt;</code><br />
+<code>#include &lt;boost/locale/utf.hpp&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -120,9 +120,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a69dac5ada19585e767eaf71bdf3d29b9"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1parser.html#a69dac5ada19585e767eaf71bdf3d29b9">wr22::regex_parser::parser::Parser</a> (Iter begin, Sentinel end) -&gt; Parser&lt; Iter, Sentinel &gt;</td></tr>
 <tr class="memdesc:a69dac5ada19585e767eaf71bdf3d29b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type deduction guideline for <code><a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1Parser.html" title="A regex parser.">Parser</a></code>.  <a href="namespacewr22_1_1regex__parser_1_1parser.html#a69dac5ada19585e767eaf71bdf3d29b9">More...</a><br /></td></tr>
 <tr class="separator:a69dac5ada19585e767eaf71bdf3d29b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace217504acdc6ed4ae36367869ee770e"><td class="memItemLeft" align="right" valign="top">regex::SpannedPart&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1parser.html#ace217504acdc6ed4ae36367869ee770e">wr22::regex_parser::parser::parse_regex</a> (const utils::UnicodeStringView &amp;regex)</td></tr>
-<tr class="memdesc:ace217504acdc6ed4ae36367869ee770e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a regular expression into its AST.  <a href="namespacewr22_1_1regex__parser_1_1parser.html#ace217504acdc6ed4ae36367869ee770e">More...</a><br /></td></tr>
-<tr class="separator:ace217504acdc6ed4ae36367869ee770e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b3ab78629ca10584a8603b4d6a7d1ec"><td class="memItemLeft" align="right" valign="top">regex::SpannedPart&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1parser.html#a5b3ab78629ca10584a8603b4d6a7d1ec">wr22::regex_parser::parser::parse_regex</a> (const std::u32string_view &amp;regex)</td></tr>
+<tr class="memdesc:a5b3ab78629ca10584a8603b4d6a7d1ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a regular expression into its AST.  <a href="namespacewr22_1_1regex__parser_1_1parser.html#a5b3ab78629ca10584a8603b4d6a7d1ec">More...</a><br /></td></tr>
+<tr class="separator:a5b3ab78629ca10584a8603b4d6a7d1ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

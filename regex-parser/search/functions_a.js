@@ -5,7 +5,7 @@ var searchData=
   ['parse_5fchar_5fliteral_2',['parse_char_literal',['../classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a40c901fb19ef7200147d0d3f5014a40f',1,'wr22::regex_parser::parser::Parser']]],
   ['parse_5fgroup_3',['parse_group',['../classwr22_1_1regex__parser_1_1parser_1_1Parser.html#ab4ec4dd1b448ebf2e4cfc91be53d72a9',1,'wr22::regex_parser::parser::Parser']]],
   ['parse_5fgroup_5fname_4',['parse_group_name',['../classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a21abf5909376cb92a27149e6b1077a6b',1,'wr22::regex_parser::parser::Parser']]],
-  ['parse_5fregex_5',['parse_regex',['../classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a7478e843eb8684b673bc4fd709dc5323',1,'wr22::regex_parser::parser::Parser::parse_regex()'],['../namespacewr22_1_1regex__parser_1_1parser.html#ace217504acdc6ed4ae36367869ee770e',1,'wr22::regex_parser::parser::parse_regex()']]],
+  ['parse_5fregex_5',['parse_regex',['../classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a7478e843eb8684b673bc4fd709dc5323',1,'wr22::regex_parser::parser::Parser::parse_regex()'],['../namespacewr22_1_1regex__parser_1_1parser.html#a5b3ab78629ca10584a8603b4d6a7d1ec',1,'wr22::regex_parser::parser::parse_regex()']]],
   ['parse_5fsequence_6',['parse_sequence',['../classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a6c70da3acd6ff5fb57907fb097076728',1,'wr22::regex_parser::parser::Parser']]],
   ['parse_5fsequence_5for_5fempty_7',['parse_sequence_or_empty',['../classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a96e4187e522366bed01856d9b0010de2',1,'wr22::regex_parser::parser::Parser']]],
   ['parse_5fwildcard_8',['parse_wildcard',['../classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a3ed1b5786e4876d4881804bbcd662e21',1,'wr22::regex_parser::parser::Parser']]],
