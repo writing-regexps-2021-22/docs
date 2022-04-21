@@ -30,6 +30,9 @@
         font-size: 0.9em;
         padding: 1em;
       }
+      h1 {
+        font-size: 1.8em;
+      }
     }
     @media print {
       body {
@@ -134,6 +137,12 @@
     #TOC li {
       list-style: none;
     }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
     #TOC a:not(:hover) {
       text-decoration: none;
     }
@@ -154,10 +163,17 @@
 <h1 class="title">regex-server</h1>
 </header>
 <h1 id="regex-server">regex-server</h1>
-<p>The main backend application and entry point. Runs an HTTP server on 127.0.0.1:6666 and handles API requests for operations with regular expressions. The following operations are implemented:</p>
+<p>The main backend application and entry point. Runs an HTTP server on
+127.0.0.1:6666 and handles API requests for operations with regular
+expressions. The following operations are implemented:</p>
 <ol type="1">
-<li>Parse a regular expression into its syntax tree. Request path: <code>/parse</code>. Request method: POST. Request body: <code>{"regex": "&lt;regular expression&gt;"}</code></li>
+<li>Parse a regular expression into its syntax tree. Request path:
+<code>/parse</code>. Request method: POST. Request body:
+<code>{"regex": "&lt;regular expression&gt;"}</code></li>
 </ol>
-<p>For additional information on the API interface and usage examples, see the <a href="https://writing-regexps-2021-22.github.io/docs/interface-spec/readme.html">Communication Interface Specification</a>.</p>
+<p>For additional information on the API interface and usage examples,
+see the <a
+href="https://writing-regexps-2021-22.github.io/docs/interface-spec/readme.html">Communication
+Interface Specification</a>.</p>
 </body>
 </html>

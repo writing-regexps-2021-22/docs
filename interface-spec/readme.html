@@ -30,6 +30,9 @@
         font-size: 0.9em;
         padding: 1em;
       }
+      h1 {
+        font-size: 1.8em;
+      }
     }
     @media print {
       body {
@@ -134,6 +137,12 @@
     #TOC li {
       list-style: none;
     }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
     #TOC a:not(:hover) {
       text-decoration: none;
     }
@@ -216,31 +225,89 @@
 <header id="title-block-header">
 <h1 class="title">interface-spec</h1>
 </header>
-<h1 id="communication-interface-specification-v-0.1.0">Communication Interface Specification v 0.1.0</h1>
-<h2 id="common-definitions-and-convention">Common Definitions And Convention</h2>
+<h1 id="communication-interface-specification-v-0.1.0">Communication
+Interface Specification v 0.1.0</h1>
+<h2 id="common-definitions-and-convention">Common Definitions And
+Convention</h2>
 <ol type="1">
-<li><strong>Backend</strong> is the program that implements processing of regular expressions and provides a software interface to execute these operations on given data and obtain the result of their execution.</li>
-<li><strong>Frontend</strong> is the program that instructs the backend to execute operations with regular expressions, as requested, directly or indirectly, by the user, and presents their results, possibly with some additional post-processing, to the user.</li>
-<li><strong>Communication interface</strong> is the interface to the operations provided by the backend and used by the frontend.</li>
-<li><strong>Service error</strong> is an error that prevents a request from the frontend from being handled by the backend. This category of errors includes (but is not limited to) I/O errors, errors related to the syntax or format of ths request or hitting a timeout, but does not include an unsuccessful result of an operation executed.</li>
-<li><strong>Error code</strong> is a unique string that describes a kind of error.</li>
-<li>Terms <strong>JSON object</strong>, <strong>JSON array</strong>, <strong>JSON number</strong>, <strong>JSON string</strong> are defined as the corresponding JSON datatypes. The term <strong>JSON value</strong> corresponds to a value of an arbitrary type (explicitly including <code>null</code>).</li>
-<li>Unless explicitly specified otherwise, the described values cannot be null.</li>
-<li><strong>Bold</strong> text is used to introduce new terms. <em>Italic</em> text is used to refer to already defined terms.</li>
+<li><strong>Backend</strong> is the program that implements processing
+of regular expressions and provides a software interface to execute
+these operations on given data and obtain the result of their
+execution.</li>
+<li><strong>Frontend</strong> is the program that instructs the backend
+to execute operations with regular expressions, as requested, directly
+or indirectly, by the user, and presents their results, possibly with
+some additional post-processing, to the user.</li>
+<li><strong>Communication interface</strong> is the interface to the
+operations provided by the backend and used by the frontend.</li>
+<li><strong>Service error</strong> is an error that prevents a request
+from the frontend from being handled by the backend. This category of
+errors includes (but is not limited to) I/O errors, errors related to
+the syntax or format of ths request or hitting a timeout, but does not
+include an unsuccessful result of an operation executed.</li>
+<li><strong>Error code</strong> is a unique string that describes a kind
+of error.</li>
+<li>Terms <strong>JSON object</strong>, <strong>JSON array</strong>,
+<strong>JSON number</strong>, <strong>JSON string</strong> are defined
+as the corresponding JSON datatypes. The term <strong>JSON
+value</strong> corresponds to a value of an arbitrary type (explicitly
+including <code>null</code>).</li>
+<li>Unless explicitly specified otherwise, the described values cannot
+be null.</li>
+<li><strong>Bold</strong> text is used to introduce new terms.
+<em>Italic</em> text is used to refer to already defined terms.</li>
 </ol>
 <h2 id="communication-interface">Communication Interface</h2>
-<p>The communication interface is defined in this section. The <em>backend</em> listens on the TCP network socket bound to the IPv4 address <code>127.0.0.1</code> to the port <code>6666</code> and accepts incoming connections from the <em>frontend</em>. After the TCP connection has been established, the communication between the <em>frontend</em> and the <em>backend</em> proceeds over HTTP/1.1. The <em>frontend</em> makes HTTP requests to the <em>backend</em> and receives HTTP responses from it.</p>
-<p>The set of allowed request paths is limited, and each path represents an operation with regular expressions. If the <em>frontend</em> requests a path not defined in this specification, the <em>backend</em> responds with the 404 Not Found HTTP status code and arbitrary, possibly empty response body. If the <em>frontend</em> requests a path that is defined in this specification but uses an HTTP method that is not defined for this path, the <em>backend</em> responds with the 405 Method Not Allowed HTTP status code and arbitrary, possibly empty response body, for any HTTP method except <code>HEAD</code>. The behavior of the <code>HEAD</code> method is defined as in the <a href="https://datatracker.ietf.org/doc/rfc2616/">HTTP/1.1 specification</a>.</p>
-<p>When requests have a body, it must be a valid JSON document. This document is referred to as <strong>the request payload</strong>. The structure of the request payload is defined separately for each request path.</p>
-<p>The response body must be a valid JSON document. The root document item must be a <em>JSON object</em> with either one or both the following fields:</p>
+<p>The communication interface is defined in this section. The
+<em>backend</em> listens on the TCP network socket bound to the IPv4
+address <code>127.0.0.1</code> to the port <code>6666</code> and accepts
+incoming connections from the <em>frontend</em>. After the TCP
+connection has been established, the communication between the
+<em>frontend</em> and the <em>backend</em> proceeds over HTTP/1.1. The
+<em>frontend</em> makes HTTP requests to the <em>backend</em> and
+receives HTTP responses from it.</p>
+<p>The set of allowed request paths is limited, and each path represents
+an operation with regular expressions. If the <em>frontend</em> requests
+a path not defined in this specification, the <em>backend</em> responds
+with the 404 Not Found HTTP status code and arbitrary, possibly empty
+response body. If the <em>frontend</em> requests a path that is defined
+in this specification but uses an HTTP method that is not defined for
+this path, the <em>backend</em> responds with the 405 Method Not Allowed
+HTTP status code and arbitrary, possibly empty response body, for any
+HTTP method except <code>HEAD</code>. The behavior of the
+<code>HEAD</code> method is defined as in the <a
+href="https://datatracker.ietf.org/doc/rfc2616/">HTTP/1.1
+specification</a>.</p>
+<p>When requests have a body, it must be a valid JSON document. This
+document is referred to as <strong>the request payload</strong>. The
+structure of the request payload is defined separately for each request
+path.</p>
+<p>The response body must be a valid JSON document. The root document
+item must be a <em>JSON object</em> with either one or both the
+following fields:</p>
 <ol type="1">
-<li><code>data</code> — A <em>JSON object</em> of the format specific to the request path. Represents the operation-specific data returned as the result of its execution. Must be present if <code>error</code> is not present, but may be present even together with <code>error</code>. This object is referred to as <strong>the response payload</strong>.</li>
-<li><code>error</code> — A <em>JSON object</em> representing an error (format defined below). Describes the <em>service error</em> that prevented the execution of the requested operation. Must be present if and only if a <em>service error</em> has occurred. This field is referred to as <strong>the response service error object</strong>.</li>
+<li><code>data</code> — A <em>JSON object</em> of the format specific to
+the request path. Represents the operation-specific data returned as the
+result of its execution. Must be present if <code>error</code> is not
+present, but may be present even together with <code>error</code>. This
+object is referred to as <strong>the response payload</strong>.</li>
+<li><code>error</code> — A <em>JSON object</em> representing an error
+(format defined below). Describes the <em>service error</em> that
+prevented the execution of the requested operation. Must be present if
+and only if a <em>service error</em> has occurred. This field is
+referred to as <strong>the response service error object</strong>.</li>
 </ol>
-<p>If present, the <code>error</code> field is an <strong>error</strong> object. The latter is defined as a <em>JSON object</em> with the following fields:</p>
+<p>If present, the <code>error</code> field is an <strong>error</strong>
+object. The latter is defined as a <em>JSON object</em> with the
+following fields:</p>
 <ol type="1">
-<li><code>code</code> — A <em>JSON string</em> that represents the <em>error code</em>. Must always be present.</li>
-<li><code>data</code> — A <em>JSON value</em> of the error-specific format. The precise format is defined together with the definition of the corresponding <em>error code</em>. If no definition of the <code>data</code> field is given for an <em>error code</em>, this field must be absent if such error is returned.</li>
+<li><code>code</code> — A <em>JSON string</em> that represents the
+<em>error code</em>. Must always be present.</li>
+<li><code>data</code> — A <em>JSON value</em> of the error-specific
+format. The precise format is defined together with the definition of
+the corresponding <em>error code</em>. If no definition of the
+<code>data</code> field is given for an <em>error code</em>, this field
+must be absent if such error is returned.</li>
 </ol>
 <p>The list of defined request paths is as follows:</p>
 <ol type="1">
@@ -252,106 +319,215 @@
 <p>Allowed HTTP methods: <code>POST</code>.</p>
 <p><em>Request payload</em> fields:</p>
 <ol type="1">
-<li><code>regex</code> — A JSON string that represents the regular expression to parse. Must always be present.</li>
+<li><code>regex</code> — A JSON string that represents the regular
+expression to parse. Must always be present.</li>
 </ol>
-<p><em>Response payload</em> is a <em>parse result</em> object representing the result of the parse operation. This and other object types are defined below.</p>
+<p><em>Response payload</em> is a <em>parse result</em> object
+representing the result of the parse operation. This and other object
+types are defined below.</p>
 <ol type="1">
-<li><strong>Parse result</strong> is a <em>JSON object</em>. Two fields are possible, and exactly one must be present:
+<li><strong>Parse result</strong> is a <em>JSON object</em>. Two fields
+are possible, and exactly one must be present:
 <ol type="1">
-<li><code>parse_tree</code> — a <em>spanned tree node</em> object corresponding to the root parse tree node, if the regular expression was successfully parsed.</li>
-<li><code>parse_error</code> — an <em>error</em> object describing the parse error if it has occurred. The possible <em>error codes</em> are defined as follows:
+<li><code>parse_tree</code> — a <em>spanned tree node</em> object
+corresponding to the root parse tree node, if the regular expression was
+successfully parsed.</li>
+<li><code>parse_error</code> — an <em>error</em> object describing the
+parse error if it has occurred. The possible <em>error codes</em> are
+defined as follows:
 <ol type="1">
-<li>“<code>expected_end</code>” — if a regular expression was expected to end at a certain position but did not. It is unspecified when exactly this error will be raised, and it may be subject to change. Error <code>data</code> is a <em>JSON object</em> with the following fields:
+<li>“<code>expected_end</code>” — if a regular expression was expected
+to end at a certain position but did not. It is unspecified when exactly
+this error will be raised, and it may be subject to change. Error
+<code>data</code> is a <em>JSON object</em> with the following fields:
 <ol type="1">
-<li><code>char_got</code> — a <em>JSON string</em> encoding exactly 1 character (Unicode codepoint). This is the character that was encountered instead of the end of string (that is, <code>char = regex[position]</code>).</li>
-<li><code>position</code> — a <em>JSON number</em> representing the 0-based index of the character right after the expected end of the regular expression.</li>
+<li><code>char_got</code> — a <em>JSON string</em> encoding exactly 1
+character (Unicode codepoint). This is the character that was
+encountered instead of the end of string (that is,
+<code>char = regex[position]</code>).</li>
+<li><code>position</code> — a <em>JSON number</em> representing the
+0-based index of the character right after the expected end of the
+regular expression.</li>
 </ol></li>
-<li>“<code>unexpected_char</code>” — if a certain character in the regular expression is not allowable at its position. Error <code>data</code> is a <em>JSON object</em> with the following fields:
+<li>“<code>unexpected_char</code>” — if a certain character in the
+regular expression is not allowable at its position. Error
+<code>data</code> is a <em>JSON object</em> with the following fields:
 <ol type="1">
-<li><code>char_got</code> — a <em>JSON string</em> encoding exactly 1 character (Unicode codepoint). This is the first character that was encountered but not allowable.</li>
-<li><code>position</code> — a <em>JSON number</em> representing the 0-based index of the first character that was not allowable.</li>
-<li><code>expected</code> — a <em>JSON string</em> giving a hint on what kinds of characters were expected/allowable at this position. This string does not have a defined format and should only be used to help the developers or users to debug their parse error. This may be subject to change in further revisions of the specification.</li>
+<li><code>char_got</code> — a <em>JSON string</em> encoding exactly 1
+character (Unicode codepoint). This is the first character that was
+encountered but not allowable.</li>
+<li><code>position</code> — a <em>JSON number</em> representing the
+0-based index of the first character that was not allowable.</li>
+<li><code>expected</code> — a <em>JSON string</em> giving a hint on what
+kinds of characters were expected/allowable at this position. This
+string does not have a defined format and should only be used to help
+the developers or users to debug their parse error. This may be subject
+to change in further revisions of the specification.</li>
 </ol></li>
-<li>“<code>unexpected_end</code>” — if a regular expression ended abruptly, at a position where it was not expected to. Error <code>data</code> is a <em>JSON object</em> with the following fields:
+<li>“<code>unexpected_end</code>” — if a regular expression ended
+abruptly, at a position where it was not expected to. Error
+<code>data</code> is a <em>JSON object</em> with the following fields:
 <ol type="1">
-<li><code>position</code> — a <em>JSON number</em> representing the 0-based index of the character that would be located right after the end. Effectively, this is the length of the regular expression string.</li>
-<li><code>expected</code> — a <em>JSON string</em> giving a hint on what kinds of characters were expected at this position. This string does not have a defined format and should only be used to help the developers or users to debug their parse error. This may be subject to change in further revisions of the specification.</li>
+<li><code>position</code> — a <em>JSON number</em> representing the
+0-based index of the character that would be located right after the
+end. Effectively, this is the length of the regular expression
+string.</li>
+<li><code>expected</code> — a <em>JSON string</em> giving a hint on what
+kinds of characters were expected at this position. This string does not
+have a defined format and should only be used to help the developers or
+users to debug their parse error. This may be subject to change in
+further revisions of the specification.</li>
 </ol></li>
 </ol></li>
 </ol></li>
-<li><strong>Spanned tree node</strong> is a <em>JSON object</em> with the following fields:
+<li><strong>Spanned tree node</strong> is a <em>JSON object</em> with
+the following fields:
 <ol type="1">
-<li><code>span</code> — a <em>span</em>. Determines the starting and ending positions of the current parse tree node in the regular expression string.</li>
+<li><code>span</code> — a <em>span</em>. Determines the starting and
+ending positions of the current parse tree node in the regular
+expression string.</li>
 <li>All fields from a <em>tree node</em> object.</li>
 </ol></li>
-<li><strong>Tree node</strong> is a <em>JSON object</em> with the following fields:
+<li><strong>Tree node</strong> is a <em>JSON object</em> with the
+following fields:
 <ol type="1">
-<li><code>type</code> — a <em>JSON string</em> that determines the type of the tree node.</li>
-<li>Other fields depdending on <code>type</code>. The following values of <code>type</code> are defined (new fields may be added in further revisions of the specification):
+<li><code>type</code> — a <em>JSON string</em> that determines the type
+of the tree node.</li>
+<li>Other fields depdending on <code>type</code>. The following values
+of <code>type</code> are defined (new fields may be added in further
+revisions of the specification):
 <ol type="1">
-<li>“<code>alternatives</code>” — a list of alternatives (e.g. “<code>a|b|c</code>” in the regex). Other fields in the <em>tree node</em> object:
+<li>“<code>alternatives</code>” — a list of alternatives
+(e.g. “<code>a|b|c</code>” in the regex). Other fields in the <em>tree
+node</em> object:
 <ol type="1">
-<li><code>alternatives</code> — a <em>JSON array</em> of <em>spanned tree node</em> objects. Each of them represents one alternative.</li>
+<li><code>alternatives</code> — a <em>JSON array</em> of <em>spanned
+tree node</em> objects. Each of them represents one alternative.</li>
 </ol></li>
-<li>“<code>empty</code>” — an empty tree node (matches the empty string). No other <em>tree node</em> fields are defined.</li>
-<li>“<code>group</code>” — a group (e.g. “<code>(foo)</code>” in the regex). May be capturing or non-capturing, see <a href="https://writing-regexps-2021-22.github.io/docs/regex-parser/structwr22_1_1regex__parser_1_1regex_1_1part_1_1Group.html">the reference documentation</a> for details. Other fields in the tree node object:
+<li>“<code>empty</code>” — an empty tree node (matches the empty
+string). No other <em>tree node</em> fields are defined.</li>
+<li>“<code>group</code>” — a group (e.g. “<code>(foo)</code>” in the
+regex). May be capturing or non-capturing, see <a
+href="https://writing-regexps-2021-22.github.io/docs/regex-parser/structwr22_1_1regex__parser_1_1regex_1_1part_1_1Group.html">the
+reference documentation</a> for details. Other fields in the tree node
+object:
 <ol type="1">
-<li><code>inner</code> — a <em>spanned tree node</em>, which represents the content of the group.</li>
-<li><code>capture</code> — a <em>capture</em> object, which describes the capturing behavior of this group.</li>
+<li><code>inner</code> — a <em>spanned tree node</em>, which represents
+the content of the group.</li>
+<li><code>capture</code> — a <em>capture</em> object, which describes
+the capturing behavior of this group.</li>
 </ol></li>
-<li>“<code>literal</code>” — a literal character (e.g. “<code>a</code>”). Other fields in the <em>tree node</em> object:
+<li>“<code>literal</code>” — a literal character
+(e.g. “<code>a</code>”). Other fields in the <em>tree node</em> object:
 <ol type="1">
-<li><code>char</code> — a <em>JSON string</em> containing 1 character (Unicode codepoint). This codepoint is the literal character in the regular expression.</li>
+<li><code>char</code> — a <em>JSON string</em> containing 1 character
+(Unicode codepoint). This codepoint is the literal character in the
+regular expression.</li>
 </ol></li>
-<li>“<code>optional</code>”, “<code>plus</code>”, “<code>star</code>” — expressions quantified with “<code>?</code>”, “<code>+</code>” and “<code>*</code>” respectively. Other fields in the <em>tree node</em> object:
+<li>“<code>optional</code>”, “<code>plus</code>”, “<code>star</code>” —
+expressions quantified with “<code>?</code>”, “<code>+</code>” and
+“<code>*</code>” respectively. Other fields in the <em>tree node</em>
+object:
 <ol type="1">
-<li><code>inner</code> — a <em>spanned tree node</em> representing the expression under the quantifier.</li>
+<li><code>inner</code> — a <em>spanned tree node</em> representing the
+expression under the quantifier.</li>
 </ol></li>
-<li>“<code>sequence</code>” — a collection of several subexpressions following each other sequentially (e.g. “<code>[a-z].abc+</code>” is a sequence of “<code>[a-z]</code>”, “<code>.</code>”, “<code>a</code>”, “<code>b</code>” and “<code>c+</code>”). Other fields in the <em>tree node</em> object:
+<li>“<code>sequence</code>” — a collection of several subexpressions
+following each other sequentially (e.g. “<code>[a-z].abc+</code>” is a
+sequence of “<code>[a-z]</code>”, “<code>.</code>”, “<code>a</code>”,
+“<code>b</code>” and “<code>c+</code>”). Other fields in the <em>tree
+node</em> object:
 <ol type="1">
-<li><code>items</code> — a <em>JSON array</em> of <em>spanned tree nodes</em>, each representing a subexpression.</li>
+<li><code>items</code> — a <em>JSON array</em> of <em>spanned tree
+nodes</em>, each representing a subexpression.</li>
 </ol></li>
-<li>“<code>wildcard</code>” — a wildcard symbol (“<code>.</code>” in the regex). No other <em>tree node</em> fields are defined.</li>
+<li>“<code>wildcard</code>” — a wildcard symbol (“<code>.</code>” in the
+regex). No other <em>tree node</em> fields are defined.</li>
 </ol></li>
 </ol></li>
-<li><strong>Capture</strong> is a <em>JSON object</em> describing the capturing behavior of a group with the following fields:
+<li><strong>Capture</strong> is a <em>JSON object</em> describing the
+capturing behavior of a group with the following fields:
 <ol type="1">
-<li><code>type</code> — a <em>JSON string</em> that determines the type of the capture.</li>
-<li>Other fields depdending on <code>type</code>. The following values of <code>type</code> are defined:
+<li><code>type</code> — a <em>JSON string</em> that determines the type
+of the capture.</li>
+<li>Other fields depdending on <code>type</code>. The following values
+of <code>type</code> are defined:
 <ol type="1">
-<li>“<code>index</code>” — group capturing by index (e.g. “<code>(foo)</code>”). No other <em>capture</em> fields are defined.</li>
-<li>“<code>none</code>” — non-capturing group (e.g. “<code>(?:foo)</code>”). No other <em>capture</em> fields are defined.</li>
-<li>“<code>name</code>” — group capturing by name (e.g. “<code>(?P&lt;name&gt;foo)</code>”). Other fields in the <em>capture</em> object:
+<li>“<code>index</code>” — group capturing by index
+(e.g. “<code>(foo)</code>”). No other <em>capture</em> fields are
+defined.</li>
+<li>“<code>none</code>” — non-capturing group
+(e.g. “<code>(?:foo)</code>”). No other <em>capture</em> fields are
+defined.</li>
+<li>“<code>name</code>” — group capturing by name
+(e.g. “<code>(?P&lt;name&gt;foo)</code>”). Other fields in the
+<em>capture</em> object:
 <ol type="1">
-<li><code>name</code> — a <em>JSON string</em> representing the name of the capture.</li>
-<li><code>flavor</code> — a <em>JSON string</em> representing the syntax variant used in the regular expression to declare a group capturing by name. Possible values:
+<li><code>name</code> — a <em>JSON string</em> representing the name of
+the capture.</li>
+<li><code>flavor</code> — a <em>JSON string</em> representing the syntax
+variant used in the regular expression to declare a group capturing by
+name. Possible values:
 <ol type="1">
-<li>“<code>apostrophes</code>” — corresponds to “<code>(?'name'data)</code>”.</li>
-<li>“<code>angles</code>” — corresponds to “<code>(?&lt;name&gt;data)</code>”.</li>
-<li>“<code>angles_with_p</code>” — corresponds to “<code>(?P&lt;name&gt;data)</code>”.</li>
+<li>“<code>apostrophes</code>” — corresponds to
+“<code>(?'name'data)</code>”.</li>
+<li>“<code>angles</code>” — corresponds to
+“<code>(?&lt;name&gt;data)</code>”.</li>
+<li>“<code>angles_with_p</code>” — corresponds to
+“<code>(?P&lt;name&gt;data)</code>”.</li>
 </ol></li>
 </ol></li>
 </ol></li>
 </ol></li>
-<li><strong>Span</strong> is a <em>JSON array</em> of exactly two <em>JSON numbers</em>. Each number is an integer, and the second one is greater than or equal to the first one. These numbers represent the starting and ending positions of a parse tree node in the regular expression string: the first number is the 0-based index of the first Unicode character (codepoint) covered by this tree node, and the second number is the 0-based index of the Unicode character right after the last one covered. That is, the left end is included, and the right end is excluded. For example, in a regex “<code>a(b|c)d</code>” the group “<code>(b|c)</code>” has the span <code>[1, 6]</code>, because the index of “<code>(</code>” is 1, and the index of “<code>d</code>” (the character right after the group) is 6.</li>
+<li><strong>Span</strong> is a <em>JSON array</em> of exactly two
+<em>JSON numbers</em>. Each number is an integer, and the second one is
+greater than or equal to the first one. These numbers represent the
+starting and ending positions of a parse tree node in the regular
+expression string: the first number is the 0-based index of the first
+Unicode character (codepoint) covered by this tree node, and the second
+number is the 0-based index of the Unicode character right after the
+last one covered. That is, the left end is included, and the right end
+is excluded. For example, in a regex “<code>a(b|c)d</code>” the group
+“<code>(b|c)</code>” has the span <code>[1, 6]</code>, because the index
+of “<code>(</code>” is 1, and the index of “<code>d</code>” (the
+character right after the group) is 6.</li>
 </ol>
 <h2 id="service-errors">Service Errors</h2>
-<p><em>Service errors</em> are represented by <em>error</em> objects. The following <em>error codes</em> are defined for <em>service errors</em>:</p>
+<p><em>Service errors</em> are represented by <em>error</em> objects.
+The following <em>error codes</em> are defined for <em>service
+errors</em>:</p>
 <ol type="1">
-<li>“<code>internal_error</code>” — due to a bug in the backend, it was unable to handle the request. HTTP status code 500 (Internal Server Error) is returned. <code>data</code> field is absent.</li>
-<li>“<code>invalid_request_json</code>” — the request payload was not a valid JSON document. HTTP status code 400 (Bad Request) is returned. <code>data</code> field is absent.</li>
-<li>“<code>invalid_request_json_structure</code>” — the request payload was valid JSON, but its structure did not conform to this specification (e.g. data types were wrong or required fields were missing). HTTP status code 400 (Bad Request) is returned. <code>data</code> field is absent.</li>
-<li>“<code>invalid_utf8</code>” — some strings in the request payload were not correctly UTF-8 encoded. It is unspecified when this error is raised in place of “<code>invalid_request_json</code>”, since the latest JSON specification requires the JSON document to be UTF-8 encoded. HTTP status code 400 (Bad Request) is returned. <code>data</code> field is absent.</li>
-<li>“<code>not_implemented</code>” — the requested operation or its part is not implemented on the backend. HTTP status code 501 (Not Implemented) is returned. <code>data</code> field is absent.</li>
+<li>“<code>internal_error</code>” — due to a bug in the backend, it was
+unable to handle the request. HTTP status code 500 (Internal Server
+Error) is returned. <code>data</code> field is absent.</li>
+<li>“<code>invalid_request_json</code>” — the request payload was not a
+valid JSON document. HTTP status code 400 (Bad Request) is returned.
+<code>data</code> field is absent.</li>
+<li>“<code>invalid_request_json_structure</code>” — the request payload
+was valid JSON, but its structure did not conform to this specification
+(e.g. data types were wrong or required fields were missing). HTTP
+status code 400 (Bad Request) is returned. <code>data</code> field is
+absent.</li>
+<li>“<code>invalid_utf8</code>” — some strings in the request payload
+were not correctly UTF-8 encoded. It is unspecified when this error is
+raised in place of “<code>invalid_request_json</code>”, since the latest
+JSON specification requires the JSON document to be UTF-8 encoded. HTTP
+status code 400 (Bad Request) is returned. <code>data</code> field is
+absent.</li>
+<li>“<code>not_implemented</code>” — the requested operation or its part
+is not implemented on the backend. HTTP status code 501 (Not
+Implemented) is returned. <code>data</code> field is absent.</li>
 </ol>
 <h2 id="examples">Examples</h2>
 <h3 id="successful-parsing">Successful Parsing</h3>
 <p>Request payload:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;regex&quot;</span><span class="fu">:</span> <span class="st">&quot;(?P&lt;group&gt;a|b)c&quot;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
 <p>Response JSON:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;parse_tree&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;span&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">0</span><span class="ot">,</span> <span class="dv">15</span><span class="ot">]</span><span class="fu">,</span></span>
@@ -393,11 +569,13 @@
 <span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
 <h3 id="parse-error">Parse Error</h3>
 <p>Request payload:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;regex&quot;</span><span class="fu">:</span> <span class="st">&quot;(text&quot;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
 <p>Response JSON:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;data&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;parse_error&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&quot;code&quot;</span><span class="fu">:</span> <span class="st">&quot;unexpected_end&quot;</span><span class="fu">,</span></span>
@@ -410,9 +588,11 @@
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
 <h3 id="service-error">Service Error</h3>
 <p>Request payload:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">2</span><span class="ot">,</span> <span class="dv">3</span><span class="ot">]</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">2</span><span class="ot">,</span> <span class="dv">3</span><span class="ot">]</span></span></code></pre></div>
 <p>Response JSON:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;error&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;code&quot;</span><span class="fu">:</span> <span class="st">&quot;invalid_request_json_structure&quot;</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
