@@ -4,6 +4,7 @@ var classwr22_1_1regex__parser_1_1parser_1_1Parser =
     [ "expect_end", "classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a2ab55e255434d9fba54d712237e7f15e", null ],
     [ "parse_alternatives", "classwr22_1_1regex__parser_1_1parser_1_1Parser.html#ae696a61b9985a59e64e28ee3e209d745", null ],
     [ "parse_atom", "classwr22_1_1regex__parser_1_1parser_1_1Parser.html#ab1906f100fbfa03a3fc6b25544cf6847", null ],
+    [ "parse_char_class", "classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a5a665f6004c96496c7a4f796e4d2002a", null ],
     [ "parse_char_literal", "classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a40c901fb19ef7200147d0d3f5014a40f", null ],
     [ "parse_group", "classwr22_1_1regex__parser_1_1parser_1_1Parser.html#ab4ec4dd1b448ebf2e4cfc91be53d72a9", null ],
     [ "parse_group_name", "classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a21abf5909376cb92a27149e6b1077a6b", null ],

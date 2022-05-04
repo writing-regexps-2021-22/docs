@@ -92,6 +92,7 @@ $(document).ready(function(){initNavTree('part_8hpp.html',''); initResizable(); 
 <div class="contents">
 <div class="textblock"><code>#include &lt;nlohmann/json_fwd.hpp&gt;</code><br />
 <code>#include &lt;<a class="el" href="capture_8hpp_source.html">wr22/regex_parser/regex/capture.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="character__class__data_8hpp_source.html">wr22/regex_parser/regex/character_class_data.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="span_8hpp_source.html">wr22/regex_parser/span/span.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="adt_8hpp_source.html">wr22/regex_parser/utils/adt.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="box_8hpp_source.html">wr22/regex_parser/utils/box.hpp</a>&gt;</code><br />
@@ -131,6 +132,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Wildcard.html">wr22::regex_parser::regex::part::Wildcard</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A regex part specifying any single character (<code>.</code>).  <a href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1Wildcard.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1CharacterClass.html">wr22::regex_parser::regex::part::CharacterClass</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A regex part specifying a character class (e.g. <code>[a-z_]</code>).  <a href="structwr22_1_1regex__parser_1_1regex_1_1part_1_1CharacterClass.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1Part.html">wr22::regex_parser::regex::Part</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A part of a regular expression and its AST node type.  <a href="classwr22_1_1regex__parser_1_1regex_1_1Part.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,8 +156,8 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a7b7fd7048e238af763fc1fc8e544f49e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html#a7b7fd7048e238af763fc1fc8e544f49e">wr22::regex_parser::regex::part::Adt</a> = utils::Adt&lt; Empty, Literal, Alternatives, Sequence, Group, Optional, Plus, Star, Wildcard &gt;</td></tr>
-<tr class="separator:a7b7fd7048e238af763fc1fc8e544f49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2d5460ec825d84a7caf2b2973ee469e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html#ad2d5460ec825d84a7caf2b2973ee469e">wr22::regex_parser::regex::part::Adt</a> = utils::Adt&lt; Empty, Literal, Alternatives, Sequence, Group, Optional, Plus, Star, Wildcard, CharacterClass &gt;</td></tr>
+<tr class="separator:ad2d5460ec825d84a7caf2b2973ee469e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -175,6 +179,8 @@ Functions</h2></td></tr>
 <tr class="separator:ad686857e77cab9237d855baad3f46422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd89a14aa7218cf6c409c8419ec81bfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html#afd89a14aa7218cf6c409c8419ec81bfc">wr22::regex_parser::regex::part::to_json</a> (nlohmann::json &amp;j, const part::Wildcard &amp;part)</td></tr>
 <tr class="separator:afd89a14aa7218cf6c409c8419ec81bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae636fb750931f1d7d1bec087b2b6f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex_1_1part.html#a5ae636fb750931f1d7d1bec087b2b6f2">wr22::regex_parser::regex::part::to_json</a> (nlohmann::json &amp;j, const part::CharacterClass &amp;part)</td></tr>
+<tr class="separator:a5ae636fb750931f1d7d1bec087b2b6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b5ea29565845990ebf6ac8b799a3725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex.html#a4b5ea29565845990ebf6ac8b799a3725">wr22::regex_parser::regex::to_json</a> (nlohmann::json &amp;j, const Part &amp;part)</td></tr>
 <tr class="separator:a4b5ea29565845990ebf6ac8b799a3725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ed788d6e19d4eb08a393154bd053f53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__parser_1_1regex.html#a1ed788d6e19d4eb08a393154bd053f53">wr22::regex_parser::regex::to_json</a> (nlohmann::json &amp;j, const SpannedPart &amp;part)</td></tr>

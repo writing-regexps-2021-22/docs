@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['flavor_0',['flavor',['../structwr22_1_1regex__parser_1_1regex_1_1capture_1_1Name.html#ac2282c45d84986c7fdc0f19b50d064e4',1,'wr22::regex_parser::regex::capture::Name']]]
+  ['end_0',['end',['../structwr22_1_1regex__parser_1_1span_1_1InvalidSpan.html#a455600ec722fb9152eec1d5fba67ecf1',1,'wr22::regex_parser::span::InvalidSpan']]]
 ];

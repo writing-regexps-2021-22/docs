@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('classwr22_1_1regex__parser_1_1span_1_1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a7b44b5426adc69e23d3f65680913d1d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwr22_1_1regex__parser_1_1span_1_1Span.html">Span</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1span_1_1Span.html#a7b44b5426adc69e23d3f65680913d1d5">extend_right</a> (size_t num_positions) const</td></tr>
+<tr class="memdesc:a7b44b5426adc69e23d3f65680913d1d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new span that equals the current span extended to the right by a specified number of positions.  <a href="classwr22_1_1regex__parser_1_1span_1_1Span.html#a7b44b5426adc69e23d3f65680913d1d5">More...</a><br /></td></tr>
+<tr class="separator:a7b44b5426adc69e23d3f65680913d1d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c9747c184dbb6a943a5cf4a88096a29"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1span_1_1Span.html#a0c9747c184dbb6a943a5cf4a88096a29">length</a> () const</td></tr>
 <tr class="memdesc:a0c9747c184dbb6a943a5cf4a88096a29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the length of the span (the number of characters covered).  <a href="classwr22_1_1regex__parser_1_1span_1_1Span.html#a0c9747c184dbb6a943a5cf4a88096a29">More...</a><br /></td></tr>
 <tr class="separator:a0c9747c184dbb6a943a5cf4a88096a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,6 +169,34 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the <code>end</code> position of the span. </p>
+
+</div>
+</div>
+<a id="a7b44b5426adc69e23d3f65680913d1d5" name="a7b44b5426adc69e23d3f65680913d1d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b44b5426adc69e23d3f65680913d1d5">&#9670;&nbsp;</a></span>extend_right()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwr22_1_1regex__parser_1_1span_1_1Span.html">Span</a> wr22::regex_parser::span::Span::extend_right </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_positions</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new span that equals the current span extended to the right by a specified number of positions. </p>
+<p >Please note that this method creates a new span and does not modify the existing one.</p>
+<p >Formally, <code>[begin..end].extend_right(n) = [begin..(end+n)]</code>.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="structwr22_1_1regex__parser_1_1span_1_1InvalidSpan.html" title="The exception thrown on an attempt to construct an invalid span.">InvalidSpan</a></td><td>if <code>end + length</code> overflows <code>size_t</code>. Note that the error message might not be precise enough. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

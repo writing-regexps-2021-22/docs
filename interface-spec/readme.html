@@ -378,6 +378,20 @@ have a defined format and should only be used to help the developers or
 users to debug their parse error. This may be subject to change in
 further revisions of the specification.</li>
 </ol></li>
+<li>“<code>invalid_range</code>” — if a character range is invalid
+(wrong direction, e.g. <code>z-a</code>). Error <code>data</code> is a
+<em>JSON object</em> with the following fields:
+<ol type="1">
+<li><code>span</code> — the <em>span</em> of the range in question.</li>
+<li><code>first</code> — a <em>JSON string</em> consisting of exactly
+one character. This character is the first character in the range, as
+written in the regex. E.g. in the range <code>z-a</code> it is
+“<code>z</code>”.</li>
+<li><code>last</code> — a <em>JSON string</em> consisting of exactly one
+character. This character is the last character in the range, as written
+in the regex. E.g. in the range <code>z-a</code> it is
+“<code>a</code>”.</li>
+</ol></li>
 </ol></li>
 </ol></li>
 <li><strong>Spanned tree node</strong> is a <em>JSON object</em> with
@@ -443,6 +457,20 @@ nodes</em>, each representing a subexpression.</li>
 </ol></li>
 <li>“<code>wildcard</code>” — a wildcard symbol (“<code>.</code>” in the
 regex). No other <em>tree node</em> fields are defined.</li>
+<li>“<code>character_class</code>” — a character class
+(e.g. “<code>[^a-zA-Z_]</code>”). Other fields in the <em>tree node</em>
+object:
+<ol type="1">
+<li><code>inverted</code> — a <em>JSON boolean</em> that is true if the
+character class’s match is inverted (there is a <code>^</code> in the
+beginning of the character class) and false otherwise. E.g. it is true
+for the character class “<code>[^a-z]</code>” but false for
+“<code>[a-z]</code>”.</li>
+<li><code>ranges</code> — a <em>JSON array</em> of <em>spanned character
+range</em> objects representing the sequence of character ranges and
+individual characters in this character class, in the order they are
+specified in the regex, and together with their spans.</li>
+</ol></li>
 </ol></li>
 </ol></li>
 <li><strong>Capture</strong> is a <em>JSON object</em> describing the
@@ -491,6 +519,33 @@ is excluded. For example, in a regex “<code>a(b|c)d</code>” the group
 “<code>(b|c)</code>” has the span <code>[1, 6]</code>, because the index
 of “<code>(</code>” is 1, and the index of “<code>d</code>” (the
 character right after the group) is 6.</li>
+<li><strong>Spanned character range</strong> is a <em>JSON object</em>
+describing a character range and its span in the regex. It has the
+following fields:
+<ol type="1">
+<li><code>range</code> — the <em>character range</em> object
+representing the range this object describes.</li>
+<li><code>span</code> — the <em>span</em> of this character range.</li>
+</ol></li>
+<li><strong>Character range</strong> is a <em>JSON object</em>
+describing a single character or a range of characters that appear
+inside a character class. It has the following fields:
+<ol type="1">
+<li><code>single_char</code> — a <em>JSON boolean</em> that is true if
+this character range contains only one character and false otherwise.
+This corresponds to single characters in character classes
+(e.g. <code>[a]</code>) or trivial ranges
+(e.g. <code>[a-a]</code>).</li>
+<li><code>char</code> — a <em>JSON string</em> of exactly one character,
+which is the character contained in the range. This field is present if
+and only if <code>single_char</code> is true.</li>
+<li><code>first_char</code> — a <em>JSON string</em> of exactly one
+character, which is the first character contained in the range. This
+field is present if and only if <code>single_char</code> is false.</li>
+<li><code>last_char</code> — a <em>JSON string</em> of exactly one
+character, which is the last character contained in the range. This
+field is present if and only if <code>single_char</code> is false.</li>
+</ol></li>
 </ol>
 <h2 id="service-errors">Service Errors</h2>
 <p><em>Service errors</em> are represented by <em>error</em> objects.

@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['name_0',['Name',['../structwr22_1_1regex__parser_1_1regex_1_1capture_1_1Name.html#a4b76b871436545bdac70630dc568f577',1,'wr22::regex_parser::regex::capture::Name']]],
-  ['name_1',['name',['../structwr22_1_1regex__parser_1_1regex_1_1capture_1_1Name.html#a29396c20815cb6e808a22ddab165da20',1,'wr22::regex_parser::regex::capture::Name']]],
-  ['name_2',['Name',['../structwr22_1_1regex__parser_1_1regex_1_1capture_1_1Name.html',1,'wr22::regex_parser::regex::capture']]],
-  ['named_5fcapture_5fflavor_2ecpp_3',['named_capture_flavor.cpp',['../named__capture__flavor_8cpp.html',1,'']]],
-  ['named_5fcapture_5fflavor_2ehpp_4',['named_capture_flavor.hpp',['../named__capture__flavor_8hpp.html',1,'']]],
-  ['namedcaptureflavor_5',['NamedCaptureFlavor',['../namespacewr22_1_1regex__parser_1_1regex.html#ab4ab1b35dcd29d86ce14f5279f90f67a',1,'wr22::regex_parser::regex']]],
-  ['none_6',['None',['../structwr22_1_1regex__parser_1_1regex_1_1capture_1_1None.html#a0e4b5901d043bf0dd9f53428b8503fc3',1,'wr22::regex_parser::regex::capture::None::None()'],['../structwr22_1_1regex__parser_1_1regex_1_1capture_1_1None.html',1,'wr22::regex_parser::regex::capture::None']]]
+  ['m_5fvariant_0',['m_variant',['../classwr22_1_1regex__parser_1_1utils_1_1Adt.html#ad5089efb5ad103963759397ea13a2d6c',1,'wr22::regex_parser::utils::Adt']]],
+  ['make_5fempty_1',['make_empty',['../classwr22_1_1regex__parser_1_1span_1_1Span.html#a69aa8cce76f7326896f43867085aa161',1,'wr22::regex_parser::span::Span']]],
+  ['make_5ffrom_5fpositions_2',['make_from_positions',['../classwr22_1_1regex__parser_1_1span_1_1Span.html#a517267be374fc2ffc57480429de0692e',1,'wr22::regex_parser::span::Span']]],
+  ['make_5fsingle_5fposition_3',['make_single_position',['../classwr22_1_1regex__parser_1_1span_1_1Span.html#a5e4c198a409ab8d6bb2e10dab06ccd35',1,'wr22::regex_parser::span::Span']]],
+  ['make_5fwith_5flength_4',['make_with_length',['../classwr22_1_1regex__parser_1_1span_1_1Span.html#af67f253a1744e3b6d046c368835d4560',1,'wr22::regex_parser::span::Span']]],
+  ['multicallable_5',['MultiCallable',['../structwr22_1_1regex__parser_1_1utils_1_1detail_1_1adt_1_1MultiCallable.html#a39e51e1b3b2e5389c6632b78325ffb0a',1,'wr22::regex_parser::utils::detail::adt::MultiCallable::MultiCallable()'],['../structwr22_1_1regex__parser_1_1utils_1_1detail_1_1adt_1_1MultiCallable.html',1,'wr22::regex_parser::utils::detail::adt::MultiCallable&lt; Fs &gt;']]]
 ];

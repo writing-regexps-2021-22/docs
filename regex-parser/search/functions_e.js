@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['visit_0',['visit',['../classwr22_1_1regex__parser_1_1utils_1_1Adt.html#a3fcd4db0d6f3bf1276c7ced32104ad99',1,'wr22::regex_parser::utils::Adt::visit(Fs &amp;&amp;... visitors) const'],['../classwr22_1_1regex__parser_1_1utils_1_1Adt.html#a07d5c8e3b851046fa584fe4d8ec311ea',1,'wr22::regex_parser::utils::Adt::visit(Fs &amp;&amp;... visitors)']]]
+  ['unexpectedchar_0',['UnexpectedChar',['../classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#af131d8c38fb38d71d00d5463fa95f4a5',1,'wr22::regex_parser::parser::errors::UnexpectedChar']]],
+  ['unexpectedend_1',['UnexpectedEnd',['../classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedEnd.html#a20e60f7706aed54cafb084bf930b477f',1,'wr22::regex_parser::parser::errors::UnexpectedEnd']]]
 ];
