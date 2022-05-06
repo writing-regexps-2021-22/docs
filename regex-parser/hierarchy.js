@@ -1,19 +1,16 @@
 var hierarchy =
 [
-    [ "wr22::regex_parser::utils::Adt< Variants >", "classwr22_1_1regex__parser_1_1utils_1_1Adt.html", [
-      [ "wr22::regex_parser::regex::Capture", "classwr22_1_1regex__parser_1_1regex_1_1Capture.html", null ],
+    [ "capture::Adt", null, [
+      [ "wr22::regex_parser::regex::Capture", "classwr22_1_1regex__parser_1_1regex_1_1Capture.html", null ]
+    ] ],
+    [ "part::Adt", null, [
       [ "wr22::regex_parser::regex::Part", "classwr22_1_1regex__parser_1_1regex_1_1Part.html", null ]
     ] ],
     [ "wr22::regex_parser::regex::part::Alternatives", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Alternatives.html", null ],
-    [ "wr22::regex_parser::utils::Box< T >", "classwr22_1_1regex__parser_1_1utils_1_1Box.html", null ],
-    [ "wr22::regex_parser::utils::Box< wr22::regex_parser::regex::SpannedPart >", "classwr22_1_1regex__parser_1_1utils_1_1Box.html", null ],
     [ "wr22::regex_parser::regex::part::CharacterClass", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1CharacterClass.html", null ],
     [ "wr22::regex_parser::regex::CharacterClassData", "structwr22_1_1regex__parser_1_1regex_1_1CharacterClassData.html", null ],
     [ "wr22::regex_parser::regex::CharacterRange", "classwr22_1_1regex__parser_1_1regex_1_1CharacterRange.html", null ],
     [ "wr22::regex_parser::regex::part::Empty", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Empty.html", null ],
-    [ "std::exception", null, [
-      [ "wr22::regex_parser::utils::BoxIsEmpty", "structwr22_1_1regex__parser_1_1utils_1_1BoxIsEmpty.html", null ]
-    ] ],
     [ "wr22::regex_parser::regex::part::Group", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Group.html", null ],
     [ "wr22::regex_parser::regex::capture::Index", "structwr22_1_1regex__parser_1_1regex_1_1capture_1_1Index.html", null ],
     [ "wr22::regex_parser::regex::part::Literal", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Literal.html", null ],
@@ -37,8 +34,5 @@ var hierarchy =
     [ "wr22::regex_parser::regex::SpannedCharacterRange", "structwr22_1_1regex__parser_1_1regex_1_1SpannedCharacterRange.html", null ],
     [ "wr22::regex_parser::regex::SpannedPart", "classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html", null ],
     [ "wr22::regex_parser::regex::part::Star", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Star.html", null ],
-    [ "wr22::regex_parser::regex::part::Wildcard", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Wildcard.html", null ],
-    [ "wr22::regex_parser::utils::detail::adt::Fs", null, [
-      [ "wr22::regex_parser::utils::detail::adt::MultiCallable< Fs >", "structwr22_1_1regex__parser_1_1utils_1_1detail_1_1adt_1_1MultiCallable.html", null ]
-    ] ]
+    [ "wr22::regex_parser::regex::part::Wildcard", "structwr22_1_1regex__parser_1_1regex_1_1part_1_1Wildcard.html", null ]
 ];

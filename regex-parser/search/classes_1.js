@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['box_0',['Box',['../classwr22_1_1regex__parser_1_1utils_1_1Box.html',1,'wr22::regex_parser::utils']]],
-  ['box_3c_20wr22_3a_3aregex_5fparser_3a_3aregex_3a_3aspannedpart_20_3e_1',['Box&lt; wr22::regex_parser::regex::SpannedPart &gt;',['../classwr22_1_1regex__parser_1_1utils_1_1Box.html',1,'wr22::regex_parser::utils']]],
-  ['boxisempty_2',['BoxIsEmpty',['../structwr22_1_1regex__parser_1_1utils_1_1BoxIsEmpty.html',1,'wr22::regex_parser::utils']]]
+  ['capture_0',['Capture',['../classwr22_1_1regex__parser_1_1regex_1_1Capture.html',1,'wr22::regex_parser::regex']]],
+  ['characterclass_1',['CharacterClass',['../structwr22_1_1regex__parser_1_1regex_1_1part_1_1CharacterClass.html',1,'wr22::regex_parser::regex::part']]],
+  ['characterclassdata_2',['CharacterClassData',['../structwr22_1_1regex__parser_1_1regex_1_1CharacterClassData.html',1,'wr22::regex_parser::regex']]],
+  ['characterrange_3',['CharacterRange',['../classwr22_1_1regex__parser_1_1regex_1_1CharacterRange.html',1,'wr22::regex_parser::regex']]]
 ];

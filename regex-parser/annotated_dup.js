@@ -41,16 +41,6 @@ var annotated_dup =
         [ "span", "namespacewr22_1_1regex__parser_1_1span.html", [
           [ "InvalidSpan", "structwr22_1_1regex__parser_1_1span_1_1InvalidSpan.html", "structwr22_1_1regex__parser_1_1span_1_1InvalidSpan" ],
           [ "Span", "classwr22_1_1regex__parser_1_1span_1_1Span.html", "classwr22_1_1regex__parser_1_1span_1_1Span" ]
-        ] ],
-        [ "utils", "namespacewr22_1_1regex__parser_1_1utils.html", [
-          [ "detail", "namespacewr22_1_1regex__parser_1_1utils_1_1detail.html", [
-            [ "adt", "namespacewr22_1_1regex__parser_1_1utils_1_1detail_1_1adt.html", [
-              [ "MultiCallable", "structwr22_1_1regex__parser_1_1utils_1_1detail_1_1adt_1_1MultiCallable.html", "structwr22_1_1regex__parser_1_1utils_1_1detail_1_1adt_1_1MultiCallable" ]
-            ] ]
-          ] ],
-          [ "Adt", "classwr22_1_1regex__parser_1_1utils_1_1Adt.html", "classwr22_1_1regex__parser_1_1utils_1_1Adt" ],
-          [ "Box", "classwr22_1_1regex__parser_1_1utils_1_1Box.html", "classwr22_1_1regex__parser_1_1utils_1_1Box" ],
-          [ "BoxIsEmpty", "structwr22_1_1regex__parser_1_1utils_1_1BoxIsEmpty.html", "structwr22_1_1regex__parser_1_1utils_1_1BoxIsEmpty" ]
         ] ]
       ] ]
     ] ]
