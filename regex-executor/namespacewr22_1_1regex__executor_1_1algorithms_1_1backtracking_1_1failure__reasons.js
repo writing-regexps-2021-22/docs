@@ -1,0 +1,7 @@
+var namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1failure__reasons =
+[
+    [ "EndOfInput", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1failure__reasons_1_1EndOfInput.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1failure__reasons_1_1EndOfInput" ],
+    [ "ExcludedChar", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1failure__reasons_1_1ExcludedChar.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1failure__reasons_1_1ExcludedChar" ],
+    [ "OptionsExhausted", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1failure__reasons_1_1OptionsExhausted.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1failure__reasons_1_1OptionsExhausted" ],
+    [ "OtherChar", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1failure__reasons_1_1OtherChar.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1failure__reasons_1_1OtherChar" ]
+];

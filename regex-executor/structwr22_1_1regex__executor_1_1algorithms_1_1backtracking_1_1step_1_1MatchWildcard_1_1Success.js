@@ -1,0 +1,4 @@
+var structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1step_1_1MatchWildcard_1_1Success =
+[
+    [ "string_span", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1step_1_1MatchWildcard_1_1Success.html#abc10b3ee074e16d6b591b03f35c403ee", null ]
+];

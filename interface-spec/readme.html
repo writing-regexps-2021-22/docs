@@ -547,6 +547,270 @@ character, which is the last character contained in the range. This
 field is present if and only if <code>single_char</code> is false.</li>
 </ol></li>
 </ol>
+<h4 id="match"><code>/match</code></h4>
+<p>Match strings against a regular expression.</p>
+<p>Allowed HTTP methods: <code>POST</code>.</p>
+<p><em>Request payload</em> fields:</p>
+<ol type="1">
+<li><code>regex</code> — A <em>JSON string</em> that represents the
+regular expression to parse. Must always be present.</li>
+<li><code>strings</code> — A <em>JSON array</em> of <em>string match
+requests</em>, each representing a string to match against the regular
+expression. Each <strong>string match request</strong> is a <em>JSON
+object</em> with the following fields:
+<ol type="1">
+<li><code>string</code>: — A <em>JSON string</em> representing the
+string to be matched.</li>
+<li><code>fragment</code>: — A <em>JSON string</em> describing which
+portion of the string needs to be matched. Currently, only the value
+“<code>whole</code>” is supported, which corresponds to matching the
+entire string.</li>
+</ol></li>
+</ol>
+<p><em>Response payload</em> is a <em>match result</em> object
+representing the result of the parse operation. This and other object
+types are defined below.</p>
+<ol type="1">
+<li><strong>Match result</strong> is a <em>JSON object</em>. Two fields
+are possible, and exactly one must be present:
+<ol type="1">
+<li><code>match_results</code> — (if the regular expression provided is
+parsed correctly) a <em>JSON array</em>, where each item corresponds to
+one string in the request’s <code>strings</code> array. Items are
+<em>JSON objects</em> with the following fields:
+<ol type="1">
+<li><code>algorithm</code> — a <em>JSON string</em> with the name of the
+algorithm used to match this string against the regular expression.
+Currently, the only possible value is “<code>backtracking</code>”.</li>
+<li><code>matched</code> — a <em>JSON boolean</em> which is true if the
+string matches the regex and false otherwise.</li>
+<li><code>steps</code> — a <em>JSON array</em> of <em>match steps</em>,
+representing the steps the matching algorithm has made.</li>
+<li>(TODO) <code>captures</code> — (present only if
+<code>matched == true</code>) the captures made by capturing
+groups.</li>
+</ol></li>
+<li><code>parse_error</code> — (if the regular expression could not be
+parsed correctly) an <em>error</em> object as defined in the
+<code>/parse</code> section.</li>
+</ol></li>
+<li><strong>Match step</strong> is a <em>JSON object</em>. The only
+mandatory field is <code>type</code>, which is a <em>JSON string</em>
+denoting the type of the step. Depending on the value of
+<code>type</code>, the <em>match step</em> has other fields. The
+following is the explanation of possible values of <code>type</code>:
+<ol type="1">
+<li>“<code>match_literal</code>” — Expect the next string character to
+match a given literal. Additional fields:
+<ol type="1">
+<li><code>regex_span</code> — the <em>span</em> of the considered
+literal in the regex.</li>
+<li><code>literal</code> — a <em>JSON string</em> of one character with
+the literal character expected in the string.</li>
+<li><code>success</code> — a <em>JSON boolean</em> which is true if the
+string character was the same as the literal and false otherwise.</li>
+<li><code>string_span</code> — (present only if
+<code>success == true</code>) a <em>span</em> object with the span of
+the matched character in the string.</li>
+<li><code>string_pos</code> — (present only if
+<code>success == false</code>) an integer <em>JSON number</em>
+describing the current position in the string (with 0 meaning “at the
+beginning”, 1 meaning “right after the first character” and so on).</li>
+<li><code>failure_reason</code> — (present only if
+<code>success == false</code>) a <em>JSON string</em> describing the
+reason why the match was not successful. Possible values:
+<ol type="1">
+<li>“<code>other_char</code>” — the next character in the string was
+different from the literal in the regex.</li>
+<li>“<code>end_of_input</code>” — there was no next character in the
+string (the string ended there).</li>
+</ol></li>
+</ol></li>
+<li>“<code>match_wildcard</code>” — Match any next character of the
+string. Additional fields:
+<ol type="1">
+<li><code>regex_span</code> — the <em>span</em> of the considered
+wildcard (“<code>.</code>”) in the regex.</li>
+<li><code>success</code> — a <em>JSON boolean</em> which is true if the
+match was successful and false otherwise. For reasons why the match
+might have failed, see <code>failure_reason</code>.</li>
+<li><code>string_span</code> — (present only if
+<code>success == true</code>) a <em>span</em> object with the span of
+the matched character in the string.</li>
+<li><code>string_pos</code> — (present only if
+<code>success == false</code>) an integer <em>JSON number</em>
+describing the current position in the string (with 0 meaning “at the
+beginning”, 1 meaning “right after the first character” and so on).</li>
+<li><code>failure_reason</code> — (present only if
+<code>success == false</code>) a <em>JSON string</em> describing the
+reason why the match was not successful. Possible values:
+<ol type="1">
+<li>“<code>end_of_input</code>” — there was no next character in the
+string (the string ended there).</li>
+</ol></li>
+</ol></li>
+<li>“<code>match_char_class</code>” — Match the next string character
+against a character class (a list of character ranges and individual
+characters). Additional fields:
+<ol type="1">
+<li><code>regex_span</code> — the <em>span</em> of the considered
+character class (e.g. “[a-z]”) in the regex.</li>
+<li><code>success</code> — a <em>JSON boolean</em> which is true if the
+match was successful and false otherwise.</li>
+<li><code>string_span</code> — (present only if
+<code>success == true</code>) a <em>span</em> object with the span of
+the matched character in the string.</li>
+<li><code>string_pos</code> — (present only if
+<code>success == false</code>) an integer <em>JSON number</em>
+describing the current position in the string (with 0 meaning “at the
+beginning”, 1 meaning “right after the first character” and so on).</li>
+<li><code>failure_reason</code> — (present only if
+<code>success == false</code>) a <em>JSON string</em> describing the
+reason why the match was not successful. Possible values:
+<ol type="1">
+<li>“<code>end_of_input</code>” — there was no next character in the
+string (the string ended there).</li>
+<li>“<code>excluded_char</code>” — the next string character did not
+match the character class. E.g. <code>0</code> does not match
+<code>[a-z]</code>.</li>
+</ol></li>
+</ol></li>
+<li>“<code>match_&lt;quantifier&gt;</code>” where
+<code>&lt;quantifier&gt;</code> is either of <code>star</code>,
+<code>plus</code> or <code>optional</code> — Start matching the
+sub-expression under the quantifier repeatedly. By itself, this step
+does not consume any characters from the string and cannot fail.
+Additional fields:
+<ol type="1">
+<li><code>regex_span</code> — the <em>span</em> of the considered
+quantified expression (e.g. “.*“) in the regex.</li>
+<li><code>string_pos</code> — an integer <em>JSON number</em> describing
+the current position in the string (with 0 meaning “at the beginning”, 1
+meaning “right after the first character” and so on).</li>
+</ol></li>
+<li>(TODO) “<code>finish_&lt;quantifier&gt;</code>” where
+<code>&lt;quantifier&gt;</code> is either of <code>star</code>,
+<code>plus</code> or <code>optional</code> — Finish repeated matching of
+the sub-expression under the quantifier and fix the number of
+repetitions matched. Completes the corresponding
+“<code>match_&lt;quantifier&gt;</code>” step. Usually, this step is
+successful, but it can fail if there is no possible number of
+repetitions that makes the string match the regex in the current branch.
+Additional fields:
+<ol type="1">
+<li><code>regex_span</code> — the <em>span</em> of the considered
+quantified expression (e.g. “.*“) in the regex. This is the same
+expression as in the corresponding <code>match_&lt;quantifier&gt;</code>
+step.</li>
+<li><code>success</code> — a <em>JSON boolean</em> which is true if the
+match was successful and false otherwise.</li>
+<li><code>string_span</code> — (present only if
+<code>success == true</code>) a <em>span</em> object with the overall
+span of all matched repetition of the sub-expression in the string. E.g.
+it is <code>[0, 5]</code> for the string “<code>abcde12345</code>”
+(current position is 0) and the regex “[a-z]+”.</li>
+<li><code>num_repetitions</code> — (present only if
+<code>success == true</code>) an integer <em>JSON number</em>, the
+number of repetitions of the sub-expression that were matched.</li>
+<li><code>string_pos</code> — (present only if
+<code>success == false</code>) an integer <em>JSON number</em>
+describing the current position in the string (with 0 meaning “at the
+beginning”, 1 meaning “right after the first character” and so on).</li>
+<li><code>failure_reason</code> — (present only if
+<code>success == false</code>) a <em>JSON string</em> describing the
+reason why the match was not successful. Possible values:
+<ol type="1">
+<li>“<code>options_exhausted</code>” — there is no valid number of
+repetitions that makes the string match the regex in the current
+branch.</li>
+</ol></li>
+</ol></li>
+<li>“<code>begin_group</code>” — Indicates a beginning of a group
+(sub-expression in parentheses in a regex). By itself, this step does
+not consume any characters from the string and cannot fail. Additional
+fields:
+<ol type="1">
+<li><code>regex_span</code> — the <em>span</em> of the considered group
+(e.g. “([0-9]+)”) in the regex.</li>
+<li><code>string_pos</code> — an integer <em>JSON number</em> describing
+the current position in the string (with 0 meaning “at the beginning”, 1
+meaning “right after the first character” and so on).</li>
+</ol></li>
+<li>“<code>end_group</code>” — Indicates that a group has finished.
+Always corresponds to an earlier “<code>begin_group</code>” step. By
+itself, this step does not consume any characters from the string and
+cannot fail. Additional fields:
+<ol type="1">
+<li><code>string_pos</code> — an integer <em>JSON number</em> describing
+the current position in the string (with 0 meaning “at the beginning”, 1
+meaning “right after the first character” and so on).</li>
+</ol></li>
+<li>“<code>match_alternatives</code>” — Start trying to match
+alternative subexpressions (e.g. “<code>abc|[0-9]+</code>” will try to
+match the string against “<code>abc</code>” first, and if it fails, then
+against “<code>[0-9]+</code>”). By itself, this step does not consume
+any characters from the string and cannot fail. Additional fields:
+<ol type="1">
+<li><code>regex_span</code> — the overall <em>span</em> of the
+considered alternatives in the regex.</li>
+<li><code>string_pos</code> — an integer <em>JSON number</em> describing
+the current position in the string (with 0 meaning “at the beginning”, 1
+meaning “right after the first character” and so on).</li>
+</ol></li>
+<li>(TODO) “<code>finish_alternatives</code>” — make a decision in the
+choice of an alternative. The current part of the string matches this
+alternative. If, later, this choice will cause the rest of the string
+not to match the rest of the regex, another alternative would be chosen.
+Additional fields:
+<ol type="1">
+<li><code>regex_span</code> — the <em>span</em> of the considered
+quantified expression (e.g. “.*“) in the regex. This is the same
+expression as in the corresponding <code>match_&lt;quantifier&gt;</code>
+step.</li>
+<li><code>success</code> — a <em>JSON boolean</em> which is true if the
+match was successful and false otherwise.</li>
+<li><code>string_span</code> — (present only if
+<code>success == true</code>) the <em>span</em> of the part of the
+string that matches the chosen alternative.</li>
+<li><code>alternative_chosen</code> — (present only if
+<code>success == true</code>) an integer <em>JSON number</em>, the index
+of the chosen alternative (starting from 0).</li>
+<li><code>string_pos</code> — (present only if
+<code>success == false</code>) an integer <em>JSON number</em>
+describing the current position in the string (with 0 meaning “at the
+beginning”, 1 meaning “right after the first character” and so on).</li>
+<li><code>failure_reason</code> — (present only if
+<code>success == false</code>) a <em>JSON string</em> describing the
+reason why the match was not successful. Possible values:
+<ol type="1">
+<li>“<code>options_exhausted</code>” — there is no valid alternative
+that makes the string match the regex in the current branch.</li>
+</ol></li>
+</ol></li>
+<li>“<code>backtrack</code>” — undo last several steps and go back to
+try another option, because, in this branch, the string does not matches
+the regex, and there are still other branches to try. This step may
+cause the current position in the string to go back, “un-consuming” some
+characters from it. Also, this step cannot fail. Additional fields:
+<ol type="1">
+<li><code>string_pos</code> — an integer <em>JSON number</em> describing
+the position in the string after this step.</li>
+<li><code>continue_after_step</code> — an integer <em>JSON number</em>
+representing the index of the last step to keep (not to undo). This
+index starts from 0, and the steps are numbered in the same way as they
+reside in the JSON array.</li>
+</ol></li>
+<li>“<code>end</code>” — finish matching, successfully or not.
+Additional fields:
+<ol type="1">
+<li><code>string_pos</code> — the current position in the string at the
+end of the matching process. If the whole string of length
+<code>N</code> has been matched, <code>string_pos = N</code>.</li>
+<li><code>success</code> — a <em>JSON boolean</em> which is true if the
+string matches the regex and false otherwise.</li>
+</ol></li>
+</ol></li>
+</ol>
 <h2 id="service-errors">Service Errors</h2>
 <p><em>Service errors</em> are represented by <em>error</em> objects.
 The following <em>error codes</em> are defined for <em>service
