@@ -225,8 +225,8 @@
 <header id="title-block-header">
 <h1 class="title">interface-spec</h1>
 </header>
-<h1 id="communication-interface-specification-v-0.2.0">Communication
-Interface Specification v 0.2.0</h1>
+<h1 id="communication-interface-specification-v-0.2.1">Communication
+Interface Specification v 0.2.1</h1>
 <h2 id="common-definitions-and-convention">Common Definitions And
 Convention</h2>
 <ol type="1">
@@ -559,9 +559,9 @@ requests</em>, each representing a string to match against the regular
 expression. Each <strong>string match request</strong> is a <em>JSON
 object</em> with the following fields:
 <ol type="1">
-<li><code>string</code>: — A <em>JSON string</em> representing the
-string to be matched.</li>
-<li><code>fragment</code>: — A <em>JSON string</em> describing which
+<li><code>string</code> — A <em>JSON string</em> representing the string
+to be matched.</li>
+<li><code>fragment</code> — A <em>JSON string</em> describing which
 portion of the string needs to be matched. Currently, only the value
 “<code>whole</code>” is supported, which corresponds to matching the
 entire string.</li>
