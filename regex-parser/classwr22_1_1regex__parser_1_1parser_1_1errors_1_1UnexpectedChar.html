@@ -105,9 +105,9 @@ Inheritance diagram for wr22::regex_parser::parser::errors::UnexpectedChar:</div
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af131d8c38fb38d71d00d5463fa95f4a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#af131d8c38fb38d71d00d5463fa95f4a5">UnexpectedChar</a> (size_t <a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#ae8e1c76e9734f6d1b9f54a6179cc9a5c">position</a>, char32_t <a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#ae150974d7c9bf6f7b765b18ffeac4033">char_got</a>, std::string <a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#a35ec1998949e6ffb320e44a718aea938">expected</a>)</td></tr>
-<tr class="memdesc:af131d8c38fb38d71d00d5463fa95f4a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#af131d8c38fb38d71d00d5463fa95f4a5">More...</a><br /></td></tr>
-<tr class="separator:af131d8c38fb38d71d00d5463fa95f4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a778f31c059860230b742e33586a6568e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#a778f31c059860230b742e33586a6568e">UnexpectedChar</a> (size_t <a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#ae8e1c76e9734f6d1b9f54a6179cc9a5c">position</a>, char32_t <a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#ae150974d7c9bf6f7b765b18ffeac4033">char_got</a>, std::string <a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#a35ec1998949e6ffb320e44a718aea938">expected</a>, std::optional&lt; char32_t &gt; <a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#a782a135ca121a50f9fc306c2994b156b">needs_closing</a>)</td></tr>
+<tr class="memdesc:a778f31c059860230b742e33586a6568e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#a778f31c059860230b742e33586a6568e">More...</a><br /></td></tr>
+<tr class="separator:a778f31c059860230b742e33586a6568e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8e1c76e9734f6d1b9f54a6179cc9a5c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#ae8e1c76e9734f6d1b9f54a6179cc9a5c">position</a> () const</td></tr>
 <tr class="memdesc:ae8e1c76e9734f6d1b9f54a6179cc9a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the input position. See the constructor docs for a more detailed description.  <a href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#ae8e1c76e9734f6d1b9f54a6179cc9a5c">More...</a><br /></td></tr>
 <tr class="separator:ae8e1c76e9734f6d1b9f54a6179cc9a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,12 +117,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a35ec1998949e6ffb320e44a718aea938"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#a35ec1998949e6ffb320e44a718aea938">expected</a> () const</td></tr>
 <tr class="memdesc:a35ec1998949e6ffb320e44a718aea938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the description of expected characters.  <a href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#a35ec1998949e6ffb320e44a718aea938">More...</a><br /></td></tr>
 <tr class="separator:a35ec1998949e6ffb320e44a718aea938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a782a135ca121a50f9fc306c2994b156b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; char32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#a782a135ca121a50f9fc306c2994b156b">needs_closing</a> () const</td></tr>
+<tr class="memdesc:a782a135ca121a50f9fc306c2994b156b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bracket that needs to be closed.  <a href="classwr22_1_1regex__parser_1_1parser_1_1errors_1_1UnexpectedChar.html#a782a135ca121a50f9fc306c2994b156b">More...</a><br /></td></tr>
+<tr class="separator:a782a135ca121a50f9fc306c2994b156b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The error when the parser got a character it didn't expect at the current position. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af131d8c38fb38d71d00d5463fa95f4a5" name="af131d8c38fb38d71d00d5463fa95f4a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af131d8c38fb38d71d00d5463fa95f4a5">&#9670;&nbsp;</a></span>UnexpectedChar()</h2>
+<a id="a778f31c059860230b742e33586a6568e" name="a778f31c059860230b742e33586a6568e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a778f31c059860230b742e33586a6568e">&#9670;&nbsp;</a></span>UnexpectedChar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,7 +146,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>expected</em>&#160;</td>
+          <td class="paramname"><em>expected</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; char32_t &gt;&#160;</td>
+          <td class="paramname"><em>needs_closing</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -159,6 +168,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">position</td><td>the 0-based position in the input when the parser has encountered the unexpected character. </td></tr>
     <tr><td class="paramname">char_got</td><td>the character that the parser has received. </td></tr>
     <tr><td class="paramname">expected</td><td>a textual description of a class of characters expected instead. </td></tr>
+    <tr><td class="paramname">needs_closing</td><td>a character describing the type of bracket that needs to be closed, if any. </td></tr>
   </table>
   </dd>
 </dl>
@@ -203,6 +213,25 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the description of expected characters. </p>
 <p >See the constructor docs for a more detailed description. </p>
+
+</div>
+</div>
+<a id="a782a135ca121a50f9fc306c2994b156b" name="a782a135ca121a50f9fc306c2994b156b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a782a135ca121a50f9fc306c2994b156b">&#9670;&nbsp;</a></span>needs_closing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; char32_t &gt; wr22::regex_parser::parser::errors::UnexpectedChar::needs_closing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the bracket that needs to be closed. </p>
 
 </div>
 </div>
