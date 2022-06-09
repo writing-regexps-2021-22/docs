@@ -93,19 +93,19 @@ $(document).ready(function(){initNavTree('explanation_8hpp_source.html',''); ini
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="explanation__folder_8hpp.html">wr22/regex_explainer/explanation/explanation_folder.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="sample__folder_8hpp.html">wr22/regex_explainer/explanation/sample_folder.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="upgrade__sample_8hpp.html">wr22/regex_explainer/explanation/upgrade_sample.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// STL</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacewr22_1_1regex__explainer_1_1explanation.html">wr22::regex_explainer::explanation</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">using</span> regex_parser::regex::SpannedPart;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::vector&lt;Explanation&gt;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="namespacewr22_1_1regex__explainer_1_1explanation.html#a3a74e91e138188de8f895aab65c2685b">get_full_explanation</a>(<span class="keyword">const</span> SpannedPart &amp;spanned_part, <span class="keywordtype">size_t</span> depth = 0);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}  <span class="comment">// namespace wr22::regex_explainer::explanation</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;wr22/unicode/conversion.hpp&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// STL</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacewr22_1_1regex__explainer_1_1explanation.html">wr22::regex_explainer::explanation</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">using</span> regex_parser::regex::SpannedPart;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    std::vector&lt;Explanation&gt;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_function" href="namespacewr22_1_1regex__explainer_1_1explanation.html#a3a74e91e138188de8f895aab65c2685b">get_full_explanation</a>(<span class="keyword">const</span> SpannedPart &amp;spanned_part, <span class="keywordtype">size_t</span> depth = 0);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}  <span class="comment">// namespace wr22::regex_explainer::explanation</span></div>
 <div class="ttc" id="aexplanation__folder_8hpp_html"><div class="ttname"><a href="explanation__folder_8hpp.html">explanation_folder.hpp</a></div></div>
 <div class="ttc" id="anamespacewr22_1_1regex__explainer_1_1explanation_html"><div class="ttname"><a href="namespacewr22_1_1regex__explainer_1_1explanation.html">wr22::regex_explainer::explanation</a></div><div class="ttdef"><b>Definition:</b> explanation.cpp:15</div></div>
 <div class="ttc" id="anamespacewr22_1_1regex__explainer_1_1explanation_html_a3a74e91e138188de8f895aab65c2685b"><div class="ttname"><a href="namespacewr22_1_1regex__explainer_1_1explanation.html#a3a74e91e138188de8f895aab65c2685b">wr22::regex_explainer::explanation::get_full_explanation</a></div><div class="ttdeci">std::vector&lt; Explanation &gt; get_full_explanation(const SpannedPart &amp;spanned_part, size_t depth)</div><div class="ttdoc">The function returns the vector processed information about each node of the syntax tree.</div><div class="ttdef"><b>Definition:</b> explanation.cpp:17</div></div>

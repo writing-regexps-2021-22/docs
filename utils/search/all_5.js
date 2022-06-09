@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['varianttype_0',['VariantType',['../classwr22_1_1utils_1_1Adt.html#a9116a176cc582e8d2494f5c67ad990f2',1,'wr22::utils::Adt']]],
-  ['visit_1',['visit',['../classwr22_1_1utils_1_1Adt.html#a124818d5ecf87ffbacfda02c0e6628ad',1,'wr22::utils::Adt::visit(Fs &amp;&amp;... visitors) const'],['../classwr22_1_1utils_1_1Adt.html#a6391d33129e205236c96768c52304f6b',1,'wr22::utils::Adt::visit(Fs &amp;&amp;... visitors)']]]
+  ['nonconcurrent_5fsemaphore_2ecpp_0',['nonconcurrent_semaphore.cpp',['../nonconcurrent__semaphore_8cpp.html',1,'']]],
+  ['nonconcurrent_5fsemaphore_2ehpp_1',['nonconcurrent_semaphore.hpp',['../nonconcurrent__semaphore_8hpp.html',1,'']]],
+  ['nonconcurrentsemaphore_2',['NonconcurrentSemaphore',['../classwr22_1_1utils_1_1NonconcurrentSemaphoreGuard.html#aa212ca8ceb2ab3b5f649736076a012c7',1,'wr22::utils::NonconcurrentSemaphoreGuard::NonconcurrentSemaphore()'],['../classwr22_1_1utils_1_1NonconcurrentSemaphore.html#a7fe6272fdb98e110fa846b9042438c6b',1,'wr22::utils::NonconcurrentSemaphore::NonconcurrentSemaphore()'],['../classwr22_1_1utils_1_1NonconcurrentSemaphore.html',1,'wr22::utils::NonconcurrentSemaphore']]],
+  ['nonconcurrentsemaphoreguard_3',['NonconcurrentSemaphoreGuard',['../classwr22_1_1utils_1_1NonconcurrentSemaphore.html#adb5f3dabcbeef6d3b4200e750d0a87f2',1,'wr22::utils::NonconcurrentSemaphore::NonconcurrentSemaphoreGuard()'],['../classwr22_1_1utils_1_1NonconcurrentSemaphoreGuard.html#acc9f7b72a77f503d139d893e02a27c4b',1,'wr22::utils::NonconcurrentSemaphoreGuard::NonconcurrentSemaphoreGuard(const NonconcurrentSemaphoreGuard &amp;)=delete'],['../classwr22_1_1utils_1_1NonconcurrentSemaphoreGuard.html#ace52b87646f2f43f7eb5864fad2c5757',1,'wr22::utils::NonconcurrentSemaphoreGuard::NonconcurrentSemaphoreGuard(NonconcurrentSemaphoreGuard &amp;&amp;other)'],['../classwr22_1_1utils_1_1NonconcurrentSemaphoreGuard.html',1,'wr22::utils::NonconcurrentSemaphoreGuard']]]
 ];

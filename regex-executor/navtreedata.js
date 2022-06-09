@@ -39,7 +39,7 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ]
@@ -58,8 +58,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "algorithms_2backtracking_2executor_8cpp.html",
-"namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1failure__reasons.html",
-"structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1step_1_1FinishAlternatives.html"
+"match__result_8hpp_source.html",
+"structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1failure__reasons_1_1OtherChar.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

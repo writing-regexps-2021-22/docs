@@ -89,6 +89,9 @@ $(document).ready(function(){initNavTree('classwr22_1_1regex__explainer_1_1expla
 </div><!--header-->
 <div class="contents">
 
+<p>A class for holding an explanation tree element.  
+ <a href="classwr22_1_1regex__explainer_1_1explanation_1_1Explanation.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="explanation__folder_8hpp_source.html">explanation_folder.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -96,6 +99,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2d94583329b20ed0fe5e77fbdf914e4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__explainer_1_1explanation_1_1Explanation.html#a2d94583329b20ed0fe5e77fbdf914e4d">Explanation</a> ()</td></tr>
 <tr class="separator:a2d94583329b20ed0fe5e77fbdf914e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae44e954e31332583cf0f9b1ce9afb246"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__explainer_1_1explanation_1_1Explanation.html#ae44e954e31332583cf0f9b1ce9afb246">Explanation</a> (<a class="el" href="namespacewr22_1_1regex__explainer_1_1explanation.html#a1ab906edbdd48a1a259bf5aa33bcae64">type_of_sentence</a> explanation_, size_t depth_, bool bold_=false)</td></tr>
+<tr class="memdesc:ae44e954e31332583cf0f9b1ce9afb246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classwr22_1_1regex__explainer_1_1explanation_1_1Explanation.html#ae44e954e31332583cf0f9b1ce9afb246">More...</a><br /></td></tr>
 <tr class="separator:ae44e954e31332583cf0f9b1ce9afb246"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1e87471e7f592f0157307c9b65cb728"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewr22_1_1regex__explainer_1_1explanation.html#a1ab906edbdd48a1a259bf5aa33bcae64">type_of_sentence</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__explainer_1_1explanation_1_1Explanation.html#ac1e87471e7f592f0157307c9b65cb728">get_explanation</a> () const</td></tr>
 <tr class="separator:ac1e87471e7f592f0157307c9b65cb728"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,7 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a100e875362318c2e7f6e965902243f2f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__explainer_1_1explanation_1_1Explanation.html#a100e875362318c2e7f6e965902243f2f">is_bold</a> () const</td></tr>
 <tr class="separator:a100e875362318c2e7f6e965902243f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >A class for holding an explanation tree element. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2d94583329b20ed0fe5e77fbdf914e4d" name="a2d94583329b20ed0fe5e77fbdf914e4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d94583329b20ed0fe5e77fbdf914e4d">&#9670;&nbsp;</a></span>Explanation() <span class="overload">[1/2]</span></h2>
 
@@ -154,6 +160,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">explanation_</td><td>is the variant type that represents some part of explanation. </td></tr>
+    <tr><td class="paramname">depth_</td><td>is the depth of the current explanation in the resulting tree of explanations. </td></tr>
+    <tr><td class="paramname">bold</td><td>is boolean variable indicating the need to highlight the color in bold. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -171,6 +187,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the depth of current spanned_part </dd></dl>
 
 </div>
 </div>
@@ -188,6 +205,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the explanation for current spanned_part </dd></dl>
 
 </div>
 </div>
@@ -205,6 +223,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the bold type indicator </dd></dl>
 
 </div>
 </div>

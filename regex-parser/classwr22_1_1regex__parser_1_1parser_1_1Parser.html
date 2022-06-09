@@ -125,9 +125,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab4ec4dd1b448ebf2e4cfc91be53d72a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html">regex::SpannedPart</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1Parser.html#ab4ec4dd1b448ebf2e4cfc91be53d72a9">parse_group</a> ()</td></tr>
 <tr class="memdesc:ab4ec4dd1b448ebf2e4cfc91be53d72a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intermediate rule: parse a parenthesized group (any capture variant).  <a href="classwr22_1_1regex__parser_1_1parser_1_1Parser.html#ab4ec4dd1b448ebf2e4cfc91be53d72a9">More...</a><br /></td></tr>
 <tr class="separator:ab4ec4dd1b448ebf2e4cfc91be53d72a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21abf5909376cb92a27149e6b1077a6b"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::string, <a class="el" href="classwr22_1_1regex__parser_1_1span_1_1Span.html">Span</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a21abf5909376cb92a27149e6b1077a6b">parse_group_name</a> ()</td></tr>
-<tr class="memdesc:a21abf5909376cb92a27149e6b1077a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intermediate rule: parse a group name.  <a href="classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a21abf5909376cb92a27149e6b1077a6b">More...</a><br /></td></tr>
-<tr class="separator:a21abf5909376cb92a27149e6b1077a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe50bca7990bc27983c3867b561d0ea7"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::string, <a class="el" href="classwr22_1_1regex__parser_1_1span_1_1Span.html">Span</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1Parser.html#abe50bca7990bc27983c3867b561d0ea7">parse_group_name</a> (char32_t closing_par)</td></tr>
+<tr class="memdesc:abe50bca7990bc27983c3867b561d0ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intermediate rule: parse a group name.  <a href="classwr22_1_1regex__parser_1_1parser_1_1Parser.html#abe50bca7990bc27983c3867b561d0ea7">More...</a><br /></td></tr>
+<tr class="separator:abe50bca7990bc27983c3867b561d0ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a665f6004c96496c7a4f796e4d2002a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwr22_1_1regex__parser_1_1regex_1_1SpannedPart.html">regex::SpannedPart</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a5a665f6004c96496c7a4f796e4d2002a">parse_char_class</a> ()</td></tr>
 <tr class="memdesc:a5a665f6004c96496c7a4f796e4d2002a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intermediate rule: parse a character class (e.g.  <a href="classwr22_1_1regex__parser_1_1parser_1_1Parser.html#a5a665f6004c96496c7a4f796e4d2002a">More...</a><br /></td></tr>
 <tr class="separator:a5a665f6004c96496c7a4f796e4d2002a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -388,8 +388,8 @@ template&lt;typename Iter , typename Sentinel &gt; </div>
 
 </div>
 </div>
-<a id="a21abf5909376cb92a27149e6b1077a6b" name="a21abf5909376cb92a27149e6b1077a6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21abf5909376cb92a27149e6b1077a6b">&#9670;&nbsp;</a></span>parse_group_name()</h2>
+<a id="abe50bca7990bc27983c3867b561d0ea7" name="abe50bca7990bc27983c3867b561d0ea7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe50bca7990bc27983c3867b561d0ea7">&#9670;&nbsp;</a></span>parse_group_name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -402,7 +402,8 @@ template&lt;typename Iter , typename Sentinel &gt; </div>
         <tr>
           <td class="memname">std::pair&lt; std::string, <a class="el" href="classwr22_1_1regex__parser_1_1span_1_1Span.html">Span</a> &gt; <a class="el" href="classwr22_1_1regex__parser_1_1parser_1_1Parser.html">wr22::regex_parser::parser::Parser</a>&lt; Iter, Sentinel &gt;::parse_group_name </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">char32_t&#160;</td>
+          <td class="paramname"><em>closing_par</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

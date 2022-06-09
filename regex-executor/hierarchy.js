@@ -7,6 +7,8 @@ var hierarchy =
     [ "wr22::regex_executor::algorithms::backtracking::AlternativesDecision", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1AlternativesDecision.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::step::Backtrack", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1step_1_1Backtrack.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::step::BeginGroup", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1step_1_1BeginGroup.html", null ],
+    [ "wr22::regex_executor::Capture", "structwr22_1_1regex__executor_1_1Capture.html", null ],
+    [ "wr22::regex_executor::Captures", "structwr22_1_1regex__executor_1_1Captures.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::DecisionApplicator< T >", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1DecisionApplicator.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::DecisionApplicator< AlternativesDecision >", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1DecisionApplicator_3_01AlternativesDecision_01_4.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::DecisionApplicator< QuantifierDecision< Quantifier > >", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1DecisionApplicator_3_01Quantifier6c51a2f8447fdef146d99f13e26c5c08.html", null ],
@@ -16,10 +18,14 @@ var hierarchy =
     [ "wr22::regex_executor::algorithms::backtracking::step::EndGroup", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1step_1_1EndGroup.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::failure_reasons::EndOfInput", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1failure__reasons_1_1EndOfInput.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::ErrorHook", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1ErrorHook.html", null ],
+    [ "std::exception", null, [
+      [ "wr22::regex_executor::algorithms::backtracking::MatchFailure", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1MatchFailure.html", null ]
+    ] ],
     [ "wr22::regex_executor::algorithms::backtracking::failure_reasons::ExcludedChar", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1failure__reasons_1_1ExcludedChar.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::instruction::Execute", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1instruction_1_1Execute.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::Executor", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Executor.html", null ],
     [ "wr22::regex_executor::Executor", "classwr22_1_1regex__executor_1_1Executor.html", null ],
+    [ "wr22::regex_executor::algorithms::backtracking::instruction::ExpectEnd", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1instruction_1_1ExpectEnd.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::detail::step::FailureBase", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1detail_1_1step_1_1FailureBase.html", [
       [ "wr22::regex_executor::algorithms::backtracking::step::End::Failure", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1step_1_1End_1_1Failure.html", null ],
       [ "wr22::regex_executor::algorithms::backtracking::step::FinishAlternatives::Failure", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1step_1_1FinishAlternatives_1_1Failure.html", null ],
@@ -39,6 +45,7 @@ var hierarchy =
     [ "wr22::regex_executor::algorithms::backtracking::InterpreterState", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1InterpreterState.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::InterpreterStateMiniSnapshot", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1InterpreterStateMiniSnapshot.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::InterpreterStateSnapshot", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1InterpreterStateSnapshot.html", null ],
+    [ "wr22::regex_executor::MapPrinter< K, V >", "structwr22_1_1regex__executor_1_1MapPrinter.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::step::MatchAlternatives", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1step_1_1MatchAlternatives.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::step::MatchCharClass", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1step_1_1MatchCharClass.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::step::MatchLiteral", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1step_1_1MatchLiteral.html", null ],
@@ -49,7 +56,6 @@ var hierarchy =
     [ "wr22::regex_executor::algorithms::backtracking::failure_reasons::OtherChar", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1failure__reasons_1_1OtherChar.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::PartExecutor", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1PartExecutor.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::QuantifierDecision< PartT >", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html", null ],
-    [ "wr22::regex_executor::algorithms::backtracking::QuantifierDecision< Quantifier >", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::QuantifierExecutor< Derived, Quantifier >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierExecutor.html", [
       [ "wr22::regex_executor::algorithms::backtracking::SpecificPartExecutor< regex_parser::regex::part::Optional >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__paf2b57161be8b8212251a545892a846a9.html", null ],
       [ "wr22::regex_executor::algorithms::backtracking::SpecificPartExecutor< regex_parser::regex::part::Plus >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa1125603269949b32d9473e72cfcd861a.html", null ],
@@ -74,6 +80,7 @@ var hierarchy =
     [ "wr22::regex_executor::algorithms::backtracking::SpecificPartExecutor< regex_parser::regex::part::Literal >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pabd2897ab779164c0e5d00c6cd9db8821.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::SpecificPartExecutor< regex_parser::regex::part::Sequence >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pae7f6b990110c4f7ebc9e0c20f050e90f.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::SpecificPartExecutor< regex_parser::regex::part::Wildcard >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa30cc4215122c06c9954c0c6e06301c50.html", null ],
+    [ "wr22::regex_executor::algorithms::backtracking::QuantifierExecutor< Derived, Quantifier >::StopImmediatelyTag", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierExecutor_1_1StopImmediatelyTag.html", null ],
     [ "wr22::regex_executor::algorithms::backtracking::detail::step::SuccessBase", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1detail_1_1step_1_1SuccessBase.html", [
       [ "wr22::regex_executor::algorithms::backtracking::step::End::Success", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1step_1_1End_1_1Success.html", null ],
       [ "wr22::regex_executor::algorithms::backtracking::step::FinishAlternatives::Success", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1step_1_1FinishAlternatives_1_1Success.html", null ],

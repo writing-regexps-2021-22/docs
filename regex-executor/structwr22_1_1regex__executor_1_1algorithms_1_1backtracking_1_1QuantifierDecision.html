@@ -105,10 +105,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ac59500ff7ab9c67c8f8285d01c944943"><td class="memItemLeft" align="right" valign="top">std::optional&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html#ac59500ff7ab9c67c8f8285d01c944943">num_repetitions</a></td></tr>
-<tr class="separator:ac59500ff7ab9c67c8f8285d01c944943"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afff2ae868d7920b3a88e9ba5da0e33b4"><td class="memItemLeft" align="right" valign="top">std::optional&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html#afff2ae868d7920b3a88e9ba5da0e33b4">actual_num_repetitions</a></td></tr>
-<tr class="separator:afff2ae868d7920b3a88e9ba5da0e33b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c8a5fb2b4a5f810b421b8b001f8b00f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html#a3c8a5fb2b4a5f810b421b8b001f8b00f">stop_here</a> = false</td></tr>
+<tr class="separator:a3c8a5fb2b4a5f810b421b8b001f8b00f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3558638312de1e4997f4e0d09a1ef5e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html#a3558638312de1e4997f4e0d09a1ef5e9">can_go_back</a> = false</td></tr>
+<tr class="separator:a3558638312de1e4997f4e0d09a1ef5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259e32263740cbccea296656d455af31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html#a259e32263740cbccea296656d455af31">is_first</a> = false</td></tr>
+<tr class="separator:a259e32263740cbccea296656d455af31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a925d2d0e097717488691a76185944f97" name="a925d2d0e097717488691a76185944f97"></a>
@@ -159,8 +161,8 @@ template&lt;typename PartT &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="afff2ae868d7920b3a88e9ba5da0e33b4" name="afff2ae868d7920b3a88e9ba5da0e33b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afff2ae868d7920b3a88e9ba5da0e33b4">&#9670;&nbsp;</a></span>actual_num_repetitions</h2>
+<a id="a3558638312de1e4997f4e0d09a1ef5e9" name="a3558638312de1e4997f4e0d09a1ef5e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3558638312de1e4997f4e0d09a1ef5e9">&#9670;&nbsp;</a></span>can_go_back</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,15 +170,15 @@ template&lt;typename PartT &gt; </div>
 template&lt;typename PartT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;size_t&gt; <a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html">wr22::regex_executor::algorithms::backtracking::QuantifierDecision</a>&lt; PartT &gt;::actual_num_repetitions</td>
+          <td class="memname">bool <a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html">wr22::regex_executor::algorithms::backtracking::QuantifierDecision</a>&lt; PartT &gt;::can_go_back = false</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac59500ff7ab9c67c8f8285d01c944943" name="ac59500ff7ab9c67c8f8285d01c944943"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac59500ff7ab9c67c8f8285d01c944943">&#9670;&nbsp;</a></span>num_repetitions</h2>
+<a id="a259e32263740cbccea296656d455af31" name="a259e32263740cbccea296656d455af31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a259e32263740cbccea296656d455af31">&#9670;&nbsp;</a></span>is_first</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,7 +186,23 @@ template&lt;typename PartT &gt; </div>
 template&lt;typename PartT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;size_t&gt; <a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html">wr22::regex_executor::algorithms::backtracking::QuantifierDecision</a>&lt; PartT &gt;::num_repetitions</td>
+          <td class="memname">bool <a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html">wr22::regex_executor::algorithms::backtracking::QuantifierDecision</a>&lt; PartT &gt;::is_first = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c8a5fb2b4a5f810b421b8b001f8b00f" name="a3c8a5fb2b4a5f810b421b8b001f8b00f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c8a5fb2b4a5f810b421b8b001f8b00f">&#9670;&nbsp;</a></span>stop_here</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PartT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html">wr22::regex_executor::algorithms::backtracking::QuantifierDecision</a>&lt; PartT &gt;::stop_here = false</td>
         </tr>
       </table>
 </div><div class="memdoc">

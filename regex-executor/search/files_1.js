@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['error_5fhook_2ehpp_0',['error_hook.hpp',['../error__hook_8hpp.html',1,'']]],
-  ['executor_2ecpp_1',['executor.cpp',['../algorithms_2backtracking_2executor_8cpp.html',1,'(Global Namespace)'],['../executor_8cpp.html',1,'(Global Namespace)']]],
-  ['executor_2ehpp_2',['executor.hpp',['../algorithms_2backtracking_2executor_8hpp.html',1,'(Global Namespace)'],['../executor_8hpp.html',1,'(Global Namespace)']]]
+  ['decision_2ecpp_0',['decision.cpp',['../decision_8cpp.html',1,'']]],
+  ['decision_2ehpp_1',['decision.hpp',['../decision_8hpp.html',1,'']]],
+  ['decision_5fapplicator_2ehpp_2',['decision_applicator.hpp',['../decision__applicator_8hpp.html',1,'']]],
+  ['decision_5fref_2ehpp_3',['decision_ref.hpp',['../decision__ref_8hpp.html',1,'']]],
+  ['decision_5fsnapshot_2ehpp_4',['decision_snapshot.hpp',['../decision__snapshot_8hpp.html',1,'']]]
 ];

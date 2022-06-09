@@ -19,6 +19,7 @@ var annotated_dup =
             [ "instruction", "namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1instruction.html", [
               [ "AddStep", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1instruction_1_1AddStep.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1instruction_1_1AddStep" ],
               [ "Execute", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1instruction_1_1Execute.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1instruction_1_1Execute" ],
+              [ "ExpectEnd", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1instruction_1_1ExpectEnd.html", null ],
               [ "Run", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1instruction_1_1Run.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1instruction_1_1Run" ]
             ] ],
             [ "step", "namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1step.html", [
@@ -47,6 +48,7 @@ var annotated_dup =
             [ "InterpreterState", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1InterpreterState.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1InterpreterState" ],
             [ "InterpreterStateMiniSnapshot", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1InterpreterStateMiniSnapshot.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1InterpreterStateMiniSnapshot" ],
             [ "InterpreterStateSnapshot", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1InterpreterStateSnapshot.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1InterpreterStateSnapshot" ],
+            [ "MatchFailure", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1MatchFailure.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1MatchFailure" ],
             [ "MatchResult", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1MatchResult.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1MatchResult" ],
             [ "PartExecutor", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1PartExecutor.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1PartExecutor" ],
             [ "QuantifierDecision", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision" ],
@@ -57,10 +59,10 @@ var annotated_dup =
             [ "SpecificPartExecutor< regex_parser::regex::part::Empty >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__paf2a40c064dcd4b6c701bbb35a8de7bcb.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__paf2a40c064dcd4b6c701bbb35a8de7bcb" ],
             [ "SpecificPartExecutor< regex_parser::regex::part::Group >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pac09ea7c5a52e6cf4eccd351c0f05522e.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pac09ea7c5a52e6cf4eccd351c0f05522e" ],
             [ "SpecificPartExecutor< regex_parser::regex::part::Literal >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pabd2897ab779164c0e5d00c6cd9db8821.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pabd2897ab779164c0e5d00c6cd9db8821" ],
-            [ "SpecificPartExecutor< regex_parser::regex::part::Optional >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__paf2b57161be8b8212251a545892a846a9.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__paf2b57161be8b8212251a545892a846a9" ],
-            [ "SpecificPartExecutor< regex_parser::regex::part::Plus >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa1125603269949b32d9473e72cfcd861a.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa1125603269949b32d9473e72cfcd861a" ],
+            [ "SpecificPartExecutor< regex_parser::regex::part::Optional >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__paf2b57161be8b8212251a545892a846a9.html", null ],
+            [ "SpecificPartExecutor< regex_parser::regex::part::Plus >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa1125603269949b32d9473e72cfcd861a.html", null ],
             [ "SpecificPartExecutor< regex_parser::regex::part::Sequence >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pae7f6b990110c4f7ebc9e0c20f050e90f.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pae7f6b990110c4f7ebc9e0c20f050e90f" ],
-            [ "SpecificPartExecutor< regex_parser::regex::part::Star >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa8fbc23b02468b442b84ed6c913fd5c63.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa8fbc23b02468b442b84ed6c913fd5c63" ],
+            [ "SpecificPartExecutor< regex_parser::regex::part::Star >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa8fbc23b02468b442b84ed6c913fd5c63.html", null ],
             [ "SpecificPartExecutor< regex_parser::regex::part::Wildcard >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa30cc4215122c06c9954c0c6e06301c50.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa30cc4215122c06c9954c0c6e06301c50" ],
             [ "Step", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Step.html", null ]
           ] ]
@@ -68,7 +70,10 @@ var annotated_dup =
         [ "utils", "namespacewr22_1_1regex__executor_1_1utils.html", [
           [ "SpannedRef", "classwr22_1_1regex__executor_1_1utils_1_1SpannedRef.html", "classwr22_1_1regex__executor_1_1utils_1_1SpannedRef" ]
         ] ],
+        [ "Capture", "structwr22_1_1regex__executor_1_1Capture.html", "structwr22_1_1regex__executor_1_1Capture" ],
+        [ "Captures", "structwr22_1_1regex__executor_1_1Captures.html", "structwr22_1_1regex__executor_1_1Captures" ],
         [ "Executor", "classwr22_1_1regex__executor_1_1Executor.html", "classwr22_1_1regex__executor_1_1Executor" ],
+        [ "MapPrinter", "structwr22_1_1regex__executor_1_1MapPrinter.html", "structwr22_1_1regex__executor_1_1MapPrinter" ],
         [ "Regex", "classwr22_1_1regex__executor_1_1Regex.html", "classwr22_1_1regex__executor_1_1Regex" ]
       ] ]
     ] ]

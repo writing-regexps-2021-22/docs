@@ -1,5 +1,9 @@
 var NAVTREEINDEX1 =
 {
+"regex_8hpp.html":[2,0,0,0,0,0,1],
+"regex_8hpp.html#a5b3ab78629ca10584a8603b4d6a7d1ec":[2,0,0,0,0,0,1,0],
+"regex_8hpp_source.html":[2,0,0,0,0,0,1],
+"span_8cpp.html":[2,0,1,2,0],
 "span_8cpp.html#a4e3a1bafad65902a04bcf3eedcfa7f87":[2,0,1,2,0,0],
 "span_8cpp.html#af8e5f3a75f02b1f2064eaf1ef417c937":[2,0,1,2,0,1],
 "span_8hpp.html":[2,0,0,0,0,2,0],

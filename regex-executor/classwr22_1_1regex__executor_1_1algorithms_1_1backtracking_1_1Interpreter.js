@@ -1,8 +1,10 @@
 var classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter =
 [
     [ "Interpreter", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#ab0d45acce12edb7ce50ad36929dd0d6d", null ],
-    [ "add_decision", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#a9faaef39d07393e6f8200df7642ce11f", null ],
+    [ "add_decision", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#a58f1ccaddb73d5aa22594f94077f6014", null ],
+    [ "add_indexed_capture", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#a3fe04958a6bbb3b42ffe642c4698e411", null ],
     [ "add_instruction", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#aa0dca224b3e3cf7addeabcd18a9fe344", null ],
+    [ "add_named_capture", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#a0c0e8c066c52c3bd0533a8292a248f47", null ],
     [ "add_step", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#a0d037b2a85af654baaa3ebd4b2d102c9", null ],
     [ "advance", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#ac33b7dbe885fbc116d1ab4d96ba9775b", null ],
     [ "counter_at_offset", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#a6249dd366e8f179d8884599c32d51176", null ],
@@ -14,6 +16,7 @@ var classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter =
     [ "decision_snapshot_at", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#ae361d8901ee8668bf8b6da5a52f17cd9", null ],
     [ "decision_snapshot_at", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#a66c6dec5091bd446be40a937a93b194b", null ],
     [ "finalize", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#a5425243e5098ebcd0f13f7ab429837cd", null ],
+    [ "finalize_error", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#a47dc06bed3755c77eefd108acedfdc10", null ],
     [ "finished", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#ab63ae7c1eef64c0841fa4e07a20299e9", null ],
     [ "into_steps", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#a7ebd0f2b4db444e66e9c20058d2e35be", null ],
     [ "last_decision_ref", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Interpreter.html#ab54f31cb853b43c855d88d398c831210", null ],

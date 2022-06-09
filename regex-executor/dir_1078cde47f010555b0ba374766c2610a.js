@@ -28,9 +28,10 @@ var dir_1078cde47f010555b0ba374766c2610a =
       [ "wr22::regex_executor::algorithms::backtracking::InterpreterStateSnapshot", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1InterpreterStateSnapshot.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1InterpreterStateSnapshot" ],
       [ "wr22::regex_executor::algorithms::backtracking::InterpreterStateMiniSnapshot", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1InterpreterStateMiniSnapshot.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1InterpreterStateMiniSnapshot" ]
     ] ],
-    [ "match_result.hpp", "match__result_8hpp.html", [
-      [ "wr22::regex_executor::algorithms::backtracking::MatchResult", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1MatchResult.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1MatchResult" ]
+    [ "match_failure.hpp", "match__failure_8hpp.html", [
+      [ "wr22::regex_executor::algorithms::backtracking::MatchFailure", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1MatchFailure.html", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1MatchFailure" ]
     ] ],
+    [ "match_result.hpp", "match__result_8hpp.html", "match__result_8hpp" ],
     [ "part_executor.hpp", "part__executor_8hpp.html", [
       [ "wr22::regex_executor::algorithms::backtracking::PartExecutor", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1PartExecutor.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1PartExecutor" ]
     ] ],
@@ -44,9 +45,10 @@ var dir_1078cde47f010555b0ba374766c2610a =
       [ "wr22::regex_executor::algorithms::backtracking::SpecificPartExecutor< regex_parser::regex::part::Alternatives >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pafaf0adef0670b4faf0d9fa822ad5c147.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pafaf0adef0670b4faf0d9fa822ad5c147" ],
       [ "wr22::regex_executor::algorithms::backtracking::SpecificPartExecutor< regex_parser::regex::part::CharacterClass >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pacb8ee227b17ade9b8dac9d685fc8fd54.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pacb8ee227b17ade9b8dac9d685fc8fd54" ],
       [ "wr22::regex_executor::algorithms::backtracking::QuantifierExecutor< Derived, Quantifier >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierExecutor.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierExecutor" ],
-      [ "wr22::regex_executor::algorithms::backtracking::SpecificPartExecutor< regex_parser::regex::part::Star >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa8fbc23b02468b442b84ed6c913fd5c63.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa8fbc23b02468b442b84ed6c913fd5c63" ],
-      [ "wr22::regex_executor::algorithms::backtracking::SpecificPartExecutor< regex_parser::regex::part::Plus >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa1125603269949b32d9473e72cfcd861a.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa1125603269949b32d9473e72cfcd861a" ],
-      [ "wr22::regex_executor::algorithms::backtracking::SpecificPartExecutor< regex_parser::regex::part::Optional >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__paf2b57161be8b8212251a545892a846a9.html", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__paf2b57161be8b8212251a545892a846a9" ]
+      [ "wr22::regex_executor::algorithms::backtracking::QuantifierExecutor< Derived, Quantifier >::StopImmediatelyTag", "structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierExecutor_1_1StopImmediatelyTag.html", null ],
+      [ "wr22::regex_executor::algorithms::backtracking::SpecificPartExecutor< regex_parser::regex::part::Star >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa8fbc23b02468b442b84ed6c913fd5c63.html", null ],
+      [ "wr22::regex_executor::algorithms::backtracking::SpecificPartExecutor< regex_parser::regex::part::Plus >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__pa1125603269949b32d9473e72cfcd861a.html", null ],
+      [ "wr22::regex_executor::algorithms::backtracking::SpecificPartExecutor< regex_parser::regex::part::Optional >", "classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1SpecificPartExecutor_3_01regex__paf2b57161be8b8212251a545892a846a9.html", null ]
     ] ],
     [ "step.hpp", "step_8hpp.html", "step_8hpp" ]
 ];

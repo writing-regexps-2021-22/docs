@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['regex_2ecpp_0',['regex.cpp',['../regex_8cpp.html',1,'']]],
-  ['regex_2ehpp_1',['regex.hpp',['../regex_8hpp.html',1,'']]]
+  ['quantifier_5ftype_2ehpp_0',['quantifier_type.hpp',['../quantifier__type_8hpp.html',1,'']]]
 ];

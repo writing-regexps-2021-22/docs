@@ -90,6 +90,9 @@ $(document).ready(function(){initNavTree('classwr22_1_1regex__explainer_1_1expla
 </div><!--header-->
 <div class="contents">
 
+<p>A class for holding a hint.  
+ <a href="classwr22_1_1regex__explainer_1_1explanation_1_1Hint.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="hint__folder_8hpp_source.html">hint_folder.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -97,6 +100,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a623cb80ce45aad8a9f6361d1e495653d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__explainer_1_1explanation_1_1Hint.html#a623cb80ce45aad8a9f6361d1e495653d">Hint</a> ()</td></tr>
 <tr class="separator:a623cb80ce45aad8a9f6361d1e495653d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aceb6d4268298caf3e86785e0c3e90ed1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__explainer_1_1explanation_1_1Hint.html#aceb6d4268298caf3e86785e0c3e90ed1">Hint</a> (std::string hint_, std::string additional_info_=&quot;&quot;)</td></tr>
+<tr class="memdesc:aceb6d4268298caf3e86785e0c3e90ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classwr22_1_1regex__explainer_1_1explanation_1_1Hint.html#aceb6d4268298caf3e86785e0c3e90ed1">More...</a><br /></td></tr>
 <tr class="separator:aceb6d4268298caf3e86785e0c3e90ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8f871bc8dad6a90ba2cd33692c4bf2d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__explainer_1_1explanation_1_1Hint.html#af8f871bc8dad6a90ba2cd33692c4bf2d">get_hint</a> () const</td></tr>
 <tr class="separator:af8f871bc8dad6a90ba2cd33692c4bf2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,9 +110,12 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:aaf35de039c1ec841fa343360b0c2b550"><td class="memItemLeft" align="right" valign="top">static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__explainer_1_1explanation_1_1Hint.html#aaf35de039c1ec841fa343360b0c2b550">main_sentence</a></td></tr>
+<tr class="memdesc:aaf35de039c1ec841fa343360b0c2b550"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a sentence for any error indicating that there is an error in the regular expression.  <a href="classwr22_1_1regex__explainer_1_1explanation_1_1Hint.html#aaf35de039c1ec841fa343360b0c2b550">More...</a><br /></td></tr>
 <tr class="separator:aaf35de039c1ec841fa343360b0c2b550"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >A class for holding a hint. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a623cb80ce45aad8a9f6361d1e495653d" name="a623cb80ce45aad8a9f6361d1e495653d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a623cb80ce45aad8a9f6361d1e495653d">&#9670;&nbsp;</a></span>Hint() <span class="overload">[1/2]</span></h2>
 
@@ -131,6 +138,9 @@ Static Public Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">wr22::regex_explainer::explanation::Hint::Hint </td>
@@ -150,7 +160,21 @@ Static Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hint_</td><td>is a string containing information about the location where the error occurred and the expected character. </td></tr>
+    <tr><td class="paramname">additional_info_</td><td>if an optional variable containing additional information about the error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -169,6 +193,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the additional information for current error </dd></dl>
 
 </div>
 </div>
@@ -186,6 +211,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the hint for current error </dd></dl>
 
 </div>
 </div>
@@ -212,6 +238,8 @@ Static Public Attributes</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">        <span class="stringliteral">&quot;Your pattern contains one or more errors, please see the explanation section above&quot;</span></div>
 </div><!-- fragment -->
+<p>This is a sentence for any error indicating that there is an error in the regular expression. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>

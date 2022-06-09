@@ -130,6 +130,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1InterpreterStateSnapshot.html">InterpreterStateSnapshot</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1MatchFailure.html">MatchFailure</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1MatchResult.html">MatchResult</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1PartExecutor.html">PartExecutor</a></td></tr>
@@ -170,13 +172,13 @@ Typedefs</h2></td></tr>
 <tr class="separator:a4539d3373411bb220b11072ac257ba97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a624d5a5f133134e6e1c35717a8a432d7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking.html#a624d5a5f133134e6e1c35717a8a432d7">Decision</a> = wr22::utils::Adt&lt; <a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1AlternativesDecision.html">AlternativesDecision</a>, <a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html">QuantifierDecision</a>&lt; regex_parser::regex::part::Star &gt;, <a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html">QuantifierDecision</a>&lt; regex_parser::regex::part::Plus &gt;, <a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1QuantifierDecision.html">QuantifierDecision</a>&lt; regex_parser::regex::part::Optional &gt; &gt;</td></tr>
 <tr class="separator:a624d5a5f133134e6e1c35717a8a432d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9390b50ab994f203f6fb2379bf272de"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking.html#ac9390b50ab994f203f6fb2379bf272de">Instruction</a> = <a class="el" href="namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1instruction.html#ad9ab652ac96e237b771376e3b7abd507">instruction::Adt</a></td></tr>
+<tr class="memitem:ac9390b50ab994f203f6fb2379bf272de"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking.html#ac9390b50ab994f203f6fb2379bf272de">Instruction</a> = <a class="el" href="namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1instruction.html#abe92b4ff1a18c1f0fa97894da4bba2b2">instruction::Adt</a></td></tr>
 <tr class="separator:ac9390b50ab994f203f6fb2379bf272de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af35a11e28cfbd8a672cb27d4b4379166"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking.html#af35a11e28cfbd8a672cb27d4b4379166">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking.html#ac9390b50ab994f203f6fb2379bf272de">Instruction</a> &amp;instruction)</td></tr>
-<tr class="separator:af35a11e28cfbd8a672cb27d4b4379166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa10b8e377e49260380eb9b0c216cb3fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking.html#aa10b8e377e49260380eb9b0c216cb3fa">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1MatchResult.html">MatchResult</a> &amp;result)</td></tr>
+<tr class="separator:aa10b8e377e49260380eb9b0c216cb3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e1cc98ffa64b67dd60edd9f80886c5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking.html#a5e1cc98ffa64b67dd60edd9f80886c5e">to_json</a> (nlohmann::json &amp;j, const <a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1Step.html">Step</a> &amp;step)</td></tr>
 <tr class="separator:a5e1cc98ffa64b67dd60edd9f80886c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71dea589cf5f98d60cf4f25de42a3e5f"><td class="memTemplParams" colspan="2">template&lt;typename... Reasons&gt; </td></tr>
@@ -205,7 +207,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking.html#ac9390b50ab994f203f6fb2379bf272de">wr22::regex_executor::algorithms::backtracking::Instruction</a> = typedef <a class="el" href="namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1instruction.html#ad9ab652ac96e237b771376e3b7abd507">instruction::Adt</a></td>
+          <td class="memname">using <a class="el" href="namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking.html#ac9390b50ab994f203f6fb2379bf272de">wr22::regex_executor::algorithms::backtracking::Instruction</a> = typedef <a class="el" href="namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1instruction.html#abe92b4ff1a18c1f0fa97894da4bba2b2">instruction::Adt</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -229,36 +231,8 @@ template&lt;typename Quantifier &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="af35a11e28cfbd8a672cb27d4b4379166" name="af35a11e28cfbd8a672cb27d4b4379166"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af35a11e28cfbd8a672cb27d4b4379166">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; wr22::regex_executor::algorithms::backtracking::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacewr22_1_1regex__executor_1_1algorithms_1_1backtracking.html#ac9390b50ab994f203f6fb2379bf272de">Instruction</a> &amp;&#160;</td>
-          <td class="paramname"><em>instruction</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a71dea589cf5f98d60cf4f25de42a3e5f" name="a71dea589cf5f98d60cf4f25de42a3e5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71dea589cf5f98d60cf4f25de42a3e5f">&#9670;&nbsp;</a></span>to_json() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a71dea589cf5f98d60cf4f25de42a3e5f">&#9670;&nbsp;</a></span>to_json() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,8 +261,36 @@ template&lt;typename... Reasons&gt; </div>
 
 </div>
 </div>
+<a id="aa10b8e377e49260380eb9b0c216cb3fa" name="aa10b8e377e49260380eb9b0c216cb3fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa10b8e377e49260380eb9b0c216cb3fa">&#9670;&nbsp;</a></span>to_json() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wr22::regex_executor::algorithms::backtracking::to_json </td>
+          <td>(</td>
+          <td class="paramtype">nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structwr22_1_1regex__executor_1_1algorithms_1_1backtracking_1_1MatchResult.html">MatchResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5e1cc98ffa64b67dd60edd9f80886c5e" name="a5e1cc98ffa64b67dd60edd9f80886c5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e1cc98ffa64b67dd60edd9f80886c5e">&#9670;&nbsp;</a></span>to_json() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e1cc98ffa64b67dd60edd9f80886c5e">&#9670;&nbsp;</a></span>to_json() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

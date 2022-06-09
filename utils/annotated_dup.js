@@ -9,7 +9,9 @@ var annotated_dup =
         ] ],
         [ "Adt", "classwr22_1_1utils_1_1Adt.html", "classwr22_1_1utils_1_1Adt" ],
         [ "Box", "classwr22_1_1utils_1_1Box.html", "classwr22_1_1utils_1_1Box" ],
-        [ "BoxIsEmpty", "structwr22_1_1utils_1_1BoxIsEmpty.html", "structwr22_1_1utils_1_1BoxIsEmpty" ]
+        [ "BoxIsEmpty", "structwr22_1_1utils_1_1BoxIsEmpty.html", "structwr22_1_1utils_1_1BoxIsEmpty" ],
+        [ "NonconcurrentSemaphore", "classwr22_1_1utils_1_1NonconcurrentSemaphore.html", "classwr22_1_1utils_1_1NonconcurrentSemaphore" ],
+        [ "NonconcurrentSemaphoreGuard", "classwr22_1_1utils_1_1NonconcurrentSemaphoreGuard.html", "classwr22_1_1utils_1_1NonconcurrentSemaphoreGuard" ]
       ] ]
     ] ]
 ];

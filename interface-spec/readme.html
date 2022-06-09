@@ -332,9 +332,10 @@ are possible, and exactly one must be present:
 <li><code>parse_tree</code> — a <em>spanned tree node</em> object
 corresponding to the root parse tree node, if the regular expression was
 successfully parsed.</li>
-<li><code>parse_error</code> — an <em>error</em> object describing the
-parse error if it has occurred. The possible <em>error codes</em> are
-defined as follows:
+<li><code>parse_error</code> — a <strong>parse error</strong> object
+describing the parse error if it has occurred. Each <strong>parse
+error</strong> object is an <em>error</em> object with the following
+possible <em>error codes</em>:
 <ol type="1">
 <li>“<code>expected_end</code>” — if a regular expression was expected
 to end at a certain position but did not. It is unspecified when exactly
@@ -586,12 +587,23 @@ Currently, the only possible value is “<code>backtracking</code>”.</li>
 string matches the regex and false otherwise.</li>
 <li><code>steps</code> — a <em>JSON array</em> of <em>match steps</em>,
 representing the steps the matching algorithm has made.</li>
-<li>(TODO) <code>captures</code> — (present only if
-<code>matched == true</code>) the captures made by capturing
-groups.</li>
+<li><code>captures</code> — (present only if
+<code>matched == true</code>) the captures made by capturing groups. It
+is a <em>JSON object</em> with the following fields:
+<ol type="1">
+<li><code>whole</code> — a <em>captured substring</em> object
+corresponding to the whole match.</li>
+<li><code>by_index</code> — a <em>JSON object</em> whose keys are
+stringified integers (e.g. <code>"1"</code>, <code>"25"</code>, etc.)
+and values are the <em>captured substring</em> objects that correspond
+to the capturing groups with the specified index.</li>
+<li><code>by_name</code> — a <em>JSON object</em> whose keys are names
+of named capturing groups and values are the <em>captured substring</em>
+objects that correspond to these groups.</li>
+</ol></li>
 </ol></li>
 <li><code>parse_error</code> — (if the regular expression could not be
-parsed correctly) an <em>error</em> object as defined in the
+parsed correctly) the <em>parse error</em> object as defined in the
 <code>/parse</code> section.</li>
 </ol></li>
 <li><strong>Match step</strong> is a <em>JSON object</em>. The only
@@ -688,7 +700,7 @@ quantified expression (e.g. “.*“) in the regex.</li>
 the current position in the string (with 0 meaning “at the beginning”, 1
 meaning “right after the first character” and so on).</li>
 </ol></li>
-<li>(TODO) “<code>finish_&lt;quantifier&gt;</code>” where
+<li>“<code>finish_&lt;quantifier&gt;</code>” where
 <code>&lt;quantifier&gt;</code> is either of <code>star</code>,
 <code>plus</code> or <code>optional</code> — Finish repeated matching of
 the sub-expression under the quantifier and fix the number of
@@ -757,8 +769,8 @@ considered alternatives in the regex.</li>
 the current position in the string (with 0 meaning “at the beginning”, 1
 meaning “right after the first character” and so on).</li>
 </ol></li>
-<li>(TODO) “<code>finish_alternatives</code>” — make a decision in the
-choice of an alternative. The current part of the string matches this
+<li>“<code>finish_alternatives</code>” — make a decision in the choice
+of an alternative. The current part of the string matches this
 alternative. If, later, this choice will cause the rest of the string
 not to match the rest of the regex, another alternative would be chosen.
 Additional fields:
@@ -810,6 +822,9 @@ end of the matching process. If the whole string of length
 string matches the regex and false otherwise.</li>
 </ol></li>
 </ol></li>
+<li><strong>Captured substring</strong> is a <em>span</em> that
+corresponds to the position of a captured fragment of the input
+string.</li>
 </ol>
 <h2 id="service-errors">Service Errors</h2>
 <p><em>Service errors</em> are represented by <em>error</em> objects.

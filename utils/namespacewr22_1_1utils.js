@@ -4,6 +4,8 @@ var namespacewr22_1_1utils =
     [ "Adt", "classwr22_1_1utils_1_1Adt.html", "classwr22_1_1utils_1_1Adt" ],
     [ "Box", "classwr22_1_1utils_1_1Box.html", "classwr22_1_1utils_1_1Box" ],
     [ "BoxIsEmpty", "structwr22_1_1utils_1_1BoxIsEmpty.html", "structwr22_1_1utils_1_1BoxIsEmpty" ],
+    [ "NonconcurrentSemaphore", "classwr22_1_1utils_1_1NonconcurrentSemaphore.html", "classwr22_1_1utils_1_1NonconcurrentSemaphore" ],
+    [ "NonconcurrentSemaphoreGuard", "classwr22_1_1utils_1_1NonconcurrentSemaphoreGuard.html", "classwr22_1_1utils_1_1NonconcurrentSemaphoreGuard" ],
     [ "Box", "namespacewr22_1_1utils.html#afb291ac3b73aa5f47f3e4b8f10c20188", null ],
     [ "Box", "namespacewr22_1_1utils.html#a728e070577a70dc3b0e5fd4796524d41", null ],
     [ "operator!=", "namespacewr22_1_1utils.html#a308904d03351e79a233452d849bc0996", null ],
